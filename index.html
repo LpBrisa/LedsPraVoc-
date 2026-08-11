@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LP Brisa LED — Catálogo</title>
+<style>
+  :root{
+    --bg:#0f1115; --bg2:#171a21; --card:#1c202a; --line:#2a2f3b;
+    --orange:#ff8a1e; --orange2:#ffb366; --text:#eef0f4; --muted:#9aa2b1;
+    --green:#3ecf8e; --red:#ff5c5c;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);}
+  header{
+    position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#12141a,#12141aee);
+    border-bottom:1px solid var(--line); padding:14px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    backdrop-filter:blur(6px);
+  }
+  header .logo{font-weight:800;font-size:22px;letter-spacing:.5px}
+  header .logo span{color:var(--orange)}
+  #waHeader{
+    background:#25D366; color:#053b1f; font-weight:700; text-decoration:none;
+    padding:9px 14px; border-radius:10px; font-size:14px; white-space:nowrap;
+  }
+  header input[type=text]{
+    flex:1; min-width:180px; padding:10px 14px; border-radius:10px; border:1px solid var(--line);
+    background:var(--bg2); color:var(--text); font-size:14px;
+  }
+  header select{
+    padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-size:14px;
+  }
+  #cartBtn{
+    background:var(--orange); color:#1a1200; border:none; padding:10px 16px; border-radius:10px;
+    font-weight:700; cursor:pointer; display:flex; align-items:center; gap:8px; font-size:14px;
+  }
+  #cartCount{background:#1a1200;color:var(--orange2);border-radius:999px;padding:1px 8px;font-size:12px}
+
+  main{padding:20px; max-width:1400px; margin:0 auto;}
+.tabs{display:flex; gap:10px; margin:0 0 16px; flex-wrap:wrap;}
+.tabBtn{background:var(--bg2); border:1px solid var(--line); color:var(--muted); padding:9px 16px; border-radius:10px; cursor:pointer; font-weight:700; font-size:14px;}
+.tabBtn.active{background:var(--orange); color:#1a1200; border-color:var(--orange);}
+.galleryGrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px;}
+.galleryGrid figure{margin:0;}
+.galleryGrid img{width:100%; border-radius:8px; border:1px solid var(--line); cursor:zoom-in; display:block; transition:.15s;}
+.galleryGrid img:hover{border-color:var(--orange); transform:scale(1.02);}
+.galleryGrid figcaption{font-size:11px; color:var(--muted); text-align:center; margin-top:4px;}
+#lightbox{position:fixed; inset:0; background:#000d; display:none; z-index:200; align-items:center; justify-content:center; padding:20px; cursor:zoom-out;}
+#lightbox img{max-width:95vw; max-height:95vh; border-radius:8px;}
+  .catTitle{margin:28px 0 12px; font-size:18px; color:var(--orange2); border-left:4px solid var(--orange); padding-left:10px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px;}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px;
+    display:flex; flex-direction:column; gap:8px; position:relative; transition:.15s;
+  }
+  .card:hover{border-color:var(--orange); transform:translateY(-2px);}
+  .badge{position:absolute;top:10px;right:10px;font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;}
+  .badge.promo{background:var(--red);color:#fff;}
+  .badge.out{background:#3a3f4b;color:var(--muted);}
+  .thumb{
+    height:240px; border-radius:10px; background:linear-gradient(135deg,#20242f,#2a2f3d);
+    display:flex; align-items:center; justify-content:center; font-size:26px; color:var(--orange);
+    overflow:hidden;
+  }
+  .thumb.photo{background:#fff; padding:4px; cursor:zoom-in;}
+  .thumb.photo img{
+    max-width:100%; max-height:100%; width:auto; height:auto;
+    object-fit:contain; object-position:center; margin:auto; display:block;
+  }
+  .name{font-size:14px; font-weight:600; line-height:1.3; min-height:36px;}
+  .desc{
+    font-size:12px; color:var(--muted); line-height:1.35;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .code{font-size:11px; color:var(--muted);}
+  .price{font-size:19px; font-weight:800; color:var(--green);}
+  .addBtn{
+    margin-top:auto; background:var(--bg2); border:1px solid var(--orange); color:var(--orange2);
+    padding:8px; border-radius:8px; font-weight:700; cursor:pointer; font-size:13px;
+  }
+  .addBtn:hover{background:var(--orange); color:#1a1200;}
+  .addBtn:disabled{border-color:var(--line); color:var(--muted); cursor:not-allowed; background:transparent;}
+
+  #cartOverlay{
+    position:fixed; inset:0; background:#000a; display:none; z-index:100; justify-content:flex-end;
+  }
+  #cartPanel{
+    width:380px; max-width:92vw; background:var(--bg2); height:100%; padding:18px; overflow-y:auto;
+    border-left:1px solid var(--line); display:flex; flex-direction:column; gap:12px;
+  }
+  #cartPanel h2{margin:0 0 6px; font-size:18px;}
+  .closeBtn{position:absolute; top:14px; right:16px; background:none; border:none; color:var(--muted); font-size:20px; cursor:pointer;}
+  .cartItem{display:flex; gap:10px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px;}
+  .cartItem .ci-name{font-size:13px; flex:1;}
+  .cartItem .ci-code{font-size:11px; color:var(--muted);}
+  .qtyBox{display:flex; align-items:center; gap:6px;}
+  .qtyBox button{width:24px;height:24px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:6px;cursor:pointer;}
+  .qtyBox span{min-width:18px; text-align:center; font-size:13px;}
+  .rmBtn{background:none;border:none;color:var(--red);cursor:pointer;font-size:12px;}
+  #cartTotal{font-size:20px; font-weight:800; color:var(--green); text-align:right; margin-top:10px;}
+  #whatsBtn{
+    background:#25D366; color:#053b1f; font-weight:800; padding:12px; border:none; border-radius:10px;
+    cursor:pointer; font-size:14px; margin-top:8px;
+  }
+  #emptyMsg{color:var(--muted); font-size:13px; text-align:center; margin-top:30px;}
+  footer{text-align:center; color:var(--muted); font-size:12px; padding:30px;}
+  .stats{color:var(--muted); font-size:13px; margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">LP <span>BRISA</span> LED</div>
+  <a href="https://wa.me/5511981707807" target="_blank" id="waHeader">📲 (11) 98170-7807</a>
+  <input type="text" id="search" placeholder="🔍 Buscar produto ou código (ex: SMD 100W, 30005)...">
+  <select id="catFilter"><option value="">Todas categorias</option></select>
+  <button id="cartBtn" onclick="toggleCart(true)">🛒 Carrinho <span id="cartCount">0</span></button>
+</header>
+
+<main>
+  <div class="tabs">
+    <button class="tabBtn active" id="tabShop" onclick="showTab('shop')">🛍️ Loja (com carrinho)</button>
+    <button class="tabBtn" id="tabGallery" onclick="showTab('gallery')">📖 Catálogo Visual (páginas originais)</button>
+  </div>
+
+  <div id="viewShop">
+    <div class="stats" id="stats"></div>
+    <div id="catalog"></div>
+  </div>
+
+  <div id="viewGallery" style="display:none">
+    <p style="color:var(--muted);font-size:13px;margin-bottom:14px;">Estas são as páginas originais do catálogo em fotos reais dos produtos. Clique para ampliar. Use a aba "Loja" para pesquisar por nome/código e montar seu pedido.</p>
+    <div class="galleryGrid" id="galleryGrid"></div>
+  </div>
+</main>
+
+<div id="lightbox" onclick="this.style.display='none'"><img id="lightboxImg" src=""></div>
+
+<footer>LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</footer>
+
+<div id="cartOverlay" onclick="if(event.target===this) toggleCart(false)">
+  <div id="cartPanel">
+    <button class="closeBtn" onclick="toggleCart(false)">✕</button>
+    <h2>Seu carrinho</h2>
+    <div id="cartItems"></div>
+    <div id="emptyMsg">Carrinho vazio</div>
+    <div id="cartTotal"></div>
+    <button id="whatsBtn" onclick="sendWhats()">📲 Enviar pedido via WhatsApp</button>
+  </div>
+</div>
+
+<script>
+// ===== PRODUTOS (extraídos do catálogo LP Brisa LED) =====
+// [categoria, nome, codigo, preco, emEstoque(1/0), promo(1/0)]
+const RAW = [
+["Luminária Pública SMD","Luminária SMD 50W Driver","30003",46.00,1,0],
+["Luminária Pública SMD","Luminária SMD 100W Driver","19583",65.00,0,0],
+["Luminária Pública SMD","Luminária SMD 150W Driver","30005",99.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W Driver","30006",125.00,1,0],
+["Luminária Pública SMD","Luminária SMD 50W DOB","30003",40.00,1,0],
+["Luminária Pública SMD","Luminária SMD 100W DOB","30004",60.00,1,0],
+["Luminária Pública SMD","Luminária SMD 150W DOB","30005",90.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W DOB","30006",110.00,1,0],
+["Luminária Pública SMD","Luminária SMD 300W DOB","19446",165.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W Driver","19110",135.00,1,0],
+["Luminária Pública SMD","Luminária SMD 50W DOB","19302",35.00,1,0],
+["Luminária Pública SMD","Luminária SMD 100W DOB","19303",48.00,1,0],
+["Luminária Pública SMD","Luminária SMD 150W DOB","19304",65.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W DOB","19305",80.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 50W Driver","19200",115.00,0,0],
+["Luminária com Relé","Luminária SMD Relé 100W Driver","19201",175.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 150W Driver","19202",215.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 200W Driver","19203",275.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 50W Driver","18070",75.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 100W Driver","18071",102.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 150W Driver","18072",129.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 200W Driver","18073",175.00,1,0],
+["Luminária com Relé","Luminária COB Relé 50W Driver","19208",65.00,0,0],
+["Luminária com Relé","Luminária COB Relé 100W Driver","19209",110.00,1,0],
+["Luminária com Relé","Luminária COB Relé 150W Driver","81898/19210",148.00,1,0],
+["Luminária com Relé","Luminária COB Relé 200W Driver","19211",185.00,1,0],
+["Luminária Pública SMD","Luminária 100W DOB","19254",35.00,1,1],
+["Luminária Pública SMD","Luminária 150W DOB","19255",50.00,1,1],
+["Luminária Pública SMD","Luminária 200W DOB","19256",65.00,1,1],
+["Luminária Pública SMD","Luminária 300W DOB","19257",85.00,1,1],
+["Luminária Pública SMD","Luminária SMD 50W Driver","19311",55.00,1,0],
+["Luminária Pública SMD","Luminária SMD 100W Driver","19312",75.00,1,0],
+["Luminária Pública SMD","Luminária SMD 150W Driver","19313",105.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W Driver","19314",140.00,1,0],
+["Luminária com Relé","Luminária SMD c/ Relé 50W","19344",50.00,1,0],
+["Luminária com Relé","Luminária SMD c/ Relé 100W","19345",60.00,0,0],
+["Luminária com Relé","Luminária SMD c/ Relé 150W","19346",78.00,0,0],
+["Luminária com Relé","Luminária SMD c/ Relé 200W","19347",102.00,0,0],
+["Luminária com Relé","Luminária SMD c/ Relé 300W","19348",128.00,1,0],
+["Luminária com Relé","Luminária COB c/ Relé 50W","19340",55.00,1,0],
+["Luminária com Relé","Luminária COB c/ Relé 100W","19341",80.00,1,0],
+["Luminária com Relé","Luminária COB c/ Relé 150W","19342",105.00,1,0],
+["Luminária com Relé","Luminária COB c/ Relé 200W","19343",125.00,1,0],
+["Luminária COB","Luminária COB 50W","19103",35.00,1,0],
+["Luminária COB","Luminária COB 100W","19104",90.00,1,0],
+["Luminária COB","Luminária COB 150W","19105",120.00,1,0],
+["Luminária COB","Luminária COB 200W","19106",145.00,1,0],
+["Luminária COB","Luminária COB 50W","18093",55.00,1,1],
+["Luminária COB","Luminária COB 100W","18094",99.00,1,1],
+["Luminária COB","Luminária COB 150W","18095",135.00,1,1],
+["Luminária COB","Luminária COB 200W","18096",155.00,1,1],
+["Luminária Pública SMD","Luminária SMD 50W BF-70%","19160",35.00,1,0],
+["Luminária Pública SMD","Luminária SMD 100W BF-50%","19161",46.00,1,0],
+["Luminária Pública SMD","Luminária SMD 150W BF-75%","19162",65.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W BF-75%","19163",95.00,1,0],
+["Luminária Pública SMD","Luminária SMD 300W BF-75%","19164",115.00,1,0],
+["Luminária Pública SMD","Luminária SMD 300W BF-50%","18070",60.00,1,1],
+["Luminária Pública SMD","Luminária SMD 400W BF-50%","19140/19104",85.00,1,1],
+["Mini Luminária","Mini Luminária SMD 30W","19584",23.00,1,0],
+["Mini Luminária","Mini Luminária SMD 50W","19585",30.00,1,0],
+["Mini Luminária","Mini Luminária SMD 100W","19586",42.00,1,0],
+["Mini Luminária","Mini Luminária SMD 150W","19587",55.00,1,0],
+["Mini Luminária","Mini Luminária SMD 200W","19588",70.00,1,0],
+["Mini Luminária","Mini Luminária SMD 30W","19642",22.00,1,0],
+["Mini Luminária","Mini Luminária SMD 50W","19643",29.00,1,0],
+["Mini Luminária","Mini Luminária SMD 100W","19644",42.00,1,0],
+["Mini Luminária","Mini Luminária SMD 150W","19645",58.00,1,0],
+["Mini Luminária","Mini Luminária SMD 200W","19646",72.00,1,0],
+["Mini Luminária","Mini Luminária COB 50W","19266",35.00,1,0],
+["Mini Luminária","Mini Luminária COB 100W","19267",65.00,1,0],
+["Mini Luminária","Mini Luminária COB 150W","19268",85.00,0,0],
+["Mini Luminária","Mini Luminária COB 200W","19269",100.00,1,0],
+["Mini Luminária","Mini Luminária COB 250W","19444",135.00,1,0],
+["Mini Luminária","Mini Luminária COB 300W","19445",160.00,1,0],
+["Mini Luminária","Mini Luminária COB 50W 4000K","19436",35.00,1,0],
+["Mini Luminária","Mini Luminária COB 50W BQ","19437",35.00,1,0],
+["Mini Luminária","Mini Luminária COB 100W 4000K","19438",65.00,0,0],
+["Mini Luminária","Mini Luminária COB 100W BQ","19439",65.00,0,0],
+["Mini Luminária","Mini Luminária COB 150W 4000K","19440",85.00,1,0],
+["Mini Luminária","Mini Luminária COB 150W BQ","19441",85.00,1,0],
+["Mini Luminária","Mini Luminária COB 200W 4000K","19442",100.00,1,0],
+["Mini Luminária","Mini Luminária COB 200W BQ","19443",100.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 50W DOB","19508",40.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 100W DOB","19509",65.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 150W DOB","19510",85.00,1,0],
+["Luminária com Relé","Luminária SMD Relé 200W DOB","19511",105.00,0,0],
+["Luminária Pública SMD","Luminária SMD 30W","19545",25.00,1,0],
+["Luminária Pública SMD","Luminária SMD 50W","19546",32.00,1,0],
+["Luminária Pública SMD","Luminária SMD 100W","19547",43.00,1,0],
+["Luminária Pública SMD","Luminária SMD 150W","19548",60.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W","19549",75.00,1,0],
+["Luminária Pública SMD","Luminária SMD 300W","19550",95.00,1,0],
+["Luminária Pública SMD","Luminária SMD 50W","19474",32.00,1,0],
+["Luminária Pública SMD","Luminária SMD 100W","19475",50.00,1,0],
+["Luminária Pública SMD","Luminária SMD 150W","19476",65.00,1,0],
+["Luminária Pública SMD","Luminária SMD 200W","19477",85.00,1,0],
+["Luminária Solar","Luminária Solar 50W","22307",55.00,1,1],
+["Luminária Solar","Luminária Solar 100W","22304",75.00,1,1],
+["Solar Slim","Luminária Sola Slim 200W","19498",65.00,1,0],
+["Solar Slim","Luminária Sola Slim 300W","19499",85.00,1,0],
+["Solar Slim","Luminária Sola Slim 400W","19500",105.00,1,0],
+["Solar Slim","Luminária Sola Slim 500W","19501",120.00,1,0],
+["Solar Slim","Luminária Sola Slim 600W","19502",145.00,1,0],
+["Solar Slim","Luminária Sola Slim 800W","19503",185.00,1,0],
+["Solar Slim","Luminária Sola Slim 1000W","19504",220.00,1,0],
+["Solar Slim","Luminária Sola Slim 200W","19523",65.00,1,0],
+["Solar Slim","Luminária Sola Slim 300W","19524",80.00,1,0],
+["Solar Slim","Luminária Sola Slim 400W","19525",110.00,1,0],
+["Solar Slim","Luminária Sola Slim 500W","19526",130.00,1,0],
+["Solar Slim","Luminária Sola Slim 400W","19623",70.00,1,0],
+["Solar Slim","Luminária Sola Slim 600W","19624",85.00,1,0],
+["Solar Slim","Luminária Sola Slim 400W","19625",85.00,1,0],
+["Solar Slim","Luminária Sola Slim 600W","19626",105.00,1,0],
+["Solar Slim","Luminária Sola Slim 800W","19627",125.00,1,0],
+["Solar Slim","Luminária Sola Slim 1000W","19628",145.00,1,0],
+["Solar Slim","Luminária Sola Slim 400W","19629",165.00,1,0],
+["Solar Slim","Luminária Sola Slim 600W","19630",195.00,1,0],
+["Solar Slim","Luminária Sola Slim 1000W","19631",225.00,1,0],
+["UFO High Bay","UFO High Bay 100W","18011",50.00,1,0],
+["UFO High Bay","UFO High Bay 150W","18012",85.00,1,0],
+["UFO High Bay","UFO High Bay 200W","18013",110.00,1,0],
+["UFO High Bay","UFO High Bay 200W","19574",110.00,1,0],
+["UFO High Bay","UFO 100W","18077",60.00,1,0],
+["UFO High Bay","UFO 150W","18078",90.00,1,0],
+["UFO High Bay","UFO 200W","18079",110.00,0,0],
+["UFO High Bay","UFO Slim High Bay 100W","19447",45.00,0,0],
+["UFO High Bay","UFO Slim High Bay 150W","19448",60.00,1,0],
+["UFO High Bay","UFO Slim High Bay 200W","19449",75.00,1,0],
+["UFO High Bay","UFO Slim 60W","19473",30.00,0,0],
+["UFO High Bay","UFO Slim 100W","19133/19461",45.00,0,0],
+["UFO High Bay","UFO Slim 200W","19134/19462",60.00,0,0],
+["UFO High Bay","UFO Slim 300W","19135/19463",80.00,0,0],
+["UFO High Bay","UFO Slim 400W","19136/19464",110.00,0,0],
+["UFO High Bay","UFO 100W","19589",40.00,0,0],
+["UFO High Bay","UFO 150W","19590",50.00,0,0],
+["UFO High Bay","UFO 200W","19591",70.00,0,0],
+["Refletor Modular","Refletor Modular 50W","19124",45.00,0,0],
+["Refletor Modular","Refletor Modular 100W","19125",90.00,0,0],
+["Refletor Modular","Refletor Modular 150W","19126",135.00,0,0],
+["Refletor Modular","Refletor Modular 200W","19127",170.00,1,0],
+["Refletor Modular","Refletor Modular 250W","19128",220.00,1,0],
+["Refletor Modular","Refletor Modular 300W","19129",285.00,1,0],
+["Refletor Modular","Refletor Modular 400W","19130",380.00,1,0],
+["Refletor Modular","Refletor Modular 500W","19131",460.00,1,0],
+["Refletor Modular","Refletor Modular 600W","19132",560.00,1,0],
+["Refletor Modular","Refletor Modular 50W","LK-E 50W-19677",30.00,1,0],
+["Refletor Modular","Refletor Modular 100W","LK-E 100W-19678",58.00,1,0],
+["Refletor Modular","Refletor Modular 150W","LK-E 150W-19679",88.00,1,0],
+["Refletor Modular","Refletor Modular 200W","LK-E 200W-19680",118.00,1,0],
+["Refletor Modular","Refletor Modular 250W","LK-E 250W-19681",155.00,1,0],
+["Refletor Modular","Refletor Modular 300W","LK-E 300W-19682",195.00,1,0],
+["Refletor Modular","Refletor Modular 400W","LK-E 400W-19683",240.00,1,0],
+["Refletor Modular","Refletor Modular 500W","19684",290.00,1,0],
+["Refletor Modular","Refletor Modular 600W","19685",340.00,0,0],
+["Refletor Modular","Refletor Modular 50W BF","19102",19.00,1,1],
+["Refletor Modular","Refletor Modular 50W Roxo","19298",32.00,1,1],
+["Refletor Modular","Refletor Modular 50W BF","10052",30.00,0,0],
+["Refletor Modular","Refletor Modular 50W Rosa","19297",30.00,0,0],
+["Refletor Modular","Refletor Modular 50W BQ","19292",30.00,0,0],
+["Refletor Modular","Refletor Modular 50W Vermelho","19293",30.00,1,0],
+["Refletor Modular","Refletor Modular 50W Verde","19294",30.00,0,0],
+["Refletor Modular","Refletor Modular 50W Azul","19295",30.00,0,0],
+["Refletor Modular","Refletor Modular 50W Amarelo","19296",30.00,1,0],
+["Refletor Modular","Refletor Modular 100W BF","18076",18.00,1,1],
+["Refletor Modular","Refletor Modular 50W BF","22309",35.00,1,0],
+["Refletor Modular","Refletor Modular 100W BF","22309-2",75.00,1,0],
+["Refletor Mudoula","Refletor Mudoula 100W","19258",40.00,1,0],
+["Refletor Mudoula","Refletor Mudoula 150W","19259",55.00,1,0],
+["Refletor Mudoula","Refletor Mudoula 200W","19260",68.00,1,0],
+["Refletor Mudoula","Refletor Mudoula 300W","19261",90.00,1,0],
+["Refletor Mudoula","Refletor Mudoula 200W","19262",80.00,1,0],
+["Refletor Mudoula","Refletor Mudoula 300W","19263",105.00,1,0],
+["Refletor Mudoula","Refletor Mudoula 400W","19264",135.00,0,0],
+["Refletor Mudoula","Refletor Mudoula 600W","19265",165.00,1,0],
+["Refletor Solar","Refletor RGB Solar","T8300",80.00,1,0],
+["Refletor Solar","Refletor RGB Solar","19336",55.00,1,1],
+["Refletor Solar","Refletor RGB Solar","19337",75.00,1,1],
+["Refletor Solar","Refletor Solar 100W","19114",75.00,1,1],
+["Refletor Solar","Refletor Solar 200W","19115",99.00,1,1],
+["Refletor Solar","Refletor Solar 300W","19116",129.00,1,1],
+["Refletor Solar","Refletor Solar 100W","19111",75.00,1,1],
+["Refletor Solar","Refletor Solar 200W","19112",99.00,0,1],
+["Refletor Solar","Refletor Solar 400W","19118",105.00,1,1],
+["Refletor Solar","Refletor Sola 100W","19478",48.00,1,0],
+["Refletor Solar","Refletor Sola 200W","19479",60.00,1,0],
+["Refletor Solar","Refletor Sola 300W","19480",85.00,1,0],
+["Refletor Solar","Refletor Sola 500W","19481",125.00,1,0],
+["Refletor Solar","Refletor Sola 800W","19482",155.00,1,0],
+["Refletor Solar","Refletor Sola 1000W","19483",175.00,0,0],
+["Refletor Solar","Refletor Sola 50W","19484",35.00,1,0],
+["Refletor Solar","Refletor Sola 100W","19485",40.00,1,0],
+["Refletor Solar","Refletor Sola 200W","19486",50.00,1,0],
+["Refletor Solar","Refletor Sola 400W","19487",60.00,1,0],
+["Refletor Solar","Refletor Sola 50W","19488",25.00,1,0],
+["Refletor Solar","Refletor Sola 100W","19489",30.00,1,0],
+["Refletor Solar","Refletor Sola 200W","19490",35.00,1,0],
+["Refletor Solar","Refletor Sola 400W","19491",45.00,1,0],
+["Refletor Solar","Refletor Sola 200W","19492",42.00,1,0],
+["Refletor Solar","Refletor Sola 300W","19493",52.00,1,0],
+["Refletor Solar","Refletor Sola 500W","19494",65.00,0,0],
+["Refletor Solar","Refletor Sola 800W","19495",80.00,1,0],
+["Refletor Solar","Refletor Sola 1000W","19496",95.00,1,0],
+["Refletor Solar","Refletor Sola 1200W","19497",120.00,1,0],
+["Refletor Solar","Refletor Sola 300W","19665",58.00,1,0],
+["Refletor Solar","Refletor Sola 400W","19666",75.00,1,0],
+["Refletor Solar","Refletor Sola 500W","19667",95.00,1,0],
+["Refletor Solar","Refletor Sola 50W","19632",42.00,1,0],
+["Refletor Solar","Refletor Sola 100W","19633",52.00,1,0],
+["Refletor Solar","Refletor Sola 200W","19634",65.00,1,0],
+["Refletor Solar","Refletor Sola 300W","19635",90.00,1,0],
+["Refletor Solar","Refletor Sola 500W","19636",115.00,1,0],
+["Refletor Solar","Refletor Sola 50W 3 Cor","19637",45.00,1,0],
+["Refletor Solar","Refletor Sola 100W 3 Cor","19638",55.00,1,0],
+["Refletor Solar","Refletor Sola 200W 3 Cor","19639",70.00,1,0],
+["Refletor Solar","Refletor Sola 300W 3 Cor","19640",100.00,1,0],
+["Refletor Solar","Refletor Sola 500W 3 Cor","19641",120.00,1,0],
+["Refletor Solar","Refletor Sola 200W","19617",60.00,1,0],
+["Refletor Solar","Refletor Sola 300W","19618",80.00,1,0],
+["Refletor Solar","Refletor Sola 500W","19619",105.00,1,0],
+["Refletor Solar","Refletor Sola 800W","19620",130.00,1,0],
+["Refletor Solar","Refletor Sola 1000W","19621",160.00,1,0],
+["Refletor Solar","Refletor Sola 1500W","19622",190.00,0,0],
+["Refletor Diversos","Refletor Mini RGB 50W","19319",26.00,1,0],
+["Refletor Diversos","Refletor Mini RGB 100W","19324",30.00,1,0],
+["Refletor Diversos","Refletor Mini RGB 200W","18094",35.00,1,1],
+["Refletor Diversos","Refletor LED BF 30W","19218",10.00,1,0],
+["Refletor Diversos","Refletor LED Mini 50W","18005",11.00,1,0],
+["Refletor Diversos","Refletor LED Mini 800W","19225",90.00,1,0],
+["Refletor Diversos","Refletor LED Mini 600W BF-50%","18010",90.00,1,0],
+["Refletor Diversos","Refletor Azul 50W","19317-19146",16.00,1,0],
+["Refletor Diversos","Refletor Vermelho 50W","19315",16.00,1,0],
+["Refletor Diversos","Refletor BQ 50W","19318",16.00,0,0],
+["Refletor Diversos","Refletor Azul 100W","19322-19150",19.00,0,0],
+["Refletor Diversos","Refletor 200W BQ","19328",30.00,1,0],
+["Refletor Diversos","Refletor Azul 200W","19327",30.00,1,0],
+["Refletor Diversos","Refletor 300W BQ","19465",35.00,1,0],
+["Refletor Diversos","Refletor Vermelho 300W","19468",35.00,1,0],
+["Refletor Diversos","Refletor Verde 300W","19466",35.00,1,0],
+["Refletor Diversos","Refletor Azul 300W","19467",35.00,1,0],
+["Refletor Diversos","Refletor 400W BQ","19469",45.00,1,0],
+["Refletor Diversos","Refletor Vermelho 400W","19472",45.00,1,0],
+["Refletor Diversos","Refletor Verde 400W","19470",45.00,1,0],
+["Refletor Diversos","Refletor Azul 400W","19471",45.00,1,0],
+["Refletor Diversos","Refletor Luz Negra 100W","19686",20.00,1,0],
+["Refletor Diversos","Refletor Luz Negra 200W","19687",28.00,1,0],
+["Refletor Diversos","Refletor Luz Negra 300W","19689",38.00,1,0],
+["Refletor Diversos","Refletor Luz Negra 50W","19141",25.00,1,0],
+["Refletor Diversos","Refletor Luz Negra 200W","19143",55.00,1,0],
+["Refletor Diversos","Refletor Luz Negra 30W","30010",11.00,1,1],
+["Pendente","Pendente Prata FPR-001","FPR-001",300.00,1,0],
+["Pendente","Pendente Preto FPR-002","FPR-002",300.00,1,0],
+["Pendente","Pendente Preto/Branco FPR-003","FPR-003",300.00,1,0],
+["Pendente","Pendente DD-7","DD-7",60.00,1,0],
+["Pendente","Pendente","19249",60.00,1,0],
+["Pendente","Pendente Alumínio BD-1","BD-1",65.00,1,0],
+["Pendente","Pendente","19248",50.00,1,0],
+["Pendente","Pendente DD-1","DD-1",50.00,1,0],
+["Pendente","Pendente DD-7 (LP96)","19250",50.00,1,0],
+["Pendente","Pendente","19247",50.00,1,0],
+["Pendente","Pendente DD-2","DD-2",45.00,1,0],
+["Pendente","Pendente DD-3","DD-3",50.00,1,0],
+["Pendente","Pendente Prata DD-9","DD-9",60.00,1,0],
+["Pendente","Pendente Dourado Plástico","19693",45.00,1,0],
+["Pendente","Pendente Plástico BD-1PVC","BD-1PVC",50.00,1,0],
+["Pendente","Pendente DD-6","DD-6",50.00,1,0],
+["Pendente","Pendente DD-8","DD-8",50.00,1,0],
+["Pendente","Pendente DD-5","DD-5",50.00,1,0],
+["Pendente","Pendente","19246",45.00,1,0],
+["Pendente","Pendente","19676",70.00,0,0],
+["Pendente","Pendente","19694",50.00,1,0],
+["Pendente","Pendente Preto","19647",55.00,1,0],
+["Pendente","Pendente Preto","19648",58.00,1,0],
+["Pendente","Pendente Preto","19649",65.00,1,0],
+["Pendente","Pendente Preto","19650",75.00,1,0],
+["Pendente","Pendente Corda MS-2M2P","MS-2M2P",29.00,1,1],
+["Pendente","Pendente Corda MS-1M2P","MS-1M2P",15.00,1,1],
+["Embutir","Embutir Quadrado 36x36","62011",22.00,1,1],
+["Spot","Spot Trilho 9W (3un)","17716",4.00,1,1],
+["Spot","Spot Triplo 15W (3un)","17717",6.00,1,1],
+["Spot","Spot Redondo 5W BF","19535",2.60,1,0],
+["Spot","Spot Redondo 5W BQ","19536",2.60,1,0],
+["Spot","Spot Quadrado 5W BF","19537",2.60,1,0],
+["Spot","Spot Quadrado 5W BQ","19538",2.60,1,0],
+["Spot","Spot Redondo 7W BF","19539",2.80,0,0],
+["Spot","Spot Redondo 7W BQ","19540",2.80,0,0],
+["Spot","Spot Quadrado 7W BF","19541",2.80,0,0],
+["Spot","Spot Quadrado 7W BQ","19542",2.80,0,0],
+["Spot","Spot Quadrado 5W BF (preto)","19659",2.60,1,0],
+["Spot","Spot Quadrado 5W BQ (preto)","19660",2.60,1,0],
+["Spot","Spot Redondo 5W BF (preto)","19657",2.60,1,0],
+["Spot","Spot Redondo 5W BQ (preto)","19658",2.60,0,0],
+["Spot","Spot Quadrado 7W BF (preto)","19663",2.80,1,0],
+["Spot","Spot Quadrado 7W BQ (preto)","19664",2.80,1,0],
+["Spot","Spot Redondo 7W BF (preto)","19661",2.80,0,0],
+["Spot","Spot Redondo 7W BQ (preto)","19662",2.80,0,0],
+["Spot Embutir Piso","Spot LED Embutir 1 Facho","19566",9.00,1,0],
+["Spot Embutir Piso","Spot LED Embutir 2 Fachos","19567",10.00,1,0],
+["Spot Embutir Piso","Spot LED Embutir 3 Fachos","19568",11.00,1,0],
+["Spot Embutir Piso","Spot LED Embutir 4 Fachos","DMD-MGT-4T-P",12.00,1,0],
+["Spot Embutir Piso","Spot LED Embutir 1 Facho","19570",9.00,1,0],
+["Spot Embutir Piso","Spot LED Embutir 2 Fachos","19571",10.00,1,0],
+["Spot Embutir Piso","Spot LED Embutir 3 Fachos","19572",11.00,1,0],
+["Spot Embutir Piso","Spot LED Embutir 4 Fachos","DMD-MGT-4T-B",12.00,1,0],
+["Trilho","Trilho 7W Preto/Branco Slim","19400-19405",5.00,1,0],
+["Trilho","Trilho 10W Preto/Branco Slim","19406-19411",6.00,1,0],
+["Trilho","Trilho 15W Preto/Branco Slim","19412-19417",7.00,1,0],
+["Trilho","Trilho 20W Preto/Branco Slim","19418-19423",8.00,1,0],
+["Trilho","Trilho 30W Preto/Branco Slim","19424-19429",9.00,1,0],
+["Trilho","Spot de Trilho 7W Preto","GDD-7W BN-P",8.00,0,0],
+["Trilho","Spot de Trilho 7W Branco","19229/GDD-7W BQ-B",7.00,1,0],
+["Trilho","Spot Trilho 10W Preto","19230/GDD-10W BF-P",8.00,1,0],
+["Trilho","Spot de Trilho 10W Branco","19232/GDD-10W BF-B",8.00,1,0],
+["Trilho","Spot de Trilho 15W Preto","GDD-15W BF-P",9.00,1,0],
+["Trilho","Spot de Trilho 15W Preto","GDD-15W BN-P",9.00,0,0],
+["Trilho","Spot de Trilho 15W Branco","19237/GDD-15W BQ-B",9.00,1,0],
+["Trilho","Spot de Trilho 15W Branco","19236/GDD-15W BF-B",9.00,1,0],
+["Trilho","Spot de Trilho 20W Preto","19239/GDD-20W BQ-P",13.00,1,0],
+["Trilho","Spot de Trilho 20W Branco","19241/GDD-20WBQ-B",13.00,0,0],
+["Trilho","Spot de Trilho 20W Branco","19240/GDD-20W BF-B",13.00,0,0],
+["Trilho","Spot de Trilho 30W Branco","19244/GDD-30W BF-B",14.00,1,0],
+["Trilho","Emenda Reta Preto","EMD-P",2.00,0,0],
+["Trilho","Emenda T Preto","EMD-T-P",3.00,1,0],
+["Trilho","Emenda T Branco","EMD-T-B",3.00,1,0],
+["Trilho","Emenda X Preto","EMD-X-P",4.00,1,0],
+["Trilho","Emenda X Branco","EMD-X-B",4.00,1,0],
+["Trilho","Trilho 2M Preto","GDT-2M-P",12.00,0,0],
+["Trilho","Trilho 1M Preto","19543",5.50,0,0],
+["Trilho","Trilho 1M Branco","19544",5.50,0,0],
+["Trilho","Relé","19575",10.00,1,0],
+["Trilho","Relé","19101",11.00,1,0],
+["Trilho","Controle para App","YE2228",3.00,1,1],
+["Fita LED","Fita COB 320D 12V 5M BQ","19605",13.00,1,0],
+["Fita LED","Fita COB 320D 12V 5M BF","19606",13.00,1,0],
+["Fita LED","Fita COB 320D 12V 5M BN","19607",13.00,1,0],
+["Fita LED","Fita COB 320D 12V 10M BQ","19608",25.00,1,0],
+["Fita LED","Fita COB 320D 12V 10M BF","19609",25.00,1,0],
+["Fita LED","Fita COB 320D 12V 10M BN","19610",25.00,1,0],
+["Fita LED","Fita COB 320D 110V 10M BQ","19695",38.00,0,0],
+["Fita LED","Fita COB 320D 110V 10M BF","19696",38.00,0,0],
+["Fita LED","Fita COB 320D 110V 10M BN","19697",38.00,0,0],
+["Fita LED","Neon Flex (várias cores)","NEON-50",12.00,1,0],
+["Fita LED","Fita 2811-60D-IP65","2811-60D-IP65",32.00,1,1],
+["Fita LED","Fita 2811-60D-IP20 preto","19604",35.00,1,0],
+["Fita LED","Fita 3528-240D-BF-127V (duplo)","3528-240D-BF-127V",32.00,1,0],
+["Fita LED","Fita 3528-240D-BN-127V (duplo)","3528-240D-BN-127V",32.00,1,0],
+["Fita LED","Fita 3528-240D-BQ-127V","19598",32.00,1,0],
+["Fita LED","Fita 3528-240D-BF-127V","19599",32.00,1,0],
+["Fita LED","Fita 3528-240D-BN-127V","19600",32.00,1,0],
+["Fita LED","Fita 3528-240D-BQ-220V","19601",32.00,1,0],
+["Fita LED","Fita 3528-240D-BF-220V","19602",32.00,1,0],
+["Fita LED","Fita 3528-240D-BN-220V","19603",32.00,1,0],
+["Fita LED","Fita 3528-192D-BQ-220V","3528-192D-BQ-220V",29.00,1,1],
+["Fita LED","Fita 3528-192D-BF-220V","3528-192D-BF-220V",29.00,1,1],
+["Fita LED","Fita 3528-192D-BF-127V","3528-192D-BF-127V",29.00,1,1],
+["Fita LED","Fita 3528-192D-BQ-127V","3528-192D-BQ-127V",29.00,1,1],
+["Fita LED","Fita 3528-192D-BN-127V","3528-192D-BN-127V",29.00,1,1],
+["Fita LED","Fita 3528-120D BQ-127V","19592",20.00,0,0],
+["Fita LED","Fita 3528-120D BN-127V","19594",20.00,1,0],
+["Fita LED","Fita 3528-120D BF-127V","19593",20.00,1,0],
+["Fita LED","Fita 3528-120D BQ-220V","19595",20.00,0,0],
+["Fita LED","Fita 3528-120D BN-220V","19597",20.00,1,0],
+["Fita LED","Fita 3528-120D BF-220V","19596",20.00,1,0],
+["Fita LED","Fio de Fada Prata 100M/1000LED BQ","19670",65.00,1,0],
+["Fita LED","Fio de Fada Prata 100M/1000LED RGB","19671",65.00,1,0],
+["Fita LED","Fio de Fada Verde 100M/1000LED BQ","19672",65.00,1,0],
+["Fita LED","Fio de Fada Verde 100M/1000LED RGB","19673",65.00,1,0],
+["Fita LED","Fio de Fada Prata 200M/1000LED BQ","19674",95.00,1,0],
+["Fita LED","Fio de Fada Prata 200M/1000LED RGB","19675",95.00,1,0],
+["Perfil Alumínio","Perfil Embutir 1212 (rolo)","GJAZ-1212",650.00,1,1],
+["Perfil Alumínio","Perfil Embutir 3020 (rolo)","GJAZ-3020",590.00,1,1],
+["Perfil Alumínio","Perfil Sobrepor 2020 (rolo)","GJMZ-2020",750.00,1,1],
+["Perfil Alumínio","Perfil Sobrepor 1212 (rolo)","GJMZ-1212",750.00,1,1],
+["Perfil Alumínio","Perfil Sobrepor 3020 (rolo)","GJMZ-3020",690.00,1,1],
+["Perfil Alumínio","Perfil Sobrepor 1010 (rolo)","GJMZ-1010",590.00,1,1],
+["Perfil Alumínio","Perfil Embutir 2020 (rolo)","GJAZ-2020",790.00,1,1],
+["Perfil Alumínio","Perfil 1707 Embutir 2M Preto","19430",7.00,0,0],
+["Perfil Alumínio","Perfil 1707 Embutir 2M Branco","19431",7.00,0,0],
+["Perfil Alumínio","Perfil 1707 Sobrepor 2M Preto","19432",7.00,0,0],
+["Perfil Alumínio","Perfil 1707 Sobrepor 2M Branco","19433",7.00,0,0],
+["Perfil Alumínio","Perfil 1616 2M Preto","19580",9.00,0,0],
+["Perfil Alumínio","Perfil 1616 2M Branco","19581",9.00,0,0],
+["Perfil Alumínio","Perfil 3010 Embutir 2M Preto","19576",15.00,0,0],
+["Perfil Alumínio","Perfil 3010 Embutir 2M Branco","19577",15.00,0,0],
+["Perfil Alumínio","Perfil 3010 Sobrepor 2M Preto","19578",15.00,0,0],
+["Perfil Alumínio","Perfil 3010 Sobrepor 2M Branco","19579",15.00,0,0],
+["Perfil Alumínio","Perfil 1714 Sobrepor 2M Preto","19518",11.00,0,0],
+["Perfil Alumínio","Perfil 1714 Sobrepor 2M Branco","19519",11.00,0,0],
+["Perfil Alumínio","Perfil 1714 Embutir 2M Preto","19516",11.00,0,0],
+["Perfil Alumínio","Perfil 1714 Embutir 2M Branco","19517",11.00,0,0],
+["Perfil Alumínio","Perfil 3020 Sobrepor 2M Preto","19514",16.00,0,0],
+["Perfil Alumínio","Perfil 3020 Sobrepor 2M Branco","19515",16.00,0,0],
+["Perfil Alumínio","Perfil 3020 Embutir 2M Preto","19512",16.00,0,0],
+["Perfil Alumínio","Perfil 3020 Embutir 2M Branco","19513",16.00,0,0],
+["Espeto/Balizador","Esperto Solar BQ","19560",15.00,0,0],
+["Espeto/Balizador","Esperto Solar Verde","19691",15.00,0,0],
+["Espeto/Balizador","Esperto Solar BQ (duplo)","19561",25.00,1,0],
+["Espeto/Balizador","Esperto Solar Verde (duplo)","19692",25.00,1,0],
+["Espeto/Balizador","Esperto 7W BQ","19334",4.50,1,0],
+["Espeto/Balizador","Esperto 7W Verde","19333",4.50,1,0],
+["Espeto/Balizador","Esperto 7W BQ","19205",5.50,1,0],
+["Espeto/Balizador","Esperto 7W Verde","19206",5.50,1,0],
+["Espeto/Balizador","Esperto 7W BF","19505",5.50,1,0],
+["Espeto/Balizador","Esperto 7W Rosa","19308",5.50,1,0],
+["Espeto/Balizador","Esperto 7W Azul","19307",5.50,0,0],
+["Espeto/Balizador","Esperto 7W Vermelho","19306",5.50,1,0],
+["Espeto/Balizador","Esperto 7W BQ","10133",6.00,1,0],
+["Espeto/Balizador","Esperto 7W Verde","10132",6.00,1,0],
+["Espeto/Balizador","Esperto 7W Rosa","18002",6.00,1,0],
+["Espeto/Balizador","Esperto 7W BF","10131",6.00,1,0],
+["Espeto/Balizador","Esperto 7W Vermelho","18003",6.00,1,0],
+["Espeto/Balizador","Esperto 7W Verde","19309",6.00,1,0],
+["Espeto/Balizador","Esperto 7W BQ","19310",6.00,1,0],
+["Espeto/Balizador","Esperto 9W BF","1103",7.00,1,1],
+["Espeto/Balizador","Balizador 1W Verde","17719",15.00,1,0],
+["Espeto/Balizador","Balizador 3W BQ","10005",18.00,1,0],
+["Espeto/Balizador","Balizador 3W Verde","10004",18.00,1,0],
+["Espeto/Balizador","Balizador 3W BF","10006",18.00,1,0],
+["Espeto/Balizador","Balizador 5W Verde","17723/10008",23.00,1,0],
+["Espeto/Balizador","Balizador 7W Verde","LP10010",33.00,1,0],
+["Espeto/Balizador","Balizador 7W BF","BRISA10010",33.00,1,0],
+["Espeto/Balizador","Balizador 12W BQ","10011",60.00,1,0],
+["Espeto/Balizador","Balizador 12W Verde","17727-10012",60.00,1,0],
+["Espeto/Balizador","Balizador Mini 1W Verde","DMD-1W-VD",8.00,1,0],
+["Espeto/Balizador","Balizador Mini 3W BQ","19562",8.00,1,0],
+["Espeto/Balizador","Balizador Mini 5W BQ","19563",10.00,1,0],
+["Espeto/Balizador","Balizador Mini 7W BQ","19564",13.00,1,0],
+["Espeto/Balizador","Balizador Mini 7W Verde","DMD-7W-VD",18.00,1,0],
+["Espeto/Balizador","Balizador Mini 12W BQ","19565",18.00,1,0],
+["Bulbo","Bulbo 80W","19379/19551",25.00,1,0],
+["Bulbo","Bulbo 100W","19299/19552",35.00,1,0],
+["Bulbo","Bulbo 150W","19300/19553",45.00,1,0],
+["Bulbo","Bulbo 200W","19301/19554",55.00,1,0],
+["Bulbo","Bulbo RGB 30W","19271",15.00,1,0],
+["Bulbo","Bulbo RGB 40W","19272",20.00,1,0],
+["Bulbo","Bulbo RGB 60W","19273",25.00,1,0],
+["Diversos","Luzes de Abóboras","19451",18.00,1,0],
+["Diversos","Carregador Lâmpada Menor Potência","DC-3821",22.00,1,0],
+["Diversos","Carregador Lâmpada Menor Potência","DC-3826",23.00,1,0],
+["Diversos","Luzes de Abóboras 60W","Y-3860",32.00,1,0],
+["Diversos","Carregador Menor Potência","XK-8030",18.00,1,0],
+["Diversos","Carregador Alta Potência","XK-6300",38.00,1,0],
+["Diversos","Carregador Alta Potência","XK-6500",38.00,1,0],
+["Diversos","Carregador Alta Potência","XK-6280",30.00,1,0],
+["Diversos","Luz de Emergência 200W","19527",28.00,1,0],
+["Diversos","Luz de Emergência 300W","19528",35.00,1,0],
+["Diversos","Luz de Emergência 400W","19529",43.00,1,0],
+["Diversos","Suporte 2.1M Preto","SUP-2.1M",23.00,1,0],
+["Diversos","Cordão Solar 7M 10 Cabeças","19506",62.00,1,0],
+["Diversos","Cordão Solar 7M 15 Cabeças","19530",82.00,1,0],
+["Diversos","Cordão Europeu 7M 10 Cabeças","19458",16.00,1,0],
+["Diversos","Cordão Europeu 10M 10 Cabeças","19459",20.00,1,0],
+["Diversos","Cordão Europeu 10M 15 Cabeças","19460",25.00,1,0],
+["Fonte","Fonte 50A 12V","LP-50A",40.00,0,0],
+["Fonte","Fonte 3A 12V","19582",4.50,1,0],
+["Fonte","Fonte 2A 12V","19531",4.00,1,0],
+["Fonte","Fonte Slim 12V-5A","19520",7.50,1,0],
+["Fonte","Fonte Slim 12V-10A","19521",11.00,0,0],
+["Fonte","Fonte Chaveada 12V-5A","HJG-12V-5A",9.00,1,1],
+["Fonte","Fonte Chaveada 12V-10A","HJG-12V-10A",11.00,0,1],
+["Fonte","Fonte Chaveada 12V-15A","HJG-12V-15A",11.00,1,1],
+["Fonte","Fonte Chaveada 12V-20A","HJG-13V-20A",19.00,1,1],
+["Fonte","Fonte Chaveada 12V-30A","HJG-12V-30A",22.00,1,1],
+["Diversos","Spot Piscina 18W RGB","WL-001",62.00,1,1],
+["Diversos","Spot Piscina RGB 18W","WL-002",68.00,1,1],
+["Arandela","Arandela 6W Preto","DB-SY6W-P",20.00,1,0],
+["Arandela","Arandela 6W Branco","BD-SY6W-B",20.00,1,0],
+["Arandela","Arandela 12W Preto","19532",10.00,1,0],
+["Arandela","Arandela 18W Preto","19533",13.00,1,0],
+["Arandela","Arandela Solar Preto/Branco","TYBD-01P-BQ",9.00,1,0],
+["Arandela","Arandela Solar Preto","TYBD-01P-BF",9.00,1,0],
+["Diversos","Lâmpada Mata Mosquito","19652",55.00,1,0],
+["Diversos","Lâmpada Mata Mosquito","19651",45.00,1,0],
+["Diversos","Lâmpada Mata Mosquito","01926",15.00,1,0],
+["Diversos","Globo Musical","0851-Q",27.00,1,1],
+["Lâmpada","Lâmpada G45 3W (cores)","19454-19457",2.00,1,0],
+["Lâmpada","Lâmpada 45W","19252",17.00,1,1],
+["Lâmpada","Lâmpada 60W","19253",22.00,1,1],
+["Lâmpada","Lâmpada Musical RGB","0863",32.00,1,1],
+["Diversos","Musical de Natal","17746",32.00,1,1],
+["Diversos","Soquete c/ Sensor","10051",9.50,0,0],
+["Diversos","Soquete c/ Sensor","19690",8.00,1,0],
+["Diversos","Soquete c/ Sensor","19507",8.50,0,0],
+["Lâmpada","Lâmpada Luz Roxa 40W 110V","10050",16.00,1,0],
+["Lâmpada","Lâmpada Luz Roxa 40W 220V","19274",16.00,1,0],
+["Componentes","Driver SMD 50W","DRV-SMD-50",9.00,0,0],
+["Componentes","Driver SMD 100W","DRV-SMD-100",17.00,0,0],
+["Componentes","Driver SMD 150W","DRV-SMD-150",25.00,0,0],
+["Componentes","Driver SMD 200W","DRV-SMD-200",31.00,0,0],
+["Componentes","Chip SMD 50W","CHIP-SMD-50",8.00,1,0],
+["Componentes","Chip SMD 100W","CHIP-SMD-100",11.00,0,0],
+["Componentes","Chip SMD 150W","CHIP-SMD-150",17.00,1,0],
+["Componentes","Chip SMD 200W","CHIP-SMD-200",23.00,1,0],
+["Componentes","Acrílico SMD 50W","ACR-SMD-50",5.00,1,0],
+["Componentes","Acrílico SMD 100W","ACR-SMD-100",7.00,0,0],
+["Componentes","Acrílico SMD 150W","ACR-SMD-150",9.00,0,0],
+["Componentes","Acrílico SMD 200W","ACR-SMD-200",14.00,1,0],
+["Componentes","Chip COB 50W","CHIP-COB-50",3.00,1,0],
+["Diversos","Ventilador Pássaro","1001",2.00,1,0],
+["Diversos","Ventilador Mini Ar","2036",27.00,1,1],
+["Diversos","Ventilador Aquecedor","2034",19.00,1,1],
+["Diversos","Ventilador Circular","801",27.00,1,1],
+["Diversos","Ventilador Bolso (kit)","2029",14.00,1,1],
+["Diversos","Ventilador de Mesa","2028",29.00,1,1],
+["Diversos","Ventilador Umidificador","2038",19.00,1,1],
+["Diversos","Ventilador USB Hélice","2037",52.00,1,1],
+["Diversos","Ventilador LED USB","2035",62.00,1,1]
+];
+
+const products = RAW.map((r,i)=>({id:i, cat:r[0], name:r[1], code:r[2], price:r[3], stock:!!r[4], promo:!!r[5]}));
+
+// Fotos reais recortadas e conferidas por código a partir das páginas originais do catálogo.
+const PROD_IMG = {0:"imgs/products/prod_0.jpg",1:"imgs/products/prod_1.jpg",2:"imgs/products/prod_2.jpg",3:"imgs/products/prod_3.jpg",4:"imgs/products/prod_4.jpg",5:"imgs/products/prod_5.jpg",6:"imgs/products/prod_6.jpg",7:"imgs/products/prod_7.jpg",8:"imgs/products/prod_8.jpg",9:"imgs/products/prod_9.jpg",10:"imgs/products/prod_10.jpg",11:"imgs/products/prod_11.jpg",12:"imgs/products/prod_12.jpg",13:"imgs/products/prod_13.jpg",14:"imgs/products/prod_14.jpg",15:"imgs/products/prod_15.jpg",16:"imgs/products/prod_16.jpg",17:"imgs/products/prod_17.jpg",18:"imgs/products/prod_18.jpg",19:"imgs/products/prod_19.jpg",20:"imgs/products/prod_20.jpg",21:"imgs/products/prod_21.jpg",22:"imgs/products/prod_22.jpg",23:"imgs/products/prod_23.jpg",24:"imgs/products/prod_24.jpg",25:"imgs/products/prod_25.jpg",26:"imgs/products/prod_26.jpg",27:"imgs/products/prod_27.jpg",28:"imgs/products/prod_28.jpg",29:"imgs/products/prod_29.jpg",30:"imgs/products/prod_30.jpg",31:"imgs/products/prod_31.jpg",32:"imgs/products/prod_32.jpg",33:"imgs/products/prod_33.jpg",34:"imgs/products/prod_34.jpg",35:"imgs/products/prod_35.jpg",36:"imgs/products/prod_36.jpg",37:"imgs/products/prod_37.jpg",39:"imgs/products/prod_39.jpg",40:"imgs/products/prod_40.jpg",41:"imgs/products/prod_41.jpg",42:"imgs/products/prod_42.jpg",43:"imgs/products/prod_43.jpg",44:"imgs/products/prod_44.jpg",45:"imgs/products/prod_45.jpg",46:"imgs/products/prod_46.jpg",47:"imgs/products/prod_47.jpg",48:"imgs/products/prod_48.jpg",49:"imgs/products/prod_49.jpg",50:"imgs/products/prod_50.jpg",51:"imgs/products/prod_51.jpg",52:"imgs/products/prod_52.jpg",53:"imgs/products/prod_53.jpg",54:"imgs/products/prod_54.jpg",55:"imgs/products/prod_55.jpg",56:"imgs/products/prod_56.jpg",57:"imgs/products/prod_57.jpg",58:"imgs/products/prod_58.jpg",59:"imgs/products/prod_59.jpg",60:"imgs/products/prod_60.jpg",61:"imgs/products/prod_61.jpg",62:"imgs/products/prod_62.jpg",63:"imgs/products/prod_63.jpg",64:"imgs/products/prod_64.jpg",65:"imgs/products/prod_65.jpg",66:"imgs/products/prod_66.jpg",67:"imgs/products/prod_67.jpg",68:"imgs/products/prod_68.jpg",70:"imgs/products/prod_70.jpg",71:"imgs/products/prod_71.jpg",72:"imgs/products/prod_72.jpg",73:"imgs/products/prod_73.jpg",74:"imgs/products/prod_74.jpg",75:"imgs/products/prod_75.jpg",76:"imgs/products/prod_76.jpg",77:"imgs/products/prod_77.jpg",78:"imgs/products/prod_78.jpg",79:"imgs/products/prod_79.jpg",80:"imgs/products/prod_80.jpg",81:"imgs/products/prod_81.jpg",82:"imgs/products/prod_82.jpg",83:"imgs/products/prod_83.jpg",84:"imgs/products/prod_84.jpg",85:"imgs/products/prod_85.jpg",86:"imgs/products/prod_86.jpg",87:"imgs/products/prod_87.jpg",88:"imgs/products/prod_88.jpg",89:"imgs/products/prod_89.jpg",90:"imgs/products/prod_90.jpg",91:"imgs/products/prod_91.jpg",92:"imgs/products/prod_92.jpg",93:"imgs/products/prod_93.jpg",94:"imgs/products/prod_94.jpg",95:"imgs/products/prod_95.jpg",96:"imgs/products/prod_96.jpg",97:"imgs/products/prod_97.jpg",98:"imgs/products/prod_98.jpg",99:"imgs/products/prod_99.jpg",100:"imgs/products/prod_100.jpg",101:"imgs/products/prod_101.jpg",102:"imgs/products/prod_102.jpg",103:"imgs/products/prod_103.jpg",104:"imgs/products/prod_104.jpg",105:"imgs/products/prod_105.jpg",106:"imgs/products/prod_106.jpg",107:"imgs/products/prod_107.jpg",108:"imgs/products/prod_108.jpg",109:"imgs/products/prod_109.jpg",110:"imgs/products/prod_110.jpg",111:"imgs/products/prod_111.jpg",112:"imgs/products/prod_112.jpg",113:"imgs/products/prod_113.jpg",114:"imgs/products/prod_114.jpg",115:"imgs/products/prod_115.jpg",116:"imgs/products/prod_116.jpg",117:"imgs/products/prod_117.jpg",118:"imgs/products/prod_118.jpg",119:"imgs/products/prod_119.jpg",120:"imgs/products/prod_120.jpg",121:"imgs/products/prod_121.jpg",122:"imgs/products/prod_122.jpg",123:"imgs/products/prod_123.jpg",124:"imgs/products/prod_124.jpg",125:"imgs/products/prod_125.jpg",126:"imgs/products/prod_126.jpg",127:"imgs/products/prod_127.jpg",128:"imgs/products/prod_128.jpg",129:"imgs/products/prod_129.jpg",130:"imgs/products/prod_130.jpg",131:"imgs/products/prod_131.jpg",132:"imgs/products/prod_132.jpg",133:"imgs/products/prod_133.jpg",134:"imgs/products/prod_134.jpg",135:"imgs/products/prod_135.jpg",136:"imgs/products/prod_136.jpg",138:"imgs/products/prod_138.jpg",140:"imgs/products/prod_140.jpg",141:"imgs/products/prod_141.jpg",142:"imgs/products/prod_142.jpg",143:"imgs/products/prod_143.jpg",144:"imgs/products/prod_144.jpg",145:"imgs/products/prod_145.jpg",146:"imgs/products/prod_146.jpg",147:"imgs/products/prod_147.jpg",148:"imgs/products/prod_148.jpg",149:"imgs/products/prod_149.jpg",150:"imgs/products/prod_150.jpg",151:"imgs/products/prod_151.jpg",152:"imgs/products/prod_152.jpg",153:"imgs/products/prod_153.jpg",154:"imgs/products/prod_154.jpg",155:"imgs/products/prod_155.jpg",156:"imgs/products/prod_156.jpg",157:"imgs/products/prod_157.jpg",158:"imgs/products/prod_158.jpg",159:"imgs/products/prod_159.jpg",160:"imgs/products/prod_160.jpg",161:"imgs/products/prod_161.jpg",162:"imgs/products/prod_162.jpg",163:"imgs/products/prod_163.jpg",164:"imgs/products/prod_164.jpg",165:"imgs/products/prod_165.jpg",166:"imgs/products/prod_166.jpg",167:"imgs/products/prod_167.jpg",168:"imgs/products/prod_168.jpg",169:"imgs/products/prod_169.jpg",170:"imgs/products/prod_170.jpg",171:"imgs/products/prod_171.jpg",172:"imgs/products/prod_172.jpg",173:"imgs/products/prod_173.jpg",174:"imgs/products/prod_174.jpg",175:"imgs/products/prod_175.jpg",176:"imgs/products/prod_176.jpg",177:"imgs/products/prod_177.jpg",178:"imgs/products/prod_178.jpg",179:"imgs/products/prod_179.jpg",180:"imgs/products/prod_180.jpg",181:"imgs/products/prod_181.jpg",182:"imgs/products/prod_182.jpg",183:"imgs/products/prod_183.jpg",184:"imgs/products/prod_184.jpg",185:"imgs/products/prod_185.jpg",186:"imgs/products/prod_186.jpg",187:"imgs/products/prod_187.jpg",188:"imgs/products/prod_188.jpg",189:"imgs/products/prod_189.jpg",190:"imgs/products/prod_190.jpg",191:"imgs/products/prod_191.jpg",192:"imgs/products/prod_192.jpg",193:"imgs/products/prod_193.jpg",194:"imgs/products/prod_194.jpg",195:"imgs/products/prod_195.jpg",196:"imgs/products/prod_196.jpg",197:"imgs/products/prod_197.jpg",198:"imgs/products/prod_198.jpg",199:"imgs/products/prod_199.jpg",200:"imgs/products/prod_200.jpg",201:"imgs/products/prod_201.jpg",202:"imgs/products/prod_202.jpg",203:"imgs/products/prod_203.jpg",204:"imgs/products/prod_204.jpg",205:"imgs/products/prod_205.jpg",206:"imgs/products/prod_206.jpg",207:"imgs/products/prod_207.jpg",208:"imgs/products/prod_208.jpg",209:"imgs/products/prod_209.jpg",210:"imgs/products/prod_210.jpg",211:"imgs/products/prod_211.jpg",212:"imgs/products/prod_212.jpg",213:"imgs/products/prod_213.jpg",214:"imgs/products/prod_214.jpg",215:"imgs/products/prod_215.jpg",216:"imgs/products/prod_216.jpg",217:"imgs/products/prod_217.jpg",218:"imgs/products/prod_218.jpg",219:"imgs/products/prod_219.jpg",220:"imgs/products/prod_220.jpg",221:"imgs/products/prod_221.jpg",222:"imgs/products/prod_222.jpg",223:"imgs/products/prod_223.jpg",224:"imgs/products/prod_224.jpg",225:"imgs/products/prod_225.jpg",226:"imgs/products/prod_226.jpg",227:"imgs/products/prod_227.jpg",228:"imgs/products/prod_228.jpg",229:"imgs/products/prod_229.jpg",230:"imgs/products/prod_230.jpg",231:"imgs/products/prod_231.jpg",232:"imgs/products/prod_232.jpg",233:"imgs/products/prod_233.jpg",234:"imgs/products/prod_234.jpg",235:"imgs/products/prod_235.jpg",236:"imgs/products/prod_236.jpg",237:"imgs/products/prod_237.jpg",238:"imgs/products/prod_238.jpg",239:"imgs/products/prod_239.jpg",240:"imgs/products/prod_240.jpg",241:"imgs/products/prod_241.jpg",242:"imgs/products/prod_242.jpg",243:"imgs/products/prod_243.jpg",244:"imgs/products/prod_244.jpg",245:"imgs/products/prod_245.jpg",246:"imgs/products/prod_246.jpg",247:"imgs/products/prod_247.jpg",248:"imgs/products/prod_248.jpg",249:"imgs/products/prod_249.jpg",250:"imgs/products/prod_250.jpg",251:"imgs/products/prod_251.jpg",253:"imgs/products/prod_253.jpg",255:"imgs/products/prod_255.jpg",257:"imgs/products/prod_257.jpg",258:"imgs/products/prod_258.jpg",262:"imgs/products/prod_262.jpg",267:"imgs/products/prod_267.jpg",268:"imgs/products/prod_268.jpg",269:"imgs/products/prod_269.jpg",270:"imgs/products/prod_270.jpg",271:"imgs/products/prod_271.jpg",272:"imgs/products/prod_272.jpg",273:"imgs/products/prod_273.jpg",276:"imgs/products/prod_276.jpg",277:"imgs/products/prod_277.jpg",278:"imgs/products/prod_278.jpg",279:"imgs/products/prod_279.jpg",280:"imgs/products/prod_280.jpg",281:"imgs/products/prod_281.jpg",282:"imgs/products/prod_282.jpg",283:"imgs/products/prod_283.jpg",284:"imgs/products/prod_284.jpg",285:"imgs/products/prod_285.jpg",286:"imgs/products/prod_286.jpg",287:"imgs/products/prod_287.jpg",288:"imgs/products/prod_288.jpg",289:"imgs/products/prod_289.jpg",290:"imgs/products/prod_290.jpg",291:"imgs/products/prod_291.jpg",292:"imgs/products/prod_292.jpg",293:"imgs/products/prod_293.jpg",294:"imgs/products/prod_294.jpg",295:"imgs/products/prod_295.jpg",296:"imgs/products/prod_296.jpg",297:"imgs/products/prod_297.jpg",299:"imgs/products/prod_299.jpg",300:"imgs/products/prod_300.jpg",301:"imgs/products/prod_301.jpg",303:"imgs/products/prod_303.jpg",304:"imgs/products/prod_304.jpg",305:"imgs/products/prod_305.jpg",306:"imgs/products/prod_306.jpg",307:"imgs/products/prod_307.jpg",309:"imgs/products/prod_309.jpg",310:"imgs/products/prod_310.jpg",311:"imgs/products/prod_311.jpg",314:"imgs/products/prod_314.jpg",315:"imgs/products/prod_315.jpg",316:"imgs/products/prod_316.jpg",317:"imgs/products/prod_317.jpg",318:"imgs/products/prod_318.jpg",319:"imgs/products/prod_319.jpg",326:"imgs/products/prod_326.jpg",327:"imgs/products/prod_327.jpg",328:"imgs/products/prod_328.jpg",329:"imgs/products/prod_329.jpg",330:"imgs/products/prod_330.jpg",331:"imgs/products/prod_331.jpg",332:"imgs/products/prod_332.jpg",333:"imgs/products/prod_333.jpg",334:"imgs/products/prod_334.jpg",335:"imgs/products/prod_335.jpg",336:"imgs/products/prod_336.jpg",337:"imgs/products/prod_337.jpg",338:"imgs/products/prod_338.jpg",339:"imgs/products/prod_339.jpg",341:"imgs/products/prod_341.jpg",342:"imgs/products/prod_342.jpg",343:"imgs/products/prod_343.jpg",344:"imgs/products/prod_344.jpg",345:"imgs/products/prod_345.jpg",346:"imgs/products/prod_346.jpg",347:"imgs/products/prod_347.jpg",348:"imgs/products/prod_348.jpg",349:"imgs/products/prod_349.jpg",350:"imgs/products/prod_350.jpg",351:"imgs/products/prod_351.jpg",352:"imgs/products/prod_352.jpg",353:"imgs/products/prod_353.jpg",354:"imgs/products/prod_354.jpg",355:"imgs/products/prod_355.jpg",356:"imgs/products/prod_356.jpg",357:"imgs/products/prod_357.jpg",358:"imgs/products/prod_358.jpg",359:"imgs/products/prod_359.jpg",360:"imgs/products/prod_360.jpg",361:"imgs/products/prod_361.jpg",362:"imgs/products/prod_362.jpg",363:"imgs/products/prod_363.jpg",364:"imgs/products/prod_364.jpg",365:"imgs/products/prod_365.jpg",366:"imgs/products/prod_366.jpg",367:"imgs/products/prod_367.jpg",368:"imgs/products/prod_368.jpg",369:"imgs/products/prod_369.jpg",370:"imgs/products/prod_370.jpg",371:"imgs/products/prod_371.jpg",372:"imgs/products/prod_372.jpg",373:"imgs/products/prod_373.jpg",374:"imgs/products/prod_374.jpg",375:"imgs/products/prod_375.jpg",376:"imgs/products/prod_376.jpg",377:"imgs/products/prod_377.jpg",378:"imgs/products/prod_378.jpg",379:"imgs/products/prod_379.jpg",380:"imgs/products/prod_380.jpg",381:"imgs/products/prod_381.jpg",382:"imgs/products/prod_382.jpg",383:"imgs/products/prod_383.jpg",384:"imgs/products/prod_384.jpg",385:"imgs/products/prod_385.jpg",386:"imgs/products/prod_386.jpg",387:"imgs/products/prod_387.jpg",388:"imgs/products/prod_388.jpg",389:"imgs/products/prod_389.jpg",390:"imgs/products/prod_390.jpg",391:"imgs/products/prod_391.jpg",392:"imgs/products/prod_392.jpg",393:"imgs/products/prod_393.jpg",394:"imgs/products/prod_394.jpg",396:"imgs/products/prod_396.jpg",398:"imgs/products/prod_398.jpg",399:"imgs/products/prod_399.jpg",400:"imgs/products/prod_400.jpg",401:"imgs/products/prod_401.jpg",402:"imgs/products/prod_402.jpg",403:"imgs/products/prod_403.jpg",404:"imgs/products/prod_404.jpg",405:"imgs/products/prod_405.jpg",406:"imgs/products/prod_406.jpg",407:"imgs/products/prod_407.jpg",408:"imgs/products/prod_408.jpg",409:"imgs/products/prod_409.jpg",410:"imgs/products/prod_410.jpg",411:"imgs/products/prod_411.jpg",412:"imgs/products/prod_412.jpg",413:"imgs/products/prod_413.jpg",414:"imgs/products/prod_414.jpg",416:"imgs/products/prod_416.jpg",417:"imgs/products/prod_417.jpg",418:"imgs/products/prod_418.jpg",419:"imgs/products/prod_419.jpg",421:"imgs/products/prod_421.jpg",423:"imgs/products/prod_423.jpg",424:"imgs/products/prod_424.jpg",425:"imgs/products/prod_425.jpg",427:"imgs/products/prod_427.jpg",428:"imgs/products/prod_428.jpg",429:"imgs/products/prod_429.jpg",430:"imgs/products/prod_430.jpg",431:"imgs/products/prod_431.jpg",432:"imgs/products/prod_432.jpg",433:"imgs/products/prod_433.jpg",434:"imgs/products/prod_434.jpg",435:"imgs/products/prod_435.jpg",436:"imgs/products/prod_436.jpg",437:"imgs/products/prod_437.jpg",438:"imgs/products/prod_438.jpg",439:"imgs/products/prod_439.jpg",440:"imgs/products/prod_440.jpg",441:"imgs/products/prod_441.jpg",442:"imgs/products/prod_442.jpg",443:"imgs/products/prod_443.jpg",444:"imgs/products/prod_444.jpg",447:"imgs/products/prod_447.jpg",448:"imgs/products/prod_448.jpg",449:"imgs/products/prod_449.jpg",450:"imgs/products/prod_450.jpg",451:"imgs/products/prod_451.jpg",453:"imgs/products/prod_453.jpg",454:"imgs/products/prod_454.jpg",455:"imgs/products/prod_455.jpg",456:"imgs/products/prod_456.jpg",462:"imgs/products/prod_462.jpg",463:"imgs/products/prod_463.jpg",466:"imgs/products/prod_466.jpg",467:"imgs/products/prod_467.jpg",470:"imgs/products/prod_470.jpg",471:"imgs/products/prod_471.jpg",472:"imgs/products/prod_472.jpg",473:"imgs/products/prod_473.jpg",474:"imgs/products/prod_474.jpg",475:"imgs/products/prod_475.jpg",476:"imgs/products/prod_476.jpg",477:"imgs/products/prod_477.jpg",478:"imgs/products/prod_478.jpg",479:"imgs/products/prod_479.jpg",480:"imgs/products/prod_480.jpg",481:"imgs/products/prod_481.jpg",482:"imgs/products/prod_482.jpg",483:"imgs/products/prod_483.jpg",485:"imgs/products/prod_485.jpg",486:"imgs/products/prod_486.jpg",487:"imgs/products/prod_487.jpg",489:"imgs/products/prod_489.jpg",490:"imgs/products/prod_490.jpg",491:"imgs/products/prod_491.jpg",493:"imgs/products/prod_493.jpg",494:"imgs/products/prod_494.jpg",495:"imgs/products/prod_495.jpg",497:"imgs/products/prod_497.jpg",498:"imgs/products/prod_498.jpg",499:"imgs/products/prod_499.jpg",501:"imgs/products/prod_501.jpg",502:"imgs/products/prod_502.jpg",503:"imgs/products/prod_503.jpg",504:"imgs/products/prod_504.jpg",505:"imgs/products/prod_505.jpg"};
+
+// ===== PLANILHA GOOGLE SHEETS (editar produtos sem código) =====
+// 1) Duplique o modelo de planilha, edite os produtos.
+// 2) Arquivo > Compartilhar > Publicar na Web > formato CSV > Publicar.
+// 3) Cole o link gerado abaixo, entre as aspas.
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXW30rnoSS5C6fvHsA68cac7Nop3fMz-XqvAHweHIfRjCiODZ3-qNyNq6viW8i-SWAFy4sn7HySFUc/pub?gid=2130654090&single=true&output=csv";
+
+let PRODUCTS = products.map(p => ({...p, img: PROD_IMG[p.id] || null}));
+
+function parseCSV(text){
+  const rows = [];
+  let row = [], field = '', inQuotes = false;
+  for(let i=0;i<text.length;i++){
+    const ch = text[i];
+    if(inQuotes){
+      if(ch === '"'){ if(text[i+1] === '"'){ field += '"'; i++; } else { inQuotes = false; } }
+      else field += ch;
+    } else {
+      if(ch === '"') inQuotes = true;
+      else if(ch === ','){ row.push(field); field=''; }
+      else if(ch === '\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+      else if(ch === '\r'){ /* skip */ }
+      else field += ch;
+    }
+  }
+  if(field.length || row.length){ row.push(field); rows.push(row); }
+  return rows.filter(r=>r.length>1 || r[0]);
+}
+
+async function loadFromSheet(){
+  if(!SHEET_CSV_URL) return false;
+  try{
+    const res = await fetch(SHEET_CSV_URL, {cache:'no-store'});
+    if(!res.ok) return false;
+    const text = await res.text();
+    const rows = parseCSV(text);
+    if(rows.length < 2) return false;
+    const header = rows[0].map(h=>h.trim().toLowerCase());
+    const idx = {
+      cat: header.indexOf('categoria'), name: header.indexOf('nome'),
+      code: header.indexOf('codigo'), price: header.indexOf('preco'),
+      stock: header.indexOf('estoque'), promo: header.indexOf('promocao'),
+      img: header.indexOf('imagem_url'),
+      desc: header.indexOf('descricao')
+    };
+    const newProducts = [];
+    for(let i=1;i<rows.length;i++){
+      const r = rows[i];
+      if(!r || !r[idx.name]) continue;
+      const priceNum = parseFloat(String(r[idx.price]).replace(',','.')) || 0;
+      newProducts.push({
+        id:i-1,
+        cat: (r[idx.cat]||'Outros').trim(),
+        name: (r[idx.name]||'').trim(),
+        code: (r[idx.code]||'').trim(),
+        price: priceNum,
+        stock: String(r[idx.stock]).trim() === '1',
+        promo: String(r[idx.promo]).trim() === '1',
+        img: (idx.img>=0 && r[idx.img] && r[idx.img].trim()) ? r[idx.img].trim() : null,
+        desc: (idx.desc>=0 && r[idx.desc]) ? r[idx.desc].trim() : ''
+      });
+    }
+    if(newProducts.length){ PRODUCTS = newProducts; return true; }
+    return false;
+  }catch(e){ console.warn('Falha ao carregar planilha, usando catálogo padrão.', e); return false; }
+}
+
+// ===== STATE =====
+let cart = {}; // id -> qty
+
+function money(v){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
+
+function icon(cat){
+  const map = {
+    "Luminária Pública SMD":"💡","Luminária com Relé":"⚡","Luminária COB":"🔆",
+    "Mini Luminária":"🔦","Luminária Solar":"☀️","Solar Slim":"☀️","UFO High Bay":"🛸",
+    "Refletor Modular":"🔲","Refletor Mudoula":"🔲","Refletor Solar":"☀️","Refletor Diversos":"🔦",
+    "Pendente":"🕯️","Embutir":"⬜","Spot":"🔘","Spot Embutir Piso":"⏺️","Trilho":"➖",
+    "Fita LED":"➰","Perfil Alumínio":"📏","Espeto/Balizador":"🌱","Bulbo":"💡","Fonte":"🔌",
+    "Arandela":"🪔","Lâmpada":"💡","Componentes":"🔧","Diversos":"📦"
+  };
+  return map[cat] || "💡";
+}
+
+function renderCatalog(filterText="", filterCat=""){
+  const catalog = document.getElementById('catalog');
+  catalog.innerHTML = "";
+  const cats = [...new Set(PRODUCTS.map(p=>p.cat))];
+  let shown = 0;
+  cats.forEach(cat=>{
+    if(filterCat && cat!==filterCat) return;
+    let items = PRODUCTS.filter(p=>p.cat===cat);
+    if(filterText){
+      const f = filterText.toLowerCase();
+      items = items.filter(p=> p.name.toLowerCase().includes(f) || String(p.code).toLowerCase().includes(f));
+    }
+    if(items.length===0) return;
+    shown += items.length;
+    const h = document.createElement('div');
+    h.className='catTitle'; h.textContent = `${icon(cat)} ${cat} (${items.length})`;
+    catalog.appendChild(h);
+    const grid = document.createElement('div'); grid.className='grid';
+    items.forEach(p=>{
+      const card = document.createElement('div'); card.className='card';
+      let badge = '';
+      if(p.promo) badge = '<div class="badge promo">PROMOÇÃO</div>';
+      else if(!p.stock) badge = '<div class="badge out">SEM ESTOQUE</div>';
+      const imgSrc = p.img;
+      const thumbHtml = imgSrc
+        ? `<div class="thumb photo" onclick="openLightbox('${imgSrc}')" title="Clique para ampliar"><img src="${imgSrc}" loading="lazy" alt="${p.name}"></div>`
+        : `<div class="thumb">${icon(cat)}</div>`;
+      const escHtml = s => String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+      const descHtml = p.desc ? `<div class="desc">${escHtml(p.desc)}</div>` : '';
+      card.innerHTML = `
+        ${badge}
+        ${thumbHtml}
+        <div class="name">${p.name}</div>
+        ${descHtml}
+        <div class="code">Cód: ${p.code}</div>
+        <div class="price">${money(p.price)}</div>
+        <button class="addBtn" ${p.stock?'':'disabled'} onclick="addToCart(${p.id})">${p.stock?'+ Adicionar':'Indisponível'}</button>
+      `;
+      grid.appendChild(card);
+    });
+    catalog.appendChild(grid);
+  });
+  document.getElementById('stats').textContent = `${shown} produto(s) encontrados de ${PRODUCTS.length} no catálogo`;
+}
+
+function populateCatFilter(){
+  const sel = document.getElementById('catFilter');
+  const cats = [...new Set(PRODUCTS.map(p=>p.cat))];
+  cats.forEach(c=>{
+    const o = document.createElement('option'); o.value=c; o.textContent=c;
+    sel.appendChild(o);
+  });
+}
+
+function addToCart(id){
+  cart[id] = (cart[id]||0)+1;
+  updateCartUI();
+}
+function changeQty(id, delta){
+  cart[id] = (cart[id]||0)+delta;
+  if(cart[id]<=0) delete cart[id];
+  updateCartUI();
+}
+function removeFromCart(id){ delete cart[id]; updateCartUI(); }
+
+function updateCartUI(){
+  const ids = Object.keys(cart);
+  document.getElementById('cartCount').textContent = ids.reduce((a,id)=>a+cart[id],0);
+  const wrap = document.getElementById('cartItems');
+  const empty = document.getElementById('emptyMsg');
+  wrap.innerHTML='';
+  let total = 0;
+  if(ids.length===0){ empty.style.display='block'; }
+  else { empty.style.display='none'; }
+  ids.forEach(id=>{
+    const p = PRODUCTS[id];
+    const qty = cart[id];
+    total += p.price*qty;
+    const row = document.createElement('div'); row.className='cartItem';
+    row.innerHTML = `
+      <div style="flex:1">
+        <div class="ci-name">${p.name}</div>
+        <div class="ci-code">Cód: ${p.code} · ${money(p.price)}</div>
+        <div class="qtyBox">
+          <button onclick="changeQty(${id},-1)">−</button>
+          <span>${qty}</span>
+          <button onclick="changeQty(${id},1)">+</button>
+          <button class="rmBtn" onclick="removeFromCart(${id})">remover</button>
+        </div>
+      </div>
+      <div style="font-weight:700;color:var(--green)">${money(p.price*qty)}</div>
+    `;
+    wrap.appendChild(row);
+  });
+  document.getElementById('cartTotal').textContent = ids.length? `Total: ${money(total)}` : '';
+}
+
+function toggleCart(open){
+  document.getElementById('cartOverlay').style.display = open? 'flex':'none';
+}
+
+function sendWhats(){
+  const ids = Object.keys(cart);
+  if(ids.length===0){ alert('Seu carrinho está vazio.'); return; }
+  let msg = "Olá! Gostaria de fazer o seguinte pedido:%0A%0A";
+  let total = 0;
+  ids.forEach(id=>{
+    const p = PRODUCTS[id]; const qty = cart[id]; total += p.price*qty;
+    msg += `• ${qty}x ${p.name} (Cód ${p.code}) - ${money(p.price)} un.%0A`;
+  });
+  msg += `%0ATotal estimado: ${money(total)}`;
+  // Número de exemplo - trocar pelo WhatsApp real da empresa
+  const phone = "5511981707807";
+  window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+}
+
+document.getElementById('search').addEventListener('input', e=>{
+  renderCatalog(e.target.value, document.getElementById('catFilter').value);
+});
+document.getElementById('catFilter').addEventListener('change', e=>{
+  renderCatalog(document.getElementById('search').value, e.target.value);
+});
+
+populateCatFilter();
+renderCatalog();
+updateCartUI();
+
+// Se houver uma planilha configurada, carrega os dados dela e re-renderiza
+loadFromSheet().then(loaded=>{
+  if(loaded){
+    document.getElementById('catFilter').innerHTML = '<option value="">Todas categorias</option>';
+    populateCatFilter();
+    renderCatalog(document.getElementById('search').value, document.getElementById('catFilter').value);
+  }
+});
+
+function showTab(tab){
+  document.getElementById('viewShop').style.display = tab==='shop' ? 'block':'none';
+  document.getElementById('viewGallery').style.display = tab==='gallery' ? 'block':'none';
+  document.getElementById('tabShop').classList.toggle('active', tab==='shop');
+  document.getElementById('tabGallery').classList.toggle('active', tab==='gallery');
+}
+
+function buildGallery(){
+  const grid = document.getElementById('galleryGrid');
+  for(let i=1;i<=44;i++){
+    const n = String(i).padStart(2,'0');
+    const src = `imgs/pg-${n}.jpg`;
+    const fig = document.createElement('figure');
+    fig.innerHTML = `<img src="${src}" loading="lazy" onclick="openLightbox('${src}')"><figcaption>Página ${i}</figcaption>`;
+    grid.appendChild(fig);
+  }
+}
+function openLightbox(src){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+}
+buildGallery();
+</script>
+</body>
+</html>
