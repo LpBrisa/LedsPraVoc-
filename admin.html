@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Admin — LP Brisa LED</title>
+<style>
+  :root{
+    --bg:#0f1115; --bg2:#171a21; --card:#1c202a; --line:#2a2f3b;
+    --orange:#ff8a1e; --orange2:#ffb366; --text:#eef0f4; --muted:#9aa2b1;
+    --green:#3ecf8e; --red:#ff5c5c;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);}
+  header{
+    background:#12141a;border-bottom:1px solid var(--line);padding:14px 20px;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  }
+  header .logo{font-weight:800;font-size:20px}
+  header .logo span{color:var(--orange)}
+  #logoutBtn{background:var(--bg2);border:1px solid var(--line);color:var(--text);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:13px;display:none;}
+  main{max-width:1300px;margin:0 auto;padding:20px;}
+
+  #loginBox{max-width:360px;margin:80px auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;}
+  #loginBox h2{margin-top:0;text-align:center;}
+  #loginBox input{width:100%;padding:11px;margin-bottom:12px;border-radius:8px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-size:14px;}
+  #loginBox button{width:100%;padding:11px;border-radius:8px;border:none;background:var(--orange);color:#1a1200;font-weight:700;cursor:pointer;font-size:14px;}
+  #loginError{color:var(--red);font-size:13px;text-align:center;margin-top:10px;min-height:16px;}
+
+  #appArea{display:none;}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px;}
+  .toolbar input{flex:1;min-width:200px;padding:10px 14px;border-radius:8px;border:1px solid var(--line);background:var(--bg2);color:var(--text);}
+  .btn{padding:10px 16px;border-radius:8px;border:none;font-weight:700;cursor:pointer;font-size:13px;}
+  .btn-orange{background:var(--orange);color:#1a1200;}
+  .btn-green{background:var(--green);color:#04241a;}
+  .btn-red{background:var(--red);color:#2a0505;}
+  .btn-ghost{background:var(--bg2);color:var(--text);border:1px solid var(--line);}
+  #status{color:var(--muted);font-size:13px;margin-bottom:10px;}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{text-align:left;color:var(--muted);font-weight:600;padding:8px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);}
+  td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:middle;}
+  td input[type=text], td input[type=number], td textarea{
+    width:100%;padding:6px 8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-size:13px;
+  }
+  td textarea{resize:vertical;min-height:32px;}
+  td.thumb-cell img{width:48px;height:58px;object-fit:cover;border-radius:4px;background:#fff;}
+  .rowsave{background:var(--green);color:#04241a;border:none;border-radius:6px;padding:6px 10px;cursor:pointer;font-weight:700;font-size:12px;}
+  .rowdel{background:none;border:none;color:var(--red);cursor:pointer;font-size:12px;}
+  .dirty{outline:2px solid var(--orange);}
+  #newRowBox{background:var(--card);border:1px solid var(--orange);border-radius:10px;padding:16px;margin:20px 0;}
+  #newRowBox h3{margin-top:0;}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;}
+  .grid2 label{font-size:12px;color:var(--muted);display:block;margin-bottom:4px;}
+  .grid2 input, .grid2 textarea{width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text);}
+  small.hint{color:var(--muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">LP <span>BRISA</span> — Painel Admin</div>
+  <button id="logoutBtn">Sair</button>
+</header>
+
+<main>
+  <div id="loginBox">
+    <h2>Entrar</h2>
+    <input type="email" id="email" placeholder="E-mail">
+    <input type="password" id="password" placeholder="Senha">
+    <button id="loginBtn">Entrar</button>
+    <div id="loginError"></div>
+  </div>
+
+  <div id="appArea">
+    <div id="newRowBox">
+      <h3>➕ Adicionar produto novo</h3>
+      <div class="grid2">
+        <div><label>Categoria</label><input id="n_cat" placeholder="Ex: Refletor Solar"></div>
+        <div><label>Nome</label><input id="n_name" placeholder="Ex: Refletor Solar 100W"></div>
+        <div><label>Código</label><input id="n_code" placeholder="Ex: 19114"></div>
+        <div><label>Preço (R$)</label><input id="n_price" type="number" step="0.01" placeholder="Ex: 75.00"></div>
+        <div><label>Estoque (1=sim,0=não)</label><input id="n_stock" type="number" min="0" max="1" value="1"></div>
+        <div><label>Promoção (1=sim,0=não)</label><input id="n_promo" type="number" min="0" max="1" value="0"></div>
+        <div><label>URL da foto (opcional)</label><input id="n_img" placeholder="imgs/products/prod_X.jpg ou link"></div>
+      </div>
+      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Descrição (opcional)</label>
+      <textarea id="n_desc" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)"></textarea></div>
+      <button class="btn btn-orange" style="margin-top:12px" id="addBtn">Adicionar produto</button>
+      <span id="addStatus" style="margin-left:10px;color:var(--green);font-size:13px;"></span>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="🔍 Buscar por nome ou código...">
+      <button class="btn btn-ghost" id="refreshBtn">🔄 Recarregar</button>
+      <button class="btn btn-red" id="importBtn">📦 Restaurar catálogo inicial (506 produtos)</button>
+    </div>
+    <div id="status"></div>
+
+    <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Foto</th><th>Categoria</th><th>Nome</th><th>Código</th><th>Preço</th>
+          <th>Estoque</th><th>Promo</th><th>Descrição</th><th>URL Foto</th><th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    </div>
+  </div>
+</main>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {
+  getFirestore, collection, getDocs, doc, setDoc, deleteDoc, writeBatch
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDp6wkoQsVsttae9nERy1DTUem-EgbPOgM",
+  authDomain: "ledspravoce.firebaseapp.com",
+  projectId: "ledspravoce",
+  storageBucket: "ledspravoce.firebasestorage.app",
+  messagingSenderId: "185264089411",
+  appId: "1:185264089411:web:567a518f4ee946dcd6e7f6"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const loginBox = document.getElementById('loginBox');
+const appArea = document.getElementById('appArea');
+const logoutBtn = document.getElementById('logoutBtn');
+const loginError = document.getElementById('loginError');
+
+document.getElementById('loginBtn').addEventListener('click', async ()=>{
+  loginError.textContent = '';
+  const email = document.getElementById('email').value.trim();
+  const pass = document.getElementById('password').value;
+  try{
+    await signInWithEmailAndPassword(auth, email, pass);
+  }catch(e){
+    loginError.textContent = 'Login inválido. Confira e-mail e senha.';
+  }
+});
+
+logoutBtn.addEventListener('click', ()=> signOut(auth));
+
+onAuthStateChanged(auth, user=>{
+  if(user){
+    loginBox.style.display='none';
+    appArea.style.display='block';
+    logoutBtn.style.display='inline-block';
+    loadProducts();
+  } else {
+    loginBox.style.display='block';
+    appArea.style.display='none';
+    logoutBtn.style.display='none';
+  }
+});
+
+let allProducts = [];
+
+async function loadProducts(){
+  document.getElementById('status').textContent = 'Carregando...';
+  const snap = await getDocs(collection(db, 'products'));
+  allProducts = [];
+  snap.forEach(d=> allProducts.push({docId:d.id, ...d.data()}));
+  allProducts.sort((a,b)=> (parseInt(a.id)||0) - (parseInt(b.id)||0));
+  document.getElementById('status').textContent = `${allProducts.length} produto(s) no banco.`;
+  renderTable(allProducts);
+}
+
+function renderTable(list){
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+  list.forEach(p=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="thumb-cell">${p.img ? `<img src="${p.img}">` : '—'}</td>
+      <td><input type="text" data-f="cat" value="${escAttr(p.cat)}"></td>
+      <td><input type="text" data-f="name" value="${escAttr(p.name)}"></td>
+      <td><input type="text" data-f="code" value="${escAttr(p.code)}" style="width:80px"></td>
+      <td><input type="number" step="0.01" data-f="price" value="${p.price}" style="width:80px"></td>
+      <td><input type="number" min="0" max="1" data-f="stock" value="${p.stock?1:0}" style="width:50px"></td>
+      <td><input type="number" min="0" max="1" data-f="promo" value="${p.promo?1:0}" style="width:50px"></td>
+      <td><textarea data-f="desc" rows="1">${escAttr(p.desc||'')}</textarea></td>
+      <td><input type="text" data-f="img" value="${escAttr(p.img||'')}" style="width:140px"></td>
+      <td style="white-space:nowrap">
+        <button class="rowsave">Salvar</button>
+        <button class="rowdel">🗑️</button>
+      </td>
+    `;
+    tr.querySelectorAll('input,textarea').forEach(inp=>{
+      inp.addEventListener('input', ()=> inp.classList.add('dirty'));
+    });
+    tr.querySelector('.rowsave').addEventListener('click', async ()=>{
+      const updated = {...p};
+      tr.querySelectorAll('[data-f]').forEach(inp=>{
+        const f = inp.dataset.f;
+        if(f==='price') updated[f] = parseFloat(inp.value)||0;
+        else if(f==='stock' || f==='promo') updated[f] = inp.value.trim()==='1';
+        else updated[f] = inp.value;
+      });
+      delete updated.docId;
+      await setDoc(doc(db,'products', p.docId), updated);
+      tr.querySelectorAll('.dirty').forEach(el=>el.classList.remove('dirty'));
+      flashRow(tr);
+    });
+    tr.querySelector('.rowdel').addEventListener('click', async ()=>{
+      if(!confirm(`Excluir "${p.name}"? Essa ação não pode ser desfeita.`)) return;
+      await deleteDoc(doc(db,'products', p.docId));
+      tr.remove();
+    });
+    tbody.appendChild(tr);
+  });
+}
+
+function flashRow(tr){
+  tr.style.background = 'rgba(62,207,142,0.15)';
+  setTimeout(()=> tr.style.background = '', 700);
+}
+function escAttr(s){ return String(s??'').replace(/"/g,'&quot;'); }
+
+document.getElementById('search').addEventListener('input', e=>{
+  const f = e.target.value.toLowerCase();
+  const filtered = allProducts.filter(p=>
+    (p.name||'').toLowerCase().includes(f) || String(p.code||'').toLowerCase().includes(f) || (p.cat||'').toLowerCase().includes(f)
+  );
+  renderTable(filtered);
+});
+
+document.getElementById('refreshBtn').addEventListener('click', loadProducts);
+
+document.getElementById('addBtn').addEventListener('click', async ()=>{
+  const newId = String(Date.now());
+  const data = {
+    id: newId,
+    cat: document.getElementById('n_cat').value.trim() || 'Outros',
+    name: document.getElementById('n_name').value.trim(),
+    code: document.getElementById('n_code').value.trim(),
+    price: parseFloat(document.getElementById('n_price').value) || 0,
+    stock: document.getElementById('n_stock').value.trim() === '1',
+    promo: document.getElementById('n_promo').value.trim() === '1',
+    img: document.getElementById('n_img').value.trim(),
+    desc: document.getElementById('n_desc').value.trim()
+  };
+  if(!data.name){ alert('Preencha ao menos o nome do produto.'); return; }
+  await setDoc(doc(db,'products', newId), data);
+  document.getElementById('addStatus').textContent = '✓ Produto adicionado!';
+  setTimeout(()=> document.getElementById('addStatus').textContent = '', 2000);
+  ['n_cat','n_name','n_code','n_price','n_img','n_desc'].forEach(id=> document.getElementById(id).value='');
+  document.getElementById('n_stock').value = 1;
+  document.getElementById('n_promo').value = 0;
+  loadProducts();
+});
+
+document.getElementById('importBtn').addEventListener('click', async ()=>{
+  if(!confirm('Isso vai SUBSTITUIR todos os produtos no banco pelo catálogo inicial de 506 produtos. Continuar?')) return;
+  document.getElementById('status').textContent = 'Importando, aguarde...';
+  const res = await fetch('products.json');
+  const list = await res.json();
+  let batch = writeBatch(db);
+  let count = 0;
+  for(const p of list){
+    const ref = doc(db, 'products', String(p.id));
+    batch.set(ref, p);
+    count++;
+    if(count % 400 === 0){
+      await batch.commit();
+      batch = writeBatch(db);
+    }
+  }
+  await batch.commit();
+  document.getElementById('status').textContent = `Importação concluída: ${list.length} produtos.`;
+  loadProducts();
+});
+</script>
+</body>
+</html>
