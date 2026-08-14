@@ -8,7 +8,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_0.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 50W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 1,
@@ -19,7 +19,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_1.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 2,
@@ -30,7 +30,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_2.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 3,
@@ -41,7 +41,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_3.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 4,
@@ -52,7 +52,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_4.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 50W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 5,
@@ -63,7 +63,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_5.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 6,
@@ -74,7 +74,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_6.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 7,
@@ -85,7 +85,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_7.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 8,
@@ -96,7 +96,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_8.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 300W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 9,
@@ -107,7 +107,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_9.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 10,
@@ -118,7 +118,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_10.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 50W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_11.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 12,
@@ -140,7 +140,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_12.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 13,
@@ -151,7 +151,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_13.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 14,
@@ -162,7 +162,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_14.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 50W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 15,
@@ -173,7 +173,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_15.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 100W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 16,
@@ -184,7 +184,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_16.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 150W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 17,
@@ -195,7 +195,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_17.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 200W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 18,
@@ -206,7 +206,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_18.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 50W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 19,
@@ -217,7 +217,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_19.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 100W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 20,
@@ -228,7 +228,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_20.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 150W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 21,
@@ -239,7 +239,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_21.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 200W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 22,
@@ -250,7 +250,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_22.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 50W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 23,
@@ -261,7 +261,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_23.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 100W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 24,
@@ -272,7 +272,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_24.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 150W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 25,
@@ -283,7 +283,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_25.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 200W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 26,
@@ -294,7 +294,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_26.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 27,
@@ -305,7 +305,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_27.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 28,
@@ -316,7 +316,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_28.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 29,
@@ -327,7 +327,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_29.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 300W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver integrado (DOB). Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 30,
@@ -338,7 +338,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_30.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 50W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 31,
@@ -349,7 +349,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_31.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 32,
@@ -360,7 +360,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_32.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 33,
@@ -371,7 +371,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_33.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas, com driver externo. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 34,
@@ -382,7 +382,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_34.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 50W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 35,
@@ -393,7 +393,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_35.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 100W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 36,
@@ -404,7 +404,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_36.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 150W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 37,
@@ -415,7 +415,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_37.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 200W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 38,
@@ -426,7 +426,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_38.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 300W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 39,
@@ -437,7 +437,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_39.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 50W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 40,
@@ -448,7 +448,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_40.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 100W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 41,
@@ -459,7 +459,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_41.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 150W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 42,
@@ -470,7 +470,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_42.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 200W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 43,
@@ -481,7 +481,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_43.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 50W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 44,
@@ -492,7 +492,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_44.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 100W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 45,
@@ -503,7 +503,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_45.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 150W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 46,
@@ -514,7 +514,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_46.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 200W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 47,
@@ -525,7 +525,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_47.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 50W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 48,
@@ -536,7 +536,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_48.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 100W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 49,
@@ -547,7 +547,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_49.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 150W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 50,
@@ -558,7 +558,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_50.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED COB de 200W, com foco mais concentrado e alto brilho. Boa opção para ruas e espaços que exigem iluminação direcionada."
   },
   {
     "id": 51,
@@ -569,7 +569,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_51.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 50W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 52,
@@ -580,7 +580,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_52.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 53,
@@ -591,7 +591,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_53.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 54,
@@ -602,7 +602,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_54.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 55,
@@ -613,7 +613,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_55.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 300W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 56,
@@ -624,7 +624,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_56.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 300W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 57,
@@ -635,7 +635,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_57.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 400W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 58,
@@ -646,7 +646,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_58.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 30W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 59,
@@ -657,7 +657,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_59.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 50W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 60,
@@ -668,7 +668,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_60.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 100W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 61,
@@ -679,7 +679,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_61.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 150W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 62,
@@ -690,7 +690,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_62.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 200W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 63,
@@ -701,7 +701,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_63.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 30W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 64,
@@ -712,7 +712,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_64.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 50W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 65,
@@ -723,7 +723,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_65.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 100W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 66,
@@ -734,7 +734,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_66.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 150W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 67,
@@ -745,7 +745,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_67.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 200W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 68,
@@ -756,7 +756,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_68.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 50W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 69,
@@ -767,7 +767,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_69.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 100W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 70,
@@ -778,7 +778,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_70.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 150W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 71,
@@ -789,7 +789,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_71.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 200W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 72,
@@ -800,7 +800,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_72.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 250W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 73,
@@ -811,7 +811,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_73.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 300W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 74,
@@ -822,7 +822,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_74.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 50W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 75,
@@ -833,7 +833,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_75.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 50W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 76,
@@ -844,7 +844,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_76.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 100W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 77,
@@ -855,7 +855,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_77.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 100W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 78,
@@ -866,7 +866,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_78.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 150W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 79,
@@ -877,7 +877,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_79.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 150W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 80,
@@ -888,7 +888,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_80.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 200W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 81,
@@ -899,7 +899,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_81.jpg",
-    "desc": ""
+    "desc": "Mini luminária pública em LED SMD/COB de 200W, formato compacto para postes menores, becos e áreas residenciais."
   },
   {
     "id": 82,
@@ -910,7 +910,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_82.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 50W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 83,
@@ -921,7 +921,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_83.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 100W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 84,
@@ -932,7 +932,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_84.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 150W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 85,
@@ -943,7 +943,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_85.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED de 200W com relé fotocélula integrado, liga e desliga automaticamente conforme a luz ambiente. Indicada para postes e vias públicas."
   },
   {
     "id": 86,
@@ -954,7 +954,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_86.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 30W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 87,
@@ -965,7 +965,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_87.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 50W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 88,
@@ -976,7 +976,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_88.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 89,
@@ -987,7 +987,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_89.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 90,
@@ -998,7 +998,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_90.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 91,
@@ -1009,7 +1009,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_91.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 300W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 92,
@@ -1020,7 +1020,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_92.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 50W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 93,
@@ -1031,7 +1031,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_93.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 100W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 94,
@@ -1042,7 +1042,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_94.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 150W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 95,
@@ -1053,7 +1053,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_95.jpg",
-    "desc": ""
+    "desc": "Luminária pública em LED SMD de 200W, ideal para iluminação de ruas, avenidas e áreas externas amplas. Alta eficiência luminosa e boa dissipação de calor para uso contínuo."
   },
   {
     "id": 96,
@@ -1064,7 +1064,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_96.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar de 50W, com painel solar integrado, sem necessidade de rede elétrica. Ideal para locais remotos ou de difícil acesso à fiação."
   },
   {
     "id": 97,
@@ -1075,7 +1075,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_97.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar de 100W, com painel solar integrado, sem necessidade de rede elétrica. Ideal para locais remotos ou de difícil acesso à fiação."
   },
   {
     "id": 98,
@@ -1086,7 +1086,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_98.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 200W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 99,
@@ -1097,7 +1097,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_99.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 300W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 100,
@@ -1108,7 +1108,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_100.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 400W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 101,
@@ -1119,7 +1119,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_101.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 500W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 102,
@@ -1130,7 +1130,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_102.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 600W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 103,
@@ -1141,7 +1141,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_103.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 800W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 104,
@@ -1152,7 +1152,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_104.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 1000W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 105,
@@ -1163,7 +1163,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_105.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 200W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 106,
@@ -1174,7 +1174,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_106.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 300W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 107,
@@ -1185,7 +1185,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_107.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 400W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 108,
@@ -1196,7 +1196,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_108.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 500W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 109,
@@ -1207,7 +1207,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_109.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 400W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 110,
@@ -1218,7 +1218,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_110.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 600W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 111,
@@ -1229,7 +1229,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_111.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 400W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 112,
@@ -1240,7 +1240,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_112.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 600W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 113,
@@ -1251,7 +1251,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_113.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 800W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 114,
@@ -1262,7 +1262,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_114.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 1000W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 115,
@@ -1273,7 +1273,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_115.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 400W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 116,
@@ -1284,7 +1284,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_116.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 600W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 117,
@@ -1295,7 +1295,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_117.jpg",
-    "desc": ""
+    "desc": "Luminária pública solar modelo Slim de 1000W, com painel solar acoplado e controle remoto, fácil instalação sem fiação elétrica."
   },
   {
     "id": 118,
@@ -1306,7 +1306,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_118.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 100W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 119,
@@ -1317,7 +1317,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_119.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 150W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 120,
@@ -1328,7 +1328,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_120.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 200W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 121,
@@ -1339,7 +1339,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_121.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 200W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 122,
@@ -1350,7 +1350,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_122.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 100W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 123,
@@ -1361,7 +1361,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_123.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 150W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 124,
@@ -1372,7 +1372,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_124.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 200W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 125,
@@ -1383,7 +1383,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_125.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 100W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 126,
@@ -1394,7 +1394,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_126.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 150W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 127,
@@ -1405,7 +1405,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_127.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 200W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 128,
@@ -1416,7 +1416,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_128.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 60W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 129,
@@ -1427,7 +1427,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_129.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 100W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 130,
@@ -1438,7 +1438,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_130.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 200W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 131,
@@ -1449,7 +1449,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_131.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 300W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 132,
@@ -1460,7 +1460,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_132.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 400W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 133,
@@ -1471,7 +1471,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_133.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 100W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 134,
@@ -1482,7 +1482,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_134.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 150W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 135,
@@ -1493,7 +1493,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_135.jpg",
-    "desc": ""
+    "desc": "Luminária industrial UFO High Bay de 200W, formato redondo compacto, indicada para galpões, fábricas e pé-direito alto."
   },
   {
     "id": 136,
@@ -1504,7 +1504,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_136.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 137,
@@ -1515,7 +1515,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_137.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 100W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 138,
@@ -1526,7 +1526,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_138.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 150W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 139,
@@ -1537,7 +1537,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_139.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 200W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 140,
@@ -1548,7 +1548,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_140.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 250W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 141,
@@ -1559,7 +1559,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_141.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 300W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 142,
@@ -1570,7 +1570,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_142.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 400W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 143,
@@ -1581,7 +1581,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_143.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 500W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 144,
@@ -1592,7 +1592,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_144.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 600W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 145,
@@ -1603,7 +1603,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_145.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 146,
@@ -1614,7 +1614,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_146.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 100W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 147,
@@ -1625,7 +1625,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_147.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 150W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 148,
@@ -1636,7 +1636,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_148.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 200W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 149,
@@ -1647,7 +1647,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_149.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 250W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 150,
@@ -1658,7 +1658,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_150.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 300W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 151,
@@ -1669,7 +1669,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_151.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 400W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 152,
@@ -1680,7 +1680,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_152.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 500W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 153,
@@ -1691,7 +1691,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_153.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 600W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 154,
@@ -1702,7 +1702,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_154.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 155,
@@ -1713,7 +1713,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_155.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 156,
@@ -1724,7 +1724,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_156.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 157,
@@ -1735,7 +1735,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_157.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 158,
@@ -1746,7 +1746,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_158.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 159,
@@ -1757,7 +1757,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_159.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 160,
@@ -1768,7 +1768,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_160.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 161,
@@ -1779,7 +1779,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_161.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 162,
@@ -1790,7 +1790,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_162.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 163,
@@ -1801,7 +1801,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_163.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 100W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 164,
@@ -1812,7 +1812,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_164.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 50W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 165,
@@ -1823,7 +1823,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_165.jpg",
-    "desc": ""
+    "desc": "Refletor modular de LED de 100W, estrutura em módulos que facilita transporte e substituição de peças. Indicado para grandes áreas externas, fachadas e quadras."
   },
   {
     "id": 166,
@@ -1834,7 +1834,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_166.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 100W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 167,
@@ -1845,7 +1845,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_167.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 150W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 168,
@@ -1856,7 +1856,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_168.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 200W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 169,
@@ -1867,7 +1867,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_169.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 300W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 170,
@@ -1878,7 +1878,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_170.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 200W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 171,
@@ -1889,7 +1889,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_171.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 300W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 172,
@@ -1900,7 +1900,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_172.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 400W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 173,
@@ -1911,7 +1911,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_173.jpg",
-    "desc": ""
+    "desc": "Refletor de LED modular de 600W, alta potência para iluminação de grandes áreas, estádios e espaços amplos."
   },
   {
     "id": 174,
@@ -1922,7 +1922,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_174.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 175,
@@ -1933,7 +1933,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_175.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 176,
@@ -1944,7 +1944,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_176.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 177,
@@ -1955,7 +1955,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_177.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 100W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 178,
@@ -1966,7 +1966,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_178.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 179,
@@ -1977,7 +1977,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_179.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 300W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 180,
@@ -1988,7 +1988,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_180.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 100W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 181,
@@ -1999,7 +1999,7 @@
     "stock": false,
     "promo": true,
     "img": "imgs/products/prod_181.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 182,
@@ -2010,7 +2010,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_182.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 400W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 183,
@@ -2021,7 +2021,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_183.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 100W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 184,
@@ -2032,7 +2032,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_184.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 185,
@@ -2043,7 +2043,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_185.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 300W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 186,
@@ -2054,7 +2054,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_186.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 500W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 187,
@@ -2065,7 +2065,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_187.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 800W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 188,
@@ -2076,7 +2076,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_188.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 1000W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 189,
@@ -2087,7 +2087,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_189.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 50W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 190,
@@ -2098,7 +2098,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_190.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 100W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 191,
@@ -2109,7 +2109,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_191.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 192,
@@ -2120,7 +2120,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_192.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 400W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 193,
@@ -2131,7 +2131,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_193.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 50W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 194,
@@ -2142,7 +2142,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_194.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 100W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 195,
@@ -2153,7 +2153,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_195.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 196,
@@ -2164,7 +2164,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_196.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 400W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 197,
@@ -2175,7 +2175,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_197.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 198,
@@ -2186,7 +2186,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_198.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 300W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 199,
@@ -2197,7 +2197,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_199.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 500W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 200,
@@ -2208,7 +2208,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_200.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 800W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 201,
@@ -2219,7 +2219,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_201.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 1000W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 202,
@@ -2230,7 +2230,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_202.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 1200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 203,
@@ -2241,7 +2241,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_203.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 300W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 204,
@@ -2252,7 +2252,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_204.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 400W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 205,
@@ -2263,7 +2263,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_205.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 500W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 206,
@@ -2274,7 +2274,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_206.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 50W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 207,
@@ -2285,7 +2285,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_207.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 100W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 208,
@@ -2296,7 +2296,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_208.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 209,
@@ -2307,7 +2307,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_209.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 300W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 210,
@@ -2318,7 +2318,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_210.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 500W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 211,
@@ -2329,7 +2329,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_211.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 50W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 212,
@@ -2340,7 +2340,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_212.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 100W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 213,
@@ -2351,7 +2351,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_213.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 214,
@@ -2362,7 +2362,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_214.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 300W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 215,
@@ -2373,7 +2373,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_215.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 500W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 216,
@@ -2384,7 +2384,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_216.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 200W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 217,
@@ -2395,7 +2395,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_217.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 300W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 218,
@@ -2406,7 +2406,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_218.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 500W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 219,
@@ -2417,7 +2417,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_219.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 800W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 220,
@@ -2428,7 +2428,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_220.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 1000W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 221,
@@ -2439,7 +2439,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_221.jpg",
-    "desc": ""
+    "desc": "Refletor solar de LED de 1500W, com painel solar integrado e, em muitos modelos, controle remoto. Não precisa de fiação elétrica, ideal para muros, jardins e fachadas."
   },
   {
     "id": 222,
@@ -2450,7 +2450,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_222.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 50W, na cor RGB colorido, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 223,
@@ -2461,7 +2461,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_223.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 100W, na cor RGB colorido, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 224,
@@ -2472,7 +2472,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_224.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 200W, na cor RGB colorido, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 225,
@@ -2483,7 +2483,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_225.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 30W, na cor branco frio, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 226,
@@ -2494,7 +2494,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_226.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 50W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 227,
@@ -2505,7 +2505,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_227.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 800W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 228,
@@ -2516,7 +2516,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_228.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 600W, na cor branco frio, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 229,
@@ -2527,7 +2527,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_229.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 50W, na cor azul, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 230,
@@ -2538,7 +2538,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_230.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 50W, na cor vermelho, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 231,
@@ -2549,7 +2549,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_231.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 50W, na cor branco quente, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 232,
@@ -2560,7 +2560,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_232.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 100W, na cor azul, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 233,
@@ -2571,7 +2571,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_233.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 200W, na cor branco quente, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 234,
@@ -2582,7 +2582,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_234.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 200W, na cor azul, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 235,
@@ -2593,7 +2593,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_235.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 300W, na cor branco quente, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 236,
@@ -2604,7 +2604,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_236.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 300W, na cor vermelho, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 237,
@@ -2615,7 +2615,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_237.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 300W, na cor verde, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 238,
@@ -2626,7 +2626,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_238.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 300W, na cor azul, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 239,
@@ -2637,7 +2637,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_239.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 400W, na cor branco quente, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 240,
@@ -2648,7 +2648,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_240.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 400W, na cor vermelho, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 241,
@@ -2659,7 +2659,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_241.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 400W, na cor verde, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 242,
@@ -2670,7 +2670,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_242.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 400W, na cor azul, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 243,
@@ -2681,7 +2681,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_243.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 100W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 244,
@@ -2692,7 +2692,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_244.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 200W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 245,
@@ -2703,7 +2703,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_245.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 300W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 246,
@@ -2714,7 +2714,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_246.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 50W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 247,
@@ -2725,7 +2725,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_247.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 200W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 248,
@@ -2736,7 +2736,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_248.jpg",
-    "desc": ""
+    "desc": "Refletor de LED de 30W, indicado para iluminação decorativa e de destaque em fachadas, jardins e ambientes externos."
   },
   {
     "id": 249,
@@ -2747,7 +2747,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_249.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 250,
@@ -2758,7 +2758,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_250.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 251,
@@ -2769,7 +2769,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_251.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 252,
@@ -2780,7 +2780,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_252.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 253,
@@ -2791,7 +2791,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_253.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 254,
@@ -2802,7 +2802,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_254.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 255,
@@ -2813,7 +2813,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_255.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 256,
@@ -2824,7 +2824,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_256.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 257,
@@ -2835,7 +2835,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_257.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 258,
@@ -2846,7 +2846,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_258.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 259,
@@ -2857,7 +2857,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_259.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 260,
@@ -2868,7 +2868,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_260.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 261,
@@ -2879,7 +2879,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_261.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 262,
@@ -2890,7 +2890,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_262.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 263,
@@ -2901,7 +2901,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_263.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 264,
@@ -2912,7 +2912,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_264.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 265,
@@ -2923,7 +2923,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_265.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 266,
@@ -2934,7 +2934,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_266.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 267,
@@ -2945,7 +2945,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_267.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 268,
@@ -2956,7 +2956,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_268.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 269,
@@ -2967,7 +2967,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_269.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 270,
@@ -2978,7 +2978,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_270.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 271,
@@ -2989,7 +2989,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_271.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 272,
@@ -3000,7 +3000,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_272.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 273,
@@ -3011,7 +3011,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_273.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 274,
@@ -3022,7 +3022,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_274.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 275,
@@ -3033,7 +3033,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_275.jpg",
-    "desc": ""
+    "desc": "Luminária pendente decorativa, indicada para uso interno em salas, halls, restaurantes e ambientes que pedem um toque de decoração."
   },
   {
     "id": 276,
@@ -3044,7 +3044,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_276.jpg",
-    "desc": ""
+    "desc": "Luminária de embutir para forro/teto, acabamento discreto e iluminação uniforme para ambientes internos."
   },
   {
     "id": 277,
@@ -3055,7 +3055,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_277.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 278,
@@ -3066,7 +3066,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_278.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 279,
@@ -3077,7 +3077,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_279.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 280,
@@ -3088,7 +3088,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_280.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 281,
@@ -3099,7 +3099,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_281.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 282,
@@ -3110,7 +3110,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_282.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 283,
@@ -3121,7 +3121,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_283.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 284,
@@ -3132,7 +3132,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_284.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 285,
@@ -3143,7 +3143,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_285.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 286,
@@ -3154,7 +3154,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_286.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 287,
@@ -3165,7 +3165,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_287.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 288,
@@ -3176,7 +3176,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_288.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 289,
@@ -3187,7 +3187,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_289.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 290,
@@ -3198,7 +3198,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_290.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 291,
@@ -3209,7 +3209,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_291.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 292,
@@ -3220,7 +3220,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_292.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 293,
@@ -3231,7 +3231,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_293.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 294,
@@ -3242,7 +3242,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_294.jpg",
-    "desc": ""
+    "desc": "Spot de LED, indicado para iluminação direcionada em trilhos, jardins ou ambientes internos e externos."
   },
   {
     "id": 295,
@@ -3253,7 +3253,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_295.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 296,
@@ -3264,7 +3264,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_296.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 297,
@@ -3275,7 +3275,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_297.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 298,
@@ -3286,7 +3286,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_298.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 299,
@@ -3297,7 +3297,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_299.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 300,
@@ -3308,7 +3308,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_300.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 301,
@@ -3319,7 +3319,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_301.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 302,
@@ -3330,7 +3330,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_302.jpg",
-    "desc": ""
+    "desc": "Spot de LED para embutir no piso, resistente a pisoteio, indicado para calçadas, jardins e áreas externas decorativas."
   },
   {
     "id": 303,
@@ -3341,7 +3341,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_303.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 304,
@@ -3352,7 +3352,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_304.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 305,
@@ -3363,7 +3363,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_305.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 306,
@@ -3374,7 +3374,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_306.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 307,
@@ -3385,7 +3385,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_307.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 308,
@@ -3396,7 +3396,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_308.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 309,
@@ -3407,7 +3407,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_309.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 310,
@@ -3418,7 +3418,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_310.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 311,
@@ -3429,7 +3429,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_311.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 312,
@@ -3440,7 +3440,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_312.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 313,
@@ -3451,7 +3451,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_313.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 314,
@@ -3462,7 +3462,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_314.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 315,
@@ -3473,7 +3473,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_315.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 316,
@@ -3484,7 +3484,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_316.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 317,
@@ -3495,7 +3495,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_317.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 318,
@@ -3506,7 +3506,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_318.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 319,
@@ -3517,7 +3517,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_319.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 320,
@@ -3528,7 +3528,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_320.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 321,
@@ -3539,7 +3539,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_321.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 322,
@@ -3550,7 +3550,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_322.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 323,
@@ -3561,7 +3561,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_323.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 324,
@@ -3572,7 +3572,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_324.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 325,
@@ -3583,7 +3583,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_325.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 326,
@@ -3594,7 +3594,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_326.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 327,
@@ -3605,7 +3605,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_327.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 328,
@@ -3616,7 +3616,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_328.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 329,
@@ -3627,7 +3627,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_329.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 330,
@@ -3638,7 +3638,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_330.jpg",
-    "desc": ""
+    "desc": "Trilho eletrificado para spots, permite montar sistemas de iluminação flexíveis para lojas, vitrines e ambientes comerciais."
   },
   {
     "id": 331,
@@ -3649,7 +3649,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_331.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 332,
@@ -3660,7 +3660,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_332.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 333,
@@ -3671,7 +3671,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_333.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 334,
@@ -3682,7 +3682,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_334.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 335,
@@ -3693,7 +3693,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_335.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 336,
@@ -3704,7 +3704,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_336.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 337,
@@ -3715,7 +3715,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_337.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 338,
@@ -3726,7 +3726,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_338.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 339,
@@ -3737,7 +3737,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_339.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 340,
@@ -3748,7 +3748,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_340.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 341,
@@ -3759,7 +3759,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_341.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 342,
@@ -3770,7 +3770,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_342.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 343,
@@ -3781,7 +3781,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_343.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 344,
@@ -3792,7 +3792,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_344.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 345,
@@ -3803,7 +3803,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_345.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 346,
@@ -3814,7 +3814,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_346.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 347,
@@ -3825,7 +3825,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_347.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 348,
@@ -3836,7 +3836,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_348.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 349,
@@ -3847,7 +3847,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_349.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 350,
@@ -3858,7 +3858,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_350.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 351,
@@ -3869,7 +3869,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_351.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 352,
@@ -3880,7 +3880,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_352.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 353,
@@ -3891,7 +3891,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_353.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 354,
@@ -3902,7 +3902,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_354.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 355,
@@ -3913,7 +3913,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_355.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 356,
@@ -3924,7 +3924,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_356.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 357,
@@ -3935,7 +3935,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_357.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 358,
@@ -3946,7 +3946,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_358.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 359,
@@ -3957,7 +3957,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_359.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 360,
@@ -3968,7 +3968,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_360.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 361,
@@ -3979,7 +3979,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_361.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 362,
@@ -3990,7 +3990,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_362.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 363,
@@ -4001,7 +4001,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_363.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 364,
@@ -4012,7 +4012,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_364.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 365,
@@ -4023,7 +4023,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_365.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 366,
@@ -4034,7 +4034,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_366.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 367,
@@ -4045,7 +4045,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_367.jpg",
-    "desc": ""
+    "desc": "Fita de LED flexível, indicada para iluminação decorativa, contorno de móveis, rodapés, letreiros e ambientes internos ou externos (conforme especificação)."
   },
   {
     "id": 368,
@@ -4056,7 +4056,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_368.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 369,
@@ -4067,7 +4067,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_369.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 370,
@@ -4078,7 +4078,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_370.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 371,
@@ -4089,7 +4089,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_371.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 372,
@@ -4100,7 +4100,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_372.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 373,
@@ -4111,7 +4111,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_373.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 374,
@@ -4122,7 +4122,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_374.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 375,
@@ -4133,7 +4133,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_375.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 376,
@@ -4144,7 +4144,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_376.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 377,
@@ -4155,7 +4155,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_377.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 378,
@@ -4166,7 +4166,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_378.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 379,
@@ -4177,7 +4177,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_379.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 380,
@@ -4188,7 +4188,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_380.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 381,
@@ -4199,7 +4199,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_381.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 382,
@@ -4210,7 +4210,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_382.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 383,
@@ -4221,7 +4221,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_383.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 384,
@@ -4232,7 +4232,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_384.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 385,
@@ -4243,7 +4243,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_385.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 386,
@@ -4254,7 +4254,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_386.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 387,
@@ -4265,7 +4265,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_387.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 388,
@@ -4276,7 +4276,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_388.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 389,
@@ -4287,7 +4287,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_389.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 390,
@@ -4298,7 +4298,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_390.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 391,
@@ -4309,7 +4309,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_391.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 392,
@@ -4320,7 +4320,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_392.jpg",
-    "desc": ""
+    "desc": "Perfil de alumínio para fita de LED, protege e dá acabamento profissional à instalação, disponível em versão embutir ou sobrepor."
   },
   {
     "id": 393,
@@ -4331,7 +4331,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_393.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 394,
@@ -4342,7 +4342,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_394.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 395,
@@ -4353,7 +4353,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_395.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 396,
@@ -4364,7 +4364,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_396.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 397,
@@ -4375,7 +4375,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_397.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 398,
@@ -4386,7 +4386,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_398.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 399,
@@ -4397,7 +4397,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_399.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 400,
@@ -4408,7 +4408,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_400.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 401,
@@ -4419,7 +4419,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_401.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 402,
@@ -4430,7 +4430,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_402.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 403,
@@ -4441,7 +4441,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_403.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 404,
@@ -4452,7 +4452,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_404.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 405,
@@ -4463,7 +4463,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_405.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 406,
@@ -4474,7 +4474,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_406.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 407,
@@ -4485,7 +4485,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_407.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 408,
@@ -4496,7 +4496,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_408.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 409,
@@ -4507,7 +4507,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_409.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 410,
@@ -4518,7 +4518,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_410.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 411,
@@ -4529,7 +4529,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_411.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 412,
@@ -4540,7 +4540,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_412.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 413,
@@ -4551,7 +4551,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_413.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 414,
@@ -4562,7 +4562,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_414.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 415,
@@ -4573,7 +4573,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_415.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 416,
@@ -4584,7 +4584,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_416.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 417,
@@ -4595,7 +4595,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_417.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 418,
@@ -4606,7 +4606,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_418.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 419,
@@ -4617,7 +4617,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_419.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 420,
@@ -4628,7 +4628,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_420.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 421,
@@ -4639,7 +4639,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_421.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 422,
@@ -4650,7 +4650,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_422.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 423,
@@ -4661,7 +4661,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_423.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 424,
@@ -4672,7 +4672,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_424.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 425,
@@ -4683,7 +4683,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_425.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 426,
@@ -4694,7 +4694,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_426.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 427,
@@ -4705,7 +4705,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_427.jpg",
-    "desc": ""
+    "desc": "Luminária tipo espeto/balizador para jardim, indicada para iluminar caminhos, gramados e áreas externas decorativas."
   },
   {
     "id": 428,
@@ -4716,7 +4716,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_428.jpg",
-    "desc": ""
+    "desc": "Lâmpada bulbo de LED de alta potência, boa opção para substituir lâmpadas convencionais em ambientes que precisam de bastante luminosidade."
   },
   {
     "id": 429,
@@ -4727,7 +4727,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_429.jpg",
-    "desc": ""
+    "desc": "Lâmpada bulbo de LED de alta potência, boa opção para substituir lâmpadas convencionais em ambientes que precisam de bastante luminosidade."
   },
   {
     "id": 430,
@@ -4738,7 +4738,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_430.jpg",
-    "desc": ""
+    "desc": "Lâmpada bulbo de LED de alta potência, boa opção para substituir lâmpadas convencionais em ambientes que precisam de bastante luminosidade."
   },
   {
     "id": 431,
@@ -4749,7 +4749,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_431.jpg",
-    "desc": ""
+    "desc": "Lâmpada bulbo de LED de alta potência, boa opção para substituir lâmpadas convencionais em ambientes que precisam de bastante luminosidade."
   },
   {
     "id": 432,
@@ -4760,7 +4760,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_432.jpg",
-    "desc": ""
+    "desc": "Lâmpada bulbo de LED de alta potência, boa opção para substituir lâmpadas convencionais em ambientes que precisam de bastante luminosidade."
   },
   {
     "id": 433,
@@ -4771,7 +4771,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_433.jpg",
-    "desc": ""
+    "desc": "Lâmpada bulbo de LED de alta potência, boa opção para substituir lâmpadas convencionais em ambientes que precisam de bastante luminosidade."
   },
   {
     "id": 434,
@@ -4782,7 +4782,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_434.jpg",
-    "desc": ""
+    "desc": "Lâmpada bulbo de LED de alta potência, boa opção para substituir lâmpadas convencionais em ambientes que precisam de bastante luminosidade."
   },
   {
     "id": 435,
@@ -4793,7 +4793,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_435.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 436,
@@ -4804,7 +4804,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_436.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 437,
@@ -4815,7 +4815,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_437.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 438,
@@ -4826,7 +4826,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_438.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 439,
@@ -4837,7 +4837,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_439.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 440,
@@ -4848,7 +4848,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_440.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 441,
@@ -4859,7 +4859,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_441.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 442,
@@ -4870,7 +4870,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_442.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 443,
@@ -4881,7 +4881,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_443.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 444,
@@ -4892,7 +4892,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_444.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 445,
@@ -4903,7 +4903,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_445.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 446,
@@ -4914,7 +4914,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_446.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 447,
@@ -4925,7 +4925,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_447.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 448,
@@ -4936,7 +4936,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_448.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 449,
@@ -4947,7 +4947,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_449.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 450,
@@ -4958,7 +4958,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_450.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 451,
@@ -4969,7 +4969,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_451.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 452,
@@ -4980,7 +4980,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_452.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 453,
@@ -4991,7 +4991,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_453.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 454,
@@ -5002,7 +5002,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_454.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 455,
@@ -5013,7 +5013,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_455.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 456,
@@ -5024,7 +5024,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_456.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 457,
@@ -5035,7 +5035,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_457.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 458,
@@ -5046,7 +5046,7 @@
     "stock": false,
     "promo": true,
     "img": "imgs/products/prod_458.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 459,
@@ -5057,7 +5057,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_459.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 460,
@@ -5068,7 +5068,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_460.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 461,
@@ -5079,7 +5079,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_461.jpg",
-    "desc": ""
+    "desc": "Fonte de alimentação para projetos de iluminação em LED, converte a tensão da rede para a tensão de trabalho dos LEDs (geralmente 12V)."
   },
   {
     "id": 462,
@@ -5090,7 +5090,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_462.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 463,
@@ -5101,7 +5101,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_463.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 464,
@@ -5112,7 +5112,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_464.jpg",
-    "desc": ""
+    "desc": "Arandela de LED para parede, indicada para iluminação decorativa interna ou externa, valoriza fachadas e ambientes."
   },
   {
     "id": 465,
@@ -5123,7 +5123,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_465.jpg",
-    "desc": ""
+    "desc": "Arandela de LED para parede, indicada para iluminação decorativa interna ou externa, valoriza fachadas e ambientes."
   },
   {
     "id": 466,
@@ -5134,7 +5134,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_466.jpg",
-    "desc": ""
+    "desc": "Arandela de LED para parede, indicada para iluminação decorativa interna ou externa, valoriza fachadas e ambientes."
   },
   {
     "id": 467,
@@ -5145,7 +5145,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_467.jpg",
-    "desc": ""
+    "desc": "Arandela de LED para parede, indicada para iluminação decorativa interna ou externa, valoriza fachadas e ambientes."
   },
   {
     "id": 468,
@@ -5156,7 +5156,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_468.jpg",
-    "desc": ""
+    "desc": "Arandela de LED para parede, indicada para iluminação decorativa interna ou externa, valoriza fachadas e ambientes."
   },
   {
     "id": 469,
@@ -5167,7 +5167,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_469.jpg",
-    "desc": ""
+    "desc": "Arandela de LED para parede, indicada para iluminação decorativa interna ou externa, valoriza fachadas e ambientes."
   },
   {
     "id": 470,
@@ -5178,7 +5178,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_470.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 471,
@@ -5189,7 +5189,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_471.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 472,
@@ -5200,7 +5200,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_472.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 473,
@@ -5211,7 +5211,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_473.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 474,
@@ -5222,7 +5222,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_474.jpg",
-    "desc": ""
+    "desc": "Lâmpada de LED, opção econômica para substituição de lâmpadas convencionais com menor consumo de energia."
   },
   {
     "id": 475,
@@ -5233,7 +5233,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_475.jpg",
-    "desc": ""
+    "desc": "Lâmpada de LED, opção econômica para substituição de lâmpadas convencionais com menor consumo de energia."
   },
   {
     "id": 476,
@@ -5244,7 +5244,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_476.jpg",
-    "desc": ""
+    "desc": "Lâmpada de LED, opção econômica para substituição de lâmpadas convencionais com menor consumo de energia."
   },
   {
     "id": 477,
@@ -5255,7 +5255,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_477.jpg",
-    "desc": ""
+    "desc": "Lâmpada de LED, opção econômica para substituição de lâmpadas convencionais com menor consumo de energia."
   },
   {
     "id": 478,
@@ -5266,7 +5266,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_478.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 479,
@@ -5277,7 +5277,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_479.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 480,
@@ -5288,7 +5288,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_480.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 481,
@@ -5299,7 +5299,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_481.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 482,
@@ -5310,7 +5310,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_482.jpg",
-    "desc": ""
+    "desc": "Lâmpada de LED, opção econômica para substituição de lâmpadas convencionais com menor consumo de energia."
   },
   {
     "id": 483,
@@ -5321,7 +5321,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_483.jpg",
-    "desc": ""
+    "desc": "Lâmpada de LED, opção econômica para substituição de lâmpadas convencionais com menor consumo de energia."
   },
   {
     "id": 484,
@@ -5332,7 +5332,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_484.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 485,
@@ -5343,7 +5343,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_485.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 486,
@@ -5354,7 +5354,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_486.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 487,
@@ -5365,7 +5365,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_487.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 488,
@@ -5376,7 +5376,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_488.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 489,
@@ -5387,7 +5387,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_489.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 490,
@@ -5398,7 +5398,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_490.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 491,
@@ -5409,7 +5409,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_491.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 492,
@@ -5420,7 +5420,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_492.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 493,
@@ -5431,7 +5431,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_493.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 494,
@@ -5442,7 +5442,7 @@
     "stock": false,
     "promo": false,
     "img": "imgs/products/prod_494.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 495,
@@ -5453,7 +5453,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_495.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 496,
@@ -5464,7 +5464,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_496.jpg",
-    "desc": ""
+    "desc": "Componente/acessório para montagem e manutenção de luminárias de LED."
   },
   {
     "id": 497,
@@ -5475,7 +5475,7 @@
     "stock": true,
     "promo": false,
     "img": "imgs/products/prod_497.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 498,
@@ -5486,7 +5486,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_498.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 499,
@@ -5497,7 +5497,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_499.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 500,
@@ -5508,7 +5508,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_500.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 501,
@@ -5519,7 +5519,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_501.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 502,
@@ -5530,7 +5530,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_502.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 503,
@@ -5541,7 +5541,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_503.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 504,
@@ -5552,7 +5552,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_504.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 505,
@@ -5563,7 +5563,7 @@
     "stock": true,
     "promo": true,
     "img": "imgs/products/prod_505.jpg",
-    "desc": ""
+    "desc": "Produto diverso da linha de iluminação e decoração LP Brisa."
   },
   {
     "id": 506,

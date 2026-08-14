@@ -81,6 +81,20 @@
   }
   .addBtn:hover{background:var(--orange); color:#1a1200;}
   .addBtn:disabled{border-color:var(--line); color:var(--muted); cursor:not-allowed; background:transparent;}
+  .qtyRow{display:flex; align-items:center; gap:8px; margin-top:auto;}
+  .qtyStepper{
+    display:flex; align-items:center; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:var(--bg2);
+  }
+  .qtyStepper button{
+    background:transparent; border:none; color:var(--orange2); width:30px; height:32px; font-size:16px; font-weight:700; cursor:pointer;
+  }
+  .qtyStepper button:hover{background:var(--orange); color:#1a1200;}
+  .qtyStepper input{
+    width:38px; text-align:center; background:transparent; border:none; border-left:1px solid var(--line); border-right:1px solid var(--line);
+    color:#fff; font-size:14px; font-weight:700; height:32px; -moz-appearance:textfield;
+  }
+  .qtyStepper input::-webkit-outer-spin-button, .qtyStepper input::-webkit-inner-spin-button{-webkit-appearance:none; margin:0;}
+  .qtyRow .addBtn{flex:1; margin-top:0;}
 
   #cartOverlay{
     position:fixed; inset:0; background:#000a; display:none; z-index:100; justify-content:flex-end;
@@ -725,6 +739,16 @@ function renderCatalog(filterText="", filterCat=""){
         : `<div class="thumb">${icon(cat)}</div>`;
       const escHtml = s => String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
       const descHtml = p.desc ? `<div class="desc">${escHtml(p.desc)}</div>` : '';
+      const qtyControlHtml = p.stock
+        ? `<div class="qtyRow">
+             <div class="qtyStepper">
+               <button type="button" onclick="stepQtyInput(${p.id}, -1)">−</button>
+               <input type="number" id="qtyInput-${p.id}" value="1" min="1" step="1" inputmode="numeric" onchange="if(this.value<1||!this.value)this.value=1;">
+               <button type="button" onclick="stepQtyInput(${p.id}, 1)">+</button>
+             </div>
+             <button class="addBtn" onclick="addToCart(${p.id})">+ Adicionar</button>
+           </div>`
+        : `<button class="addBtn" disabled>Indisponível</button>`;
       card.innerHTML = `
         ${badge}
         ${thumbHtml}
@@ -732,7 +756,7 @@ function renderCatalog(filterText="", filterCat=""){
         ${descHtml}
         <div class="code">Cód: ${p.code}</div>
         <div class="price">${money(p.price)}</div>
-        <button class="addBtn" ${p.stock?'':'disabled'} onclick="addToCart(${p.id})">${p.stock?'+ Adicionar':'Indisponível'}</button>
+        ${qtyControlHtml}
       `;
       grid.appendChild(card);
     });
@@ -750,8 +774,22 @@ function populateCatFilter(){
   });
 }
 
+function stepQtyInput(id, delta){
+  const input = document.getElementById(`qtyInput-${id}`);
+  if(!input) return;
+  let v = parseInt(input.value, 10);
+  if(isNaN(v) || v < 1) v = 1;
+  v = Math.max(1, v + delta);
+  input.value = v;
+}
 function addToCart(id){
-  cart[id] = (cart[id]||0)+1;
+  const input = document.getElementById(`qtyInput-${id}`);
+  let qty = 1;
+  if(input){
+    qty = parseInt(input.value, 10);
+    if(isNaN(qty) || qty < 1) qty = 1;
+  }
+  cart[id] = (cart[id]||0)+qty;
   updateCartUI();
 }
 function changeQty(id, delta){
