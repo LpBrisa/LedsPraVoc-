@@ -94,7 +94,7 @@
     <div class="toolbar">
       <input type="text" id="search" placeholder="🔍 Buscar por nome ou código...">
       <button class="btn btn-ghost" id="refreshBtn">🔄 Recarregar</button>
-      <button class="btn btn-red" id="importBtn">📦 Restaurar catálogo inicial (506 produtos)</button>
+      <button class="btn btn-red" id="importBtn">📦 Restaurar catálogo inicial (<span id="importCount">...</span> produtos)</button>
     </div>
     <div id="status"></div>
 
@@ -151,6 +151,21 @@ document.getElementById('loginBtn').addEventListener('click', async ()=>{
 });
 
 logoutBtn.addEventListener('click', ()=> signOut(auth));
+
+// Keep the "Restaurar catálogo inicial" button label in sync with the real
+// number of products in products.json, so it never goes stale again.
+let catalogCount = null;
+async function refreshCatalogCount(){
+  try{
+    const res = await fetch('products.json');
+    const list = await res.json();
+    catalogCount = list.length;
+    document.getElementById('importCount').textContent = catalogCount;
+  }catch(e){
+    document.getElementById('importCount').textContent = '?';
+  }
+}
+refreshCatalogCount();
 
 onAuthStateChanged(auth, user=>{
   if(user){
@@ -262,17 +277,18 @@ document.getElementById('addBtn').addEventListener('click', async ()=>{
 });
 
 document.getElementById('importBtn').addEventListener('click', async ()=>{
-  if(!confirm('Isso vai SUBSTITUIR todos os produtos no banco pelo catálogo inicial de 506 produtos. Continuar?')) return;
+  const count = catalogCount ?? 'desconhecido número de';
+  if(!confirm(`Isso vai SUBSTITUIR todos os produtos no banco pelo catálogo inicial de ${count} produtos. Continuar?`)) return;
   document.getElementById('status').textContent = 'Importando, aguarde...';
   const res = await fetch('products.json');
   const list = await res.json();
   let batch = writeBatch(db);
-  let count = 0;
+  let count2 = 0;
   for(const p of list){
     const ref = doc(db, 'products', String(p.id));
     batch.set(ref, p);
-    count++;
-    if(count % 400 === 0){
+    count2++;
+    if(count2 % 400 === 0){
       await batch.commit();
       batch = writeBatch(db);
     }
@@ -280,6 +296,7 @@ document.getElementById('importBtn').addEventListener('click', async ()=>{
   await batch.commit();
   document.getElementById('status').textContent = `Importação concluída: ${list.length} produtos.`;
   loadProducts();
+  refreshCatalogCount();
 });
 </script>
 </body>
