@@ -74,6 +74,29 @@
   </div>
 
   <div id="appArea">
+    <div id="settingsBox" style="margin-bottom:20px">
+      <h3>⚙️ Informações do rodapé (site)</h3>
+      <div class="grid2">
+        <div><label>Nome da empresa</label><input id="s_businessName" placeholder="Ex: LP Brisa LED"></div>
+        <div><label>CNPJ</label><input id="s_cnpj" placeholder="Ex: 00.000.000/0001-00"></div>
+        <div><label>Endereço</label><input id="s_address" placeholder="Ex: Rua Exemplo, 123 - São Paulo/SP"></div>
+        <div><label>Telefone</label><input id="s_phone" placeholder="Ex: (11) 98170-7807"></div>
+      </div>
+      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Texto extra (opcional)</label>
+      <textarea id="s_extra" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)" placeholder="Ex: Horário de atendimento, redes sociais, etc."></textarea></div>
+      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Faixa rolante (texto que passa pro lado no rodapé, opcional)</label>
+      <input id="s_marquee" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)" placeholder="Ex: 🚚 Frete grátis acima de R$500 • Parcelamos em até 12x • Atendimento de seg a sáb"></div>
+      <div style="margin-top:4px"><span style="font-size:11px;color:var(--muted)">Deixe em branco pra não mostrar nenhuma faixa. Use • ou — pra separar várias mensagens no mesmo texto.</span></div>
+      <button class="btn btn-orange" style="margin-top:12px" id="saveSettingsBtn">Salvar informações</button>
+      <span id="settingsStatus" style="margin-left:10px;color:var(--green);font-size:13px;"></span>
+    </div>
+
+    <div id="leadsBox" style="margin-bottom:20px">
+      <h3>✉️ Contatos recebidos (Fale Conosco)</h3>
+      <button class="btn btn-ghost" id="loadLeadsBtn">🔄 Carregar contatos</button>
+      <div id="leadsList" style="margin-top:12px"></div>
+    </div>
+
     <div id="newRowBox">
       <h3>➕ Adicionar produto novo</h3>
       <div class="grid2">
@@ -100,6 +123,7 @@
     </div>
     <div id="status"></div>
 
+
     <div style="overflow-x:auto;">
     <table>
       <thead>
@@ -120,7 +144,7 @@ import {
   getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
-  getFirestore, collection, getDocs, doc, setDoc, deleteDoc, writeBatch
+  getFirestore, collection, getDocs, doc, setDoc, getDoc, deleteDoc, writeBatch, orderBy, query
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -175,12 +199,77 @@ onAuthStateChanged(auth, user=>{
     appArea.style.display='block';
     logoutBtn.style.display='inline-block';
     loadProducts();
+    loadSettings();
   } else {
     loginBox.style.display='block';
     appArea.style.display='none';
     logoutBtn.style.display='none';
   }
 });
+
+// ---- Footer / business settings ----
+async function loadSettings(){
+  try{
+    const snap = await getDoc(doc(db, 'settings', 'site'));
+    if(snap.exists()){
+      const s = snap.data();
+      document.getElementById('s_businessName').value = s.businessName || '';
+      document.getElementById('s_cnpj').value = s.cnpj || '';
+      document.getElementById('s_address').value = s.address || '';
+      document.getElementById('s_phone').value = s.phone || '';
+      document.getElementById('s_extra').value = s.extra || '';
+      document.getElementById('s_marquee').value = s.marqueeText || '';
+    }
+  }catch(e){
+    console.error('Erro ao carregar configurações:', e);
+  }
+}
+
+document.getElementById('saveSettingsBtn').addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('settingsStatus');
+  statusEl.textContent = 'Salvando...';
+  try{
+    await setDoc(doc(db, 'settings', 'site'), {
+      businessName: document.getElementById('s_businessName').value.trim(),
+      cnpj: document.getElementById('s_cnpj').value.trim(),
+      address: document.getElementById('s_address').value.trim(),
+      phone: document.getElementById('s_phone').value.trim(),
+      extra: document.getElementById('s_extra').value.trim(),
+      marqueeText: document.getElementById('s_marquee').value.trim()
+    });
+    statusEl.textContent = 'Salvo! Já aparece no rodapé do site.';
+    setTimeout(()=> statusEl.textContent = '', 4000);
+  }catch(e){
+    console.error(e);
+    statusEl.textContent = 'Erro ao salvar.';
+  }
+});
+
+// ---- Leads (Fale Conosco submissions) ----
+async function loadLeads(){
+  const box = document.getElementById('leadsList');
+  box.textContent = 'Carregando...';
+  try{
+    const q = query(collection(db, 'leads'), orderBy('createdAt', 'desc'));
+    const snap = await getDocs(q);
+    if(snap.empty){
+      box.textContent = 'Nenhum contato recebido ainda.';
+      return;
+    }
+    let html = '<table><thead><tr><th>Data</th><th>Nome</th><th>Telefone</th><th>E-mail</th><th>Mensagem</th></tr></thead><tbody>';
+    snap.forEach(d=>{
+      const l = d.data();
+      const date = l.createdAt && l.createdAt.toDate ? l.createdAt.toDate().toLocaleString('pt-BR') : '-';
+      html += `<tr><td>${date}</td><td>${l.name||''}</td><td>${l.phone||''}</td><td>${l.email||''}</td><td>${l.message||''}</td></tr>`;
+    });
+    html += '</tbody></table>';
+    box.innerHTML = html;
+  }catch(e){
+    console.error(e);
+    box.textContent = 'Erro ao carregar contatos.';
+  }
+}
+document.getElementById('loadLeadsBtn').addEventListener('click', loadLeads);
 
 let allProducts = [];
 

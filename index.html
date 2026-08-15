@@ -114,8 +114,64 @@
     cursor:pointer; font-size:14px; margin-top:8px;
   }
   #emptyMsg{color:var(--muted); font-size:13px; text-align:center; margin-top:30px;}
-  footer{text-align:center; color:var(--muted); font-size:12px; padding:30px;}
+  footer{text-align:center; color:var(--muted); font-size:12px; padding:30px; line-height:1.8;}
+  footer .footerBiz{color:var(--orange2); font-weight:700; font-size:13px;}
+  footer .footerLine{margin:2px 0;}
+  .contactBox{max-width:480px; margin:20px auto; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px;}
+  .contactBox h2{margin:0 0 8px;}
+  .contactHint{color:var(--muted); font-size:13px; margin:0 0 18px;}
+  .contactBox form{display:flex; flex-direction:column; gap:14px;}
+  .contactBox label{display:flex; flex-direction:column; gap:6px; font-size:13px; color:var(--muted); font-weight:600;}
+  .contactBox input, .contactBox textarea{
+    background:var(--bg2); border:1px solid var(--line); border-radius:10px; color:var(--text);
+    padding:10px 12px; font-size:14px; font-family:inherit;
+  }
+  .contactBox textarea{resize:vertical;}
+  .contactBox .addBtn{margin-top:4px;}
+  #contactStatus{font-size:13px; margin-top:4px;}
+  #contactStatus.ok{color:var(--green);}
+  #contactStatus.err{color:var(--red);}
   .stats{color:var(--muted); font-size:13px; margin-bottom:10px;}
+
+  .marqueeWrap{
+    background:var(--bg2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    overflow:hidden; white-space:nowrap; padding:10px 0; display:none;
+  }
+  .marqueeWrap.show{display:block;}
+  .marqueeTrack{display:inline-block; padding-left:100%; animation:marqueeScroll 22s linear infinite;}
+  .marqueeTrack span{color:var(--orange2); font-weight:600; font-size:13px;}
+  @keyframes marqueeScroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-100%);}
+  }
+
+  #floatingContactBtn{
+    position:fixed; right:20px; bottom:20px; z-index:90;
+    background:var(--orange); color:#1a1200; border:none; border-radius:999px;
+    padding:14px 20px; font-weight:800; font-size:14px; cursor:pointer;
+    box-shadow:0 6px 18px #0008; display:flex; align-items:center; gap:8px;
+  }
+  #floatingContactBtn:hover{filter:brightness(1.08);}
+
+  #floatingWhatsBtn{
+    position:fixed; right:20px; bottom:82px; z-index:90;
+    background:#25D366; color:#fff; border:none; border-radius:999px;
+    width:54px; height:54px; display:flex; align-items:center; justify-content:center;
+    font-size:26px; cursor:pointer; box-shadow:0 6px 18px #0008; text-decoration:none;
+  }
+  #floatingWhatsBtn:hover{filter:brightness(1.08);}
+
+  .infoBar{
+    display:flex; gap:12px; flex-wrap:wrap; padding:14px 20px; max-width:1400px; margin:0 auto;
+    border-bottom:1px solid var(--line);
+  }
+  .infoCard{
+    flex:1; min-width:220px; display:flex; align-items:center; gap:10px;
+    background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:12px 14px;
+  }
+  .infoCard .infoIcon{font-size:24px; flex-shrink:0;}
+  .infoCard .infoTitle{font-weight:800; font-size:13px; color:var(--text); line-height:1.3;}
+  .infoCard .infoSub{font-size:11px; color:var(--muted); margin-top:2px;}
 </style>
 </head>
 <body>
@@ -128,20 +184,81 @@
   <button id="cartBtn" onclick="toggleCart(true)">🛒 Carrinho <span id="cartCount">0</span></button>
 </header>
 
+<div class="infoBar">
+  <div class="infoCard">
+    <div class="infoIcon">💬</div>
+    <div>
+      <div class="infoTitle">COMPRE PELO WHATSAPP</div>
+      <div class="infoSub">Sem sair de casa</div>
+    </div>
+  </div>
+  <div class="infoCard">
+    <div class="infoIcon">📦</div>
+    <div>
+      <div class="infoTitle">APÓS FEITO O PEDIDO,<br>ENTRAREMOS EM CONTATO</div>
+      <div class="infoSub">*Frete por conta do cliente</div>
+    </div>
+  </div>
+  <div class="infoCard">
+    <div class="infoIcon">💰</div>
+    <div>
+      <div class="infoTitle">PAGAMENTO VIA PIX OU<br>TRANSFERÊNCIA BANCÁRIA</div>
+      <div class="infoSub">Sem parcelamento</div>
+    </div>
+  </div>
+  <div class="infoCard">
+    <div class="infoIcon">🚚</div>
+    <div>
+      <div class="infoTitle">ENVIAMOS POR CORREIOS /<br>TRANSPORTADORA</div>
+    </div>
+  </div>
+</div>
+
 <main>
   <div class="tabs">
-    <button class="tabBtn active" id="tabShop">🛍️ Loja (com carrinho)</button>
+    <button class="tabBtn active" id="tabShop" onclick="showMainTab('shop')">🛍️ Loja (com carrinho)</button>
+    <button class="tabBtn" id="tabContact" onclick="showMainTab('contact')">✉️ Fale Conosco</button>
   </div>
 
   <div id="viewShop">
     <div class="stats" id="stats"></div>
     <div id="catalog"></div>
   </div>
+
+  <div id="viewContact" style="display:none">
+    <div class="contactBox">
+      <h2>Fale Conosco</h2>
+      <p class="contactHint">Deixe seus dados que entramos em contato. Suas informações não são compartilhadas com terceiros.</p>
+      <form id="contactForm" onsubmit="return submitContact(event)">
+        <label>Nome
+          <input type="text" id="c_name" required placeholder="Seu nome completo">
+        </label>
+        <label>Telefone
+          <input type="tel" id="c_phone" required placeholder="(11) 98765-4321">
+        </label>
+        <label>E-mail
+          <input type="email" id="c_email" required placeholder="voce@email.com">
+        </label>
+        <label>Mensagem (opcional)
+          <textarea id="c_message" rows="3" placeholder="Como podemos ajudar?"></textarea>
+        </label>
+        <button type="submit" class="addBtn" id="contactSubmitBtn">Enviar</button>
+        <div id="contactStatus"></div>
+      </form>
+    </div>
+  </div>
 </main>
 
 <div id="lightbox" onclick="this.style.display='none'"><img id="lightboxImg" src=""></div>
 
-<footer>LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</footer>
+<div class="marqueeWrap" id="marqueeWrap">
+  <div class="marqueeTrack" id="marqueeTrack"><span id="marqueeText"></span></div>
+</div>
+
+<footer id="siteFooter">LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</footer>
+
+<a href="https://wa.me/5511981707807?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" id="floatingWhatsBtn" title="Fale pelo WhatsApp">📲</a>
+<button id="floatingContactBtn" onclick="showMainTab('contact'); window.scrollTo({top:0,behavior:'smooth'});">✉️ Fale Conosco</button>
 
 <div id="cartOverlay" onclick="if(event.target===this) toggleCart(false)">
   <div id="cartPanel">
@@ -868,11 +985,18 @@ function openLightbox(src){
   document.getElementById('lightboxImg').src = src;
   document.getElementById('lightbox').style.display = 'flex';
 }
+
+function showMainTab(tab){
+  document.getElementById('viewShop').style.display = tab==='shop' ? 'block':'none';
+  document.getElementById('viewContact').style.display = tab==='contact' ? 'block':'none';
+  document.getElementById('tabShop').classList.toggle('active', tab==='shop');
+  document.getElementById('tabContact').classList.toggle('active', tab==='contact');
+}
 </script>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, collection, getDocs, addDoc, doc, getDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDp6wkoQsVsttae9nERy1DTUem-EgbPOgM",
@@ -905,6 +1029,59 @@ try{
   });
   list.sort((a,b)=> (parseInt(a.id)||0) - (parseInt(b.id)||0) || 0);
   if(window.applyRemoteProducts) window.applyRemoteProducts(list);
+
+  // Load footer/business settings (edited from the admin panel)
+  try{
+    const settingsSnap = await getDoc(doc(db, 'settings', 'site'));
+    if(settingsSnap.exists()){
+      const s = settingsSnap.data();
+      const parts = [];
+      if(s.businessName) parts.push(`<div class="footerLine footerBiz">${s.businessName}</div>`);
+      if(s.cnpj) parts.push(`<div class="footerLine">CNPJ: ${s.cnpj}</div>`);
+      if(s.address) parts.push(`<div class="footerLine">${s.address}</div>`);
+      if(s.phone) parts.push(`<div class="footerLine">${s.phone}</div>`);
+      if(s.extra) parts.push(`<div class="footerLine">${s.extra}</div>`);
+      if(parts.length){
+        document.getElementById('siteFooter').innerHTML = parts.join('');
+      }
+      if(s.marqueeText && s.marqueeText.trim()){
+        document.getElementById('marqueeText').textContent = s.marqueeText.trim();
+        document.getElementById('marqueeWrap').classList.add('show');
+      }
+    }
+  }catch(e){
+    console.warn('Não foi possível carregar configurações do rodapé.', e);
+  }
+
+  // Contact form submission
+  window.submitContact = function(evt){
+    evt.preventDefault();
+    const btn = document.getElementById('contactSubmitBtn');
+    const statusEl = document.getElementById('contactStatus');
+    const payload = {
+      name: document.getElementById('c_name').value.trim(),
+      phone: document.getElementById('c_phone').value.trim(),
+      email: document.getElementById('c_email').value.trim(),
+      message: document.getElementById('c_message').value.trim(),
+      createdAt: serverTimestamp()
+    };
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    addDoc(collection(db, 'leads'), payload).then(()=>{
+      statusEl.textContent = 'Recebido! Entraremos em contato em breve.';
+      statusEl.className = 'ok';
+      document.getElementById('contactForm').reset();
+      btn.disabled = false;
+      btn.textContent = 'Enviar';
+    }).catch(err=>{
+      console.error(err);
+      statusEl.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
+      statusEl.className = 'err';
+      btn.disabled = false;
+      btn.textContent = 'Enviar';
+    });
+    return false;
+  };
 }catch(e){
   console.warn('Não foi possível carregar produtos do Firebase, usando catálogo padrão embutido.', e);
 }
