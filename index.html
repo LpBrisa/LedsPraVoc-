@@ -38,9 +38,6 @@
   #cartCount{background:#1a1200;color:var(--orange2);border-radius:999px;padding:1px 8px;font-size:12px}
 
   main{padding:20px; max-width:1400px; margin:0 auto;}
-.tabs{display:flex; gap:10px; margin:0 0 16px; flex-wrap:wrap;}
-.tabBtn{background:var(--bg2); border:1px solid var(--line); color:var(--muted); padding:9px 16px; border-radius:10px; cursor:pointer; font-weight:700; font-size:14px;}
-.tabBtn.active{background:var(--orange); color:#1a1200; border-color:var(--orange);}
 #lightbox{position:fixed; inset:0; background:#000d; display:none; z-index:200; align-items:center; justify-content:center; padding:20px; cursor:zoom-out;}
 #lightbox img{max-width:95vw; max-height:95vh; border-radius:8px;}
   .catTitle{margin:28px 0 12px; font-size:18px; color:var(--orange2); border-left:4px solid var(--orange); padding-left:10px;}
@@ -223,11 +220,6 @@
 </div>
 
 <main>
-  <div class="tabs">
-    <button class="tabBtn active" id="tabShop" onclick="showMainTab('shop')">🛍️ Loja (com carrinho)</button>
-    <button class="tabBtn" id="tabContact" onclick="showMainTab('contact')">✉️ Fale Conosco</button>
-  </div>
-
   <div id="viewShop">
     <div class="stats" id="stats"></div>
     <div id="catalog"></div>
@@ -993,8 +985,13 @@ function openLightbox(src){
 function showMainTab(tab){
   document.getElementById('viewShop').style.display = tab==='shop' ? 'block':'none';
   document.getElementById('viewContact').style.display = tab==='contact' ? 'block':'none';
-  document.getElementById('tabShop').classList.toggle('active', tab==='shop');
-  document.getElementById('tabContact').classList.toggle('active', tab==='contact');
+  const btn = document.getElementById('floatingContactBtn');
+  if(btn){
+    btn.textContent = tab==='contact' ? '🛍️ Voltar à loja' : '✉️ Fale Conosco';
+    btn.setAttribute('onclick', tab==='contact'
+      ? "showMainTab('shop'); window.scrollTo({top:0,behavior:'smooth'});"
+      : "showMainTab('contact'); window.scrollTo({top:0,behavior:'smooth'});");
+  }
 }
 </script>
 
