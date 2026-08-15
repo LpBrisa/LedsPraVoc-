@@ -41,6 +41,8 @@
 .tabs{display:flex; gap:10px; margin:0 0 16px; flex-wrap:wrap;}
 .tabBtn{background:var(--bg2); border:1px solid var(--line); color:var(--muted); padding:9px 16px; border-radius:10px; cursor:pointer; font-weight:700; font-size:14px;}
 .tabBtn.active{background:var(--orange); color:#1a1200; border-color:var(--orange);}
+#lightbox{position:fixed; inset:0; background:#000d; display:none; z-index:200; align-items:center; justify-content:center; padding:20px; cursor:zoom-out;}
+#lightbox img{max-width:95vw; max-height:95vh; border-radius:8px;}
   .catTitle{margin:28px 0 12px; font-size:18px; color:var(--orange2); border-left:4px solid var(--orange); padding-left:10px;}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px;}
   .card{
@@ -136,6 +138,8 @@
     <div id="catalog"></div>
   </div>
 </main>
+
+<div id="lightbox" onclick="this.style.display='none'"><img id="lightboxImg" src=""></div>
 
 <footer>LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</footer>
 
@@ -859,6 +863,11 @@ document.getElementById('catFilter').addEventListener('change', e=>{
 populateCatFilter();
 renderCatalog();
 updateCartUI();
+
+function openLightbox(src){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+}
 </script>
 
 <script type="module">
