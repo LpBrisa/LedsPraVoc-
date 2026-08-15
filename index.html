@@ -156,13 +156,38 @@
     cursor:pointer; font-size:14px; margin-top:8px;
   }
   #emptyMsg{color:var(--muted); font-size:13px; text-align:center; margin-top:30px;}
-  footer{text-align:center; color:var(--muted); font-size:15px; padding:36px 20px; line-height:2;}
-  footer .footerBiz{color:var(--orange2); font-weight:800; font-size:19px;}
-  footer .footerLine{margin:5px 0;}
+
+  footer{background:var(--card); border-top:1px solid var(--line); padding:40px 20px 0; margin-top:30px;}
+  .footerGrid{
+    display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:30px;
+    max-width:1200px; margin:0 auto; padding-bottom:30px;
+  }
+  .footerCol h4{color:var(--text); font-size:15px; margin:0 0 14px; font-weight:800;}
+  .footerLogoRow{display:flex; align-items:center; gap:8px; font-size:20px; font-weight:800; color:var(--text); margin-bottom:12px;}
+  .footerDesc{color:var(--muted); font-size:13px; line-height:1.7; max-width:340px;}
+  #footerContacts div, #footerSocial div{color:var(--muted); font-size:13px; margin-bottom:12px; display:flex; gap:8px; align-items:flex-start;}
+  #footerSocial a{color:var(--muted); text-decoration:none; display:flex; gap:8px; align-items:center; margin-bottom:12px; font-size:13px;}
+  #footerSocial a:hover{color:var(--orange2);}
+  .footerCatGrid{display:grid; grid-template-columns:1fr 1fr; gap:4px 14px;}
+  .footerCatGrid a{color:var(--muted); text-decoration:none; font-size:13px; line-height:2.1; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .footerCatGrid a:hover{color:var(--orange2);}
+  .footerBottom{
+    border-top:1px solid var(--line); text-align:center; color:var(--muted); font-size:12px;
+    padding:18px 20px; line-height:1.8;
+  }
+  footer .footerBiz{color:var(--orange2); font-weight:800; font-size:16px;}
+  footer .footerLine{margin:3px 0;}
   footer .footerNotice{
-    color:#ffd23f; font-weight:600; font-size:11px; max-width:520px; margin:14px auto 0;
+    color:#ffd23f; font-weight:600; font-size:11px; max-width:600px; margin:12px auto 0;
     background:#ffd23f14; border:1px solid #ffd23f55; border-radius:8px; padding:8px 14px; line-height:1.4;
   }
+  @media (max-width: 900px){
+    .footerGrid{grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width: 560px){
+    .footerGrid{grid-template-columns:1fr;}
+  }
+
   .contactBox{max-width:480px; margin:20px auto; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px;}
   .contactBox h2{margin:0 0 8px;}
   .contactHint{color:var(--muted); font-size:13px; margin:0 0 18px;}
@@ -300,7 +325,27 @@
 
 <div id="lightbox" onclick="this.style.display='none'"><img id="lightboxImg" src=""></div>
 
-<footer id="siteFooter">LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</footer>
+<footer id="siteFooter">
+  <div class="footerGrid">
+    <div class="footerCol footerAbout">
+      <div class="footerLogoRow">💡 <span>LP <b style="color:var(--orange)">BRISA</b> LED</span></div>
+      <p class="footerDesc" id="footerDescText">Catálogo completo de iluminação LED, com preços de atacado e entrega para todo o Brasil.</p>
+    </div>
+    <div class="footerCol">
+      <h4>Contatos</h4>
+      <div id="footerContacts"></div>
+    </div>
+    <div class="footerCol">
+      <h4>Produtos</h4>
+      <div class="footerCatGrid" id="footerCatGrid"></div>
+    </div>
+    <div class="footerCol">
+      <h4>Redes Sociais</h4>
+      <div id="footerSocial"></div>
+    </div>
+  </div>
+  <div class="footerBottom" id="footerBottom">LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</div>
+</footer>
 
 <a href="https://wa.me/5511981707807?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" id="floatingWhatsBtn" title="Fale pelo WhatsApp">📲</a>
 <button id="floatingContactBtn" onclick="showMainTab('contact'); window.scrollTo({top:0,behavior:'smooth'});">✉️ Fale Conosco</button>
@@ -927,6 +972,15 @@ function populateCatFilter(){
     const o = document.createElement('option'); o.value=c; o.textContent=c;
     sel.appendChild(o);
   });
+  populateFooterCategories(cats);
+}
+
+function populateFooterCategories(cats){
+  const box = document.getElementById('footerCatGrid');
+  if(!box) return;
+  box.innerHTML = cats.slice(0, 12).map(c =>
+    `<a href="#" onclick="document.getElementById('catFilter').value='${c.replace(/'/g,"\\'")}'; renderCatalog(document.getElementById('search').value, '${c.replace(/'/g,"\\'")}'); window.scrollTo({top:0,behavior:'smooth'}); return false;">${c}</a>`
+  ).join('');
 }
 
 function stepQtyInput(id, delta){
@@ -1110,15 +1164,34 @@ try{
     const settingsSnap = await getDoc(doc(db, 'settings', 'site'));
     if(settingsSnap.exists()){
       const s = settingsSnap.data();
-      const parts = [];
-      if(s.businessName) parts.push(`<div class="footerLine footerBiz">${s.businessName}</div>`);
-      if(s.cnpj) parts.push(`<div class="footerLine">CNPJ: ${s.cnpj}</div>`);
-      if(s.address) parts.push(`<div class="footerLine">${s.address}</div>`);
-      if(s.phone) parts.push(`<div class="footerLine">${s.phone}</div>`);
-      if(s.extra) parts.push(`<div class="footerNotice">⚠️ ${s.extra}</div>`);
-      if(parts.length){
-        document.getElementById('siteFooter').innerHTML = parts.join('');
+
+      if(s.aboutText){
+        document.getElementById('footerDescText').textContent = s.aboutText;
       }
+
+      // Coluna "Contatos"
+      const contactsHtml = [];
+      if(s.phone) contactsHtml.push(`<div>📱 ${s.phone}</div>`);
+      if(s.email) contactsHtml.push(`<div>✉️ ${s.email}</div>`);
+      if(s.address) contactsHtml.push(`<div>📍 ${s.address}</div>`);
+      document.getElementById('footerContacts').innerHTML = contactsHtml.join('');
+
+      // Coluna "Redes Sociais"
+      const socialHtml = [];
+      if(s.instagram) socialHtml.push(`<a href="${s.instagram}" target="_blank">📷 Instagram</a>`);
+      if(s.phone) socialHtml.push(`<a href="https://wa.me/${s.phone.replace(/\D/g,'')}" target="_blank">💬 WhatsApp</a>`);
+      if(s.address) socialHtml.push(`<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.address)}" target="_blank">📍 Google Maps</a>`);
+      document.getElementById('footerSocial').innerHTML = socialHtml.join('');
+
+      // Rodapé final: nome, CNPJ, aviso em destaque
+      const bottomParts = [];
+      if(s.businessName) bottomParts.push(`<div class="footerLine footerBiz">${s.businessName}</div>`);
+      if(s.cnpj) bottomParts.push(`<div class="footerLine">CNPJ: ${s.cnpj}</div>`);
+      if(s.extra) bottomParts.push(`<div class="footerNotice">⚠️ ${s.extra}</div>`);
+      if(bottomParts.length){
+        document.getElementById('footerBottom').innerHTML = bottomParts.join('');
+      }
+
       if(s.marqueeText && s.marqueeText.trim()){
         const parts = s.marqueeText.split(/[•|]|—/).map(t=>t.trim()).filter(Boolean);
         const track = document.getElementById('marqueeTrack');

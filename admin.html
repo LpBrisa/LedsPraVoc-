@@ -39,6 +39,9 @@
   #status{color:var(--muted);font-size:13px;margin-bottom:10px;}
 
   table{width:100%;border-collapse:collapse;font-size:13px;}
+  .statCard{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:14px 20px; min-width:120px;}
+  .statCard .statNum{font-size:26px; font-weight:800; color:var(--orange2);}
+  .statCard .statLabel{font-size:12px; color:var(--muted); margin-top:4px;}
   th{text-align:left;color:var(--muted);font-weight:600;padding:8px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);}
   td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:middle;}
   td input[type=text], td input[type=number], td textarea{
@@ -81,10 +84,14 @@
         <div><label>CNPJ</label><input id="s_cnpj" placeholder="Ex: 00.000.000/0001-00"></div>
         <div><label>Endereço</label><input id="s_address" placeholder="Ex: Rua Exemplo, 123 - São Paulo/SP"></div>
         <div><label>Telefone</label><input id="s_phone" placeholder="Ex: (11) 98170-7807"></div>
+        <div><label>E-mail</label><input id="s_email" placeholder="Ex: contato@lpbrisa.com"></div>
+        <div><label>Instagram (link completo)</label><input id="s_instagram" placeholder="Ex: https://instagram.com/lpbrisaled"></div>
       </div>
-      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Texto extra (opcional)</label>
-      <textarea id="s_extra" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)" placeholder="Ex: Horário de atendimento, redes sociais, etc."></textarea></div>
-      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Faixa rolante (texto que passa pro lado no rodapé, opcional)</label>
+      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Sobre a empresa (aparece embaixo do logo no rodapé)</label>
+      <textarea id="s_about" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)" placeholder="Ex: Catálogo completo de iluminação LED, com preços de atacado e entrega para todo o Brasil."></textarea></div>
+      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Aviso em destaque amarelo (opcional, curto funciona melhor)</label>
+      <textarea id="s_extra" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)" placeholder="Ex: Visitas somente com agendamento prévio."></textarea></div>
+      <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Faixa rolante (texto que passa pro lado no topo, opcional)</label>
       <input id="s_marquee" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)" placeholder="Ex: 🚚 Frete grátis acima de R$500 • Parcelamos em até 12x • Atendimento de seg a sáb"></div>
       <div style="margin-top:4px"><span style="font-size:11px;color:var(--muted)">Deixe em branco pra não mostrar nenhuma faixa. Use • ou — pra separar várias mensagens no mesmo texto.</span></div>
       <button class="btn btn-orange" style="margin-top:12px" id="saveSettingsBtn">Salvar informações</button>
@@ -95,6 +102,13 @@
       <h3>✉️ Contatos recebidos (Fale Conosco)</h3>
       <button class="btn btn-ghost" id="loadLeadsBtn">🔄 Carregar contatos</button>
       <div id="leadsList" style="margin-top:12px"></div>
+    </div>
+
+    <div id="visitsBox" style="margin-bottom:20px">
+      <h3>📊 Histórico de acessos ao site</h3>
+      <button class="btn btn-ghost" id="loadVisitsBtn">🔄 Carregar acessos</button>
+      <div id="visitsSummary" style="margin:12px 0; display:flex; gap:20px; flex-wrap:wrap;"></div>
+      <div id="visitsList"></div>
     </div>
 
     <div id="newRowBox">
@@ -217,6 +231,9 @@ async function loadSettings(){
       document.getElementById('s_cnpj').value = s.cnpj || '';
       document.getElementById('s_address').value = s.address || '';
       document.getElementById('s_phone').value = s.phone || '';
+      document.getElementById('s_email').value = s.email || '';
+      document.getElementById('s_instagram').value = s.instagram || '';
+      document.getElementById('s_about').value = s.aboutText || '';
       document.getElementById('s_extra').value = s.extra || '';
       document.getElementById('s_marquee').value = s.marqueeText || '';
     }
@@ -234,6 +251,9 @@ document.getElementById('saveSettingsBtn').addEventListener('click', async ()=>{
       cnpj: document.getElementById('s_cnpj').value.trim(),
       address: document.getElementById('s_address').value.trim(),
       phone: document.getElementById('s_phone').value.trim(),
+      email: document.getElementById('s_email').value.trim(),
+      instagram: document.getElementById('s_instagram').value.trim(),
+      aboutText: document.getElementById('s_about').value.trim(),
       extra: document.getElementById('s_extra').value.trim(),
       marqueeText: document.getElementById('s_marquee').value.trim()
     });
@@ -270,6 +290,48 @@ async function loadLeads(){
   }
 }
 document.getElementById('loadLeadsBtn').addEventListener('click', loadLeads);
+
+// ---- Visits (access log) ----
+async function loadVisits(){
+  const summaryBox = document.getElementById('visitsSummary');
+  const listBox = document.getElementById('visitsList');
+  summaryBox.textContent = 'Carregando...';
+  listBox.innerHTML = '';
+  try{
+    const q = query(collection(db, 'visits'), orderBy('createdAt', 'desc'));
+    const snap = await getDocs(q);
+    if(snap.empty){
+      summaryBox.textContent = 'Nenhum acesso registrado ainda.';
+      return;
+    }
+    const all = [];
+    snap.forEach(d=> all.push(d.data()));
+
+    const total = all.length;
+    const today = new Date(); today.setHours(0,0,0,0);
+    const todayCount = all.filter(v => v.createdAt && v.createdAt.toDate && v.createdAt.toDate() >= today).length;
+    const mobileCount = all.filter(v => v.device === 'mobile').length;
+
+    summaryBox.innerHTML = `
+      <div class="statCard"><div class="statNum">${total}</div><div class="statLabel">Total de acessos</div></div>
+      <div class="statCard"><div class="statNum">${todayCount}</div><div class="statLabel">Hoje</div></div>
+      <div class="statCard"><div class="statNum">${mobileCount}</div><div class="statLabel">Pelo celular</div></div>
+    `;
+
+    let html = '<table><thead><tr><th>Data</th><th>Dispositivo</th><th>Veio de</th></tr></thead><tbody>';
+    all.slice(0, 200).forEach(v=>{
+      const date = v.createdAt && v.createdAt.toDate ? v.createdAt.toDate().toLocaleString('pt-BR') : '-';
+      html += `<tr><td>${date}</td><td>${v.device||''}</td><td>${v.referrer||'direto'}</td></tr>`;
+    });
+    html += '</tbody></table>';
+    if(all.length > 200) html += `<p style="font-size:12px;color:var(--muted);margin-top:8px">Mostrando os 200 mais recentes de ${all.length} no total.</p>`;
+    listBox.innerHTML = html;
+  }catch(e){
+    console.error(e);
+    summaryBox.textContent = 'Erro ao carregar acessos.';
+  }
+}
+document.getElementById('loadVisitsBtn').addEventListener('click', loadVisits);
 
 let allProducts = [];
 
