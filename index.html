@@ -135,11 +135,15 @@
 
   .marqueeWrap{
     background:var(--bg2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-    overflow:hidden; white-space:nowrap; padding:10px 0; display:none;
+    overflow:hidden; white-space:nowrap; padding:12px 0; display:none;
   }
   .marqueeWrap.show{display:block;}
-  .marqueeTrack{display:inline-block; padding-left:100%; animation:marqueeScroll 22s linear infinite;}
-  .marqueeTrack span{color:var(--orange2); font-weight:600; font-size:13px;}
+  .marqueeTrack{display:inline-flex; align-items:center; padding-left:100%; animation:marqueeScroll 26s linear infinite;}
+  .marqueeBubble{
+    display:inline-flex; align-items:center; color:var(--orange2); font-weight:800; font-size:16px;
+    background:var(--card); border:1px solid var(--orange); border-radius:999px;
+    padding:8px 20px; margin:0 8px; white-space:nowrap;
+  }
   @keyframes marqueeScroll{
     0%{transform:translateX(0);}
     100%{transform:translateX(-100%);}
@@ -252,7 +256,7 @@
 <div id="lightbox" onclick="this.style.display='none'"><img id="lightboxImg" src=""></div>
 
 <div class="marqueeWrap" id="marqueeWrap">
-  <div class="marqueeTrack" id="marqueeTrack"><span id="marqueeText"></span></div>
+  <div class="marqueeTrack" id="marqueeTrack"></div>
 </div>
 
 <footer id="siteFooter">LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</footer>
@@ -1045,7 +1049,11 @@ try{
         document.getElementById('siteFooter').innerHTML = parts.join('');
       }
       if(s.marqueeText && s.marqueeText.trim()){
-        document.getElementById('marqueeText').textContent = s.marqueeText.trim();
+        const parts = s.marqueeText.split(/[•|]|—/).map(t=>t.trim()).filter(Boolean);
+        const track = document.getElementById('marqueeTrack');
+        // duplicate the set so the loop feels continuous
+        const buildBubbles = () => parts.map(p => `<span class="marqueeBubble">${p}</span>`).join('');
+        track.innerHTML = buildBubbles() + buildBubbles();
         document.getElementById('marqueeWrap').classList.add('show');
       }
     }
