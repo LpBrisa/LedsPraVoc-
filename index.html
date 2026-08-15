@@ -1166,7 +1166,12 @@ try{
       const s = settingsSnap.data();
 
       if(s.aboutText){
-        document.getElementById('footerDescText').textContent = s.aboutText;
+        let html = s.aboutText;
+        if(s.businessName){
+          const escaped = s.businessName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          html = html.replace(new RegExp(escaped, 'gi'), match => `<b style="color:var(--orange)">${match}</b>`);
+        }
+        document.getElementById('footerDescText').innerHTML = html;
       }
 
       // Coluna "Contatos"
