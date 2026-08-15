@@ -41,13 +41,6 @@
 .tabs{display:flex; gap:10px; margin:0 0 16px; flex-wrap:wrap;}
 .tabBtn{background:var(--bg2); border:1px solid var(--line); color:var(--muted); padding:9px 16px; border-radius:10px; cursor:pointer; font-weight:700; font-size:14px;}
 .tabBtn.active{background:var(--orange); color:#1a1200; border-color:var(--orange);}
-.galleryGrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px;}
-.galleryGrid figure{margin:0;}
-.galleryGrid img{width:100%; border-radius:8px; border:1px solid var(--line); cursor:zoom-in; display:block; transition:.15s;}
-.galleryGrid img:hover{border-color:var(--orange); transform:scale(1.02);}
-.galleryGrid figcaption{font-size:11px; color:var(--muted); text-align:center; margin-top:4px;}
-#lightbox{position:fixed; inset:0; background:#000d; display:none; z-index:200; align-items:center; justify-content:center; padding:20px; cursor:zoom-out;}
-#lightbox img{max-width:95vw; max-height:95vh; border-radius:8px;}
   .catTitle{margin:28px 0 12px; font-size:18px; color:var(--orange2); border-left:4px solid var(--orange); padding-left:10px;}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px;}
   .card{
@@ -135,22 +128,14 @@
 
 <main>
   <div class="tabs">
-    <button class="tabBtn active" id="tabShop" onclick="showTab('shop')">🛍️ Loja (com carrinho)</button>
-    <button class="tabBtn" id="tabGallery" onclick="showTab('gallery')">📖 Catálogo Visual (páginas originais)</button>
+    <button class="tabBtn active" id="tabShop">🛍️ Loja (com carrinho)</button>
   </div>
 
   <div id="viewShop">
     <div class="stats" id="stats"></div>
     <div id="catalog"></div>
   </div>
-
-  <div id="viewGallery" style="display:none">
-    <p style="color:var(--muted);font-size:13px;margin-bottom:14px;">Estas são as páginas originais do catálogo em fotos reais dos produtos. Clique para ampliar. Use a aba "Loja" para pesquisar por nome/código e montar seu pedido.</p>
-    <div class="galleryGrid" id="galleryGrid"></div>
-  </div>
 </main>
-
-<div id="lightbox" onclick="this.style.display='none'"><img id="lightboxImg" src=""></div>
 
 <footer>LP Brisa LED — Catálogo gerado a partir da tabela de preços. Itens marcados "Sem estoque" ficam disponíveis para consulta.</footer>
 
@@ -874,29 +859,6 @@ document.getElementById('catFilter').addEventListener('change', e=>{
 populateCatFilter();
 renderCatalog();
 updateCartUI();
-
-function showTab(tab){
-  document.getElementById('viewShop').style.display = tab==='shop' ? 'block':'none';
-  document.getElementById('viewGallery').style.display = tab==='gallery' ? 'block':'none';
-  document.getElementById('tabShop').classList.toggle('active', tab==='shop');
-  document.getElementById('tabGallery').classList.toggle('active', tab==='gallery');
-}
-
-function buildGallery(){
-  const grid = document.getElementById('galleryGrid');
-  for(let i=1;i<=44;i++){
-    const n = String(i).padStart(2,'0');
-    const src = `imgs/pg-${n}.jpg`;
-    const fig = document.createElement('figure');
-    fig.innerHTML = `<img src="${src}" loading="lazy" onclick="openLightbox('${src}')"><figcaption>Página ${i}</figcaption>`;
-    grid.appendChild(fig);
-  }
-}
-function openLightbox(src){
-  document.getElementById('lightboxImg').src = src;
-  document.getElementById('lightbox').style.display = 'flex';
-}
-buildGallery();
 </script>
 
 <script type="module">
