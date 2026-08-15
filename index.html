@@ -4,6 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LP Brisa LED — Catálogo</title>
+<meta name="description" content="Catálogo completo de iluminação LED da LP Brisa. Preços de atacado, mais de 500 produtos, peça direto pelo WhatsApp.">
+
+<!-- Preview ao compartilhar (WhatsApp, Facebook, Instagram) -->
+<meta property="og:title" content="LP Brisa LED — Catálogo">
+<meta property="og:description" content="Catálogo completo de iluminação LED. Preços de atacado, peça pelo WhatsApp.">
+<meta property="og:image" content="social-preview.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!--
+  GOOGLE ANALYTICS (GA4) + GOOGLE ADS — pendente
+
+  Como ativar:
+  1) Crie uma propriedade GA4 gratuita em analytics.google.com e copie o ID
+     (formato G-XXXXXXXXXX).
+  2) Se/quando tiver conta do Google Ads, copie o ID de conversão (formato
+     AW-XXXXXXXXX).
+  3) Troque "SEU_ID_GA4_AQUI" e/ou "SEU_ID_ADS_AQUI" abaixo pelos valores
+     reais e apague as linhas <!-- e --> que envolvem o bloco (ou seja, tire
+     o comentário). Pode ativar só o GA4, só o Ads, ou os dois.
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_GA4_AQUI"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'SEU_ID_GA4_AQUI');   // Google Analytics — visão geral, tempo no site, páginas, etc.
+  gtag('config', 'SEU_ID_ADS_AQUI');   // Google Ads — só se/quando tiver conta criada
+
+  window.trackConversion = function(label){
+    gtag('event', 'conversion', {'send_to': 'SEU_ID_ADS_AQUI/' + label});
+  };
+  window.trackEvent = function(name, params){
+    gtag('event', name, params || {});
+  };
+</script>
+-->
+<script>
+  // Enquanto o Analytics/Ads não está configurado, isso evita erro no console.
+  if(!window.trackConversion){ window.trackConversion = function(){}; }
+  if(!window.trackEvent){ window.trackEvent = function(){}; }
+</script>
+
 <style>
   :root{
     --bg:#0f1115; --bg2:#171a21; --card:#1c202a; --line:#2a2f3b;
@@ -111,9 +156,13 @@
     cursor:pointer; font-size:14px; margin-top:8px;
   }
   #emptyMsg{color:var(--muted); font-size:13px; text-align:center; margin-top:30px;}
-  footer{text-align:center; color:var(--muted); font-size:12px; padding:30px; line-height:1.8;}
-  footer .footerBiz{color:var(--orange2); font-weight:700; font-size:13px;}
-  footer .footerLine{margin:2px 0;}
+  footer{text-align:center; color:var(--muted); font-size:15px; padding:36px 20px; line-height:2;}
+  footer .footerBiz{color:var(--orange2); font-weight:800; font-size:19px;}
+  footer .footerLine{margin:5px 0;}
+  footer .footerNotice{
+    color:#ffd23f; font-weight:600; font-size:11px; max-width:520px; margin:14px auto 0;
+    background:#ffd23f14; border:1px solid #ffd23f55; border-radius:8px; padding:8px 14px; line-height:1.4;
+  }
   .contactBox{max-width:480px; margin:20px auto; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px;}
   .contactBox h2{margin:0 0 8px;}
   .contactHint{color:var(--muted); font-size:13px; margin:0 0 18px;}
@@ -899,6 +948,7 @@ function addToCart(id){
   const boxQty = (p && p.boxQty) ? p.boxQty : 1;
   cart[id] = (cart[id]||0) + boxes*boxQty;
   updateCartUI();
+  if(p) window.trackEvent('add_to_cart', {item_id: String(id), item_name: p.name, quantity: boxes*boxQty});
 }
 function changeQty(id, delta){
   const p = PRODUCTS[id];
@@ -964,10 +1014,18 @@ function sendWhats(){
   // Número de exemplo - trocar pelo WhatsApp real da empresa
   const phone = "5511981707807";
   window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+  window.trackConversion('whatsapp_order');
+  window.trackEvent('purchase', {value: total, currency: 'BRL', num_items: ids.length});
 }
 
+let searchTrackTimer = null;
 document.getElementById('search').addEventListener('input', e=>{
   renderCatalog(e.target.value, document.getElementById('catFilter').value);
+  clearTimeout(searchTrackTimer);
+  const term = e.target.value.trim();
+  if(term){
+    searchTrackTimer = setTimeout(()=> window.trackEvent('search', {search_term: term}), 800);
+  }
 });
 document.getElementById('catFilter').addEventListener('change', e=>{
   renderCatalog(document.getElementById('search').value, e.target.value);
@@ -1011,6 +1069,22 @@ const firebaseConfig = {
 try{
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+
+  // Registro simples de acessos (uma vez por sessão de navegador, não a cada recarregamento)
+  try{
+    if(!sessionStorage.getItem('visitLogged')){
+      const ua = navigator.userAgent;
+      const isMobile = /Mobi|Android|iPhone|iPad/i.test(ua);
+      addDoc(collection(db, 'visits'), {
+        createdAt: serverTimestamp(),
+        referrer: document.referrer || 'direto',
+        device: isMobile ? 'mobile' : 'desktop',
+        path: location.pathname
+      }).catch(()=>{});
+      sessionStorage.setItem('visitLogged', '1');
+    }
+  }catch(e){ /* não bloqueia o site se isso falhar */ }
+
   const snap = await getDocs(collection(db, 'products'));
   const list = [];
   snap.forEach(d=>{
@@ -1041,7 +1115,7 @@ try{
       if(s.cnpj) parts.push(`<div class="footerLine">CNPJ: ${s.cnpj}</div>`);
       if(s.address) parts.push(`<div class="footerLine">${s.address}</div>`);
       if(s.phone) parts.push(`<div class="footerLine">${s.phone}</div>`);
-      if(s.extra) parts.push(`<div class="footerLine">${s.extra}</div>`);
+      if(s.extra) parts.push(`<div class="footerNotice">⚠️ ${s.extra}</div>`);
       if(parts.length){
         document.getElementById('siteFooter').innerHTML = parts.join('');
       }
@@ -1075,6 +1149,8 @@ try{
     addDoc(collection(db, 'leads'), payload).then(()=>{
       statusEl.textContent = 'Recebido! Entraremos em contato em breve.';
       statusEl.className = 'ok';
+      window.trackConversion('contact_form');
+      window.trackEvent('generate_lead', {});
       document.getElementById('contactForm').reset();
       btn.disabled = false;
       btn.textContent = 'Enviar';
