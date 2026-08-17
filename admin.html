@@ -121,9 +121,11 @@
         <div><label>Estoque (1=sim,0=não)</label><input id="n_stock" type="number" min="0" max="1" value="1"></div>
         <div><label>Promoção (1=sim,0=não)</label><input id="n_promo" type="number" min="0" max="1" value="0"></div>
         <div><label>Peças por caixa (Cx)</label><input id="n_boxqty" type="number" min="1" step="1" value="1" placeholder="Ex: 30"></div>
+        <div><label>Cor</label><input id="n_color" placeholder="Ex: Vermelho, Azul, Verde"></div>
         <div><label>URL da foto (opcional)</label><input id="n_img" placeholder="imgs/products/prod_X.jpg ou link"></div>
       </div>
       <div style="margin-top:6px"><span style="font-size:11px;color:var(--muted)">"Peças por caixa": quando o cliente escolhe "2" no site, ele leva 2 caixas — o carrinho calcula sozinho o total de peças. Deixe 1 se o produto for vendido por unidade.</span></div>
+      <div style="margin-top:4px"><span style="font-size:11px;color:var(--muted)">"Cor": se o produto tiver mais de uma opção, separe por vírgula (ex: "Vermelho, Azul, Verde") — o site mostra um seletor pro cliente escolher antes de adicionar ao carrinho. Com uma cor só, aparece como informação fixa.</span></div>
       <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Descrição (opcional)</label>
       <textarea id="n_desc" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)"></textarea></div>
       <button class="btn btn-orange" style="margin-top:12px" id="addBtn">Adicionar produto</button>
@@ -143,7 +145,7 @@
       <thead>
         <tr>
           <th>Foto</th><th>Categoria</th><th>Nome</th><th>Código</th><th>Preço</th>
-          <th>Estoque</th><th>Promo</th><th>Peças/Cx</th><th>Descrição</th><th>URL Foto</th><th></th>
+          <th>Estoque</th><th>Promo</th><th>Peças/Cx</th><th>Cor</th><th>Descrição</th><th>URL Foto</th><th></th>
         </tr>
       </thead>
       <tbody id="tbody"></tbody>
@@ -359,6 +361,7 @@ function renderTable(list){
       <td><input type="number" min="0" max="1" data-f="stock" value="${p.stock?1:0}" style="width:50px"></td>
       <td><input type="number" min="0" max="1" data-f="promo" value="${p.promo?1:0}" style="width:50px"></td>
       <td><input type="number" min="1" step="1" data-f="boxQty" value="${p.boxQty||1}" style="width:60px"></td>
+      <td><input type="text" data-f="color" value="${escAttr(p.color||'')}" style="width:90px"></td>
       <td><textarea data-f="desc" rows="1">${escAttr(p.desc||'')}</textarea></td>
       <td><input type="text" data-f="img" value="${escAttr(p.img||'')}" style="width:140px"></td>
       <td style="white-space:nowrap">
@@ -419,6 +422,7 @@ document.getElementById('addBtn').addEventListener('click', async ()=>{
     stock: Number(document.getElementById('n_stock').value) > 0,
     promo: Number(document.getElementById('n_promo').value) > 0,
     boxQty: Math.max(1, parseInt(document.getElementById('n_boxqty').value)||1),
+    color: document.getElementById('n_color').value.trim(),
     img: document.getElementById('n_img').value.trim(),
     desc: document.getElementById('n_desc').value.trim()
   };
@@ -426,7 +430,7 @@ document.getElementById('addBtn').addEventListener('click', async ()=>{
   await setDoc(doc(db,'products', newId), data);
   document.getElementById('addStatus').textContent = '✓ Produto adicionado!';
   setTimeout(()=> document.getElementById('addStatus').textContent = '', 2000);
-  ['n_cat','n_name','n_code','n_price','n_img','n_desc'].forEach(id=> document.getElementById(id).value='');
+  ['n_cat','n_name','n_code','n_price','n_color','n_img','n_desc'].forEach(id=> document.getElementById(id).value='');
   document.getElementById('n_stock').value = 1;
   document.getElementById('n_promo').value = 0;
   document.getElementById('n_boxqty').value = 1;

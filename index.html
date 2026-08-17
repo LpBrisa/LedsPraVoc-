@@ -113,6 +113,14 @@
     display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
   }
   .code{font-size:11px; color:var(--muted);}
+  .colorTag{font-size:11px; color:var(--muted); display:flex; align-items:center; gap:6px; margin-top:2px;}
+  .colorDot{width:11px; height:11px; border-radius:50%; display:inline-block; border:1px solid #ffffff33; flex-shrink:0;}
+  .colorSelectRow{display:flex; align-items:center; gap:8px; margin-top:6px;}
+  .colorSelectRow label{font-size:12px; color:var(--muted); font-weight:600;}
+  .colorSelectRow select{
+    flex:1; background:var(--bg2); border:1px solid var(--line); border-radius:8px; color:var(--text);
+    padding:7px 8px; font-size:13px; font-family:inherit;
+  }
   .price{font-size:19px; font-weight:800; color:var(--green);}
   .addBtn{
     margin-top:auto; background:var(--bg2); border:1px solid var(--orange); color:var(--orange2);
@@ -893,9 +901,22 @@ window.applyRemoteProducts = function(list){
 };
 
 // ===== STATE =====
-let cart = {}; // id -> qty
+// cart: cartKey -> {id, color, qty}. cartKey = "<id>::<color>" (color pode ser vazio).
+let cart = {};
+function cartKey(id, color){ return `${id}::${color||''}`; }
 
 function money(v){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
+
+function colorDot(colorName){
+  const known = {
+    'vermelho':'#e53935','azul':'#1e88e5','verde':'#43a047','amarelo':'#fdd835',
+    'branco':'#f5f5f5','preto':'#222222','laranja':'#fb8c00','roxo':'#8e24aa',
+    'rosa':'#ec407a','rgb':'linear-gradient(90deg,#e53935,#fdd835,#43a047,#1e88e5,#8e24aa)',
+    'dourado':'#d4af37','prata':'#c0c0c0','bq':'#ffdca8','bf':'#eaf3ff'
+  };
+  const key = String(colorName||'').toLowerCase().trim();
+  return known[key] ? `<span class="colorDot" style="background:${known[key]}"></span>` : '';
+}
 
 function icon(cat){
   const map = {
@@ -938,6 +959,20 @@ function renderCatalog(filterText="", filterCat=""){
         : `<div class="thumb">${icon(cat)}</div>`;
       const escHtml = s => String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
       const descHtml = p.desc ? `<div class="desc">${escHtml(p.desc)}</div>` : '';
+      const colorOptions = p.color ? String(p.color).split(',').map(c=>c.trim()).filter(Boolean) : [];
+      const hasColorChoice = colorOptions.length > 1;
+      const colorHtml = (p.color && !hasColorChoice) ? (() => {
+        const dot = colorDot(colorOptions[0] || p.color);
+        return `<div class="colorTag">${dot}Cor: ${escHtml(colorOptions[0] || p.color)}</div>`;
+      })() : '';
+      const colorSelectHtml = hasColorChoice
+        ? `<div class="colorSelectRow">
+             <label>Cor:</label>
+             <select id="colorSelect-${p.id}">
+               ${colorOptions.map(c=>`<option value="${escHtml(c)}">${escHtml(c)}</option>`).join('')}
+             </select>
+           </div>`
+        : '';
       const boxQty = p.boxQty || 1;
       const boxHintHtml = boxQty > 1 ? `<div class="boxHint">📦 Vendido em caixas de ${boxQty} peças</div>` : '';
       const qtyControlHtml = p.stock
@@ -956,8 +991,10 @@ function renderCatalog(filterText="", filterCat=""){
         <div class="name">${p.name}</div>
         ${descHtml}
         <div class="code">Cód: ${p.code}</div>
+        ${colorHtml}
         <div class="price">${money(p.price)}</div>
         ${boxHintHtml}
+        ${colorSelectHtml}
         ${qtyControlHtml}
       `;
       grid.appendChild(card);
@@ -1000,54 +1037,62 @@ function addToCart(id){
     boxes = parseInt(input.value, 10);
     if(isNaN(boxes) || boxes < 1) boxes = 1;
   }
+  const colorSelect = document.getElementById(`colorSelect-${id}`);
+  const color = colorSelect ? colorSelect.value : '';
   const p = PRODUCTS[id];
   const boxQty = (p && p.boxQty) ? p.boxQty : 1;
-  cart[id] = (cart[id]||0) + boxes*boxQty;
+  const key = cartKey(id, color);
+  const existing = cart[key];
+  cart[key] = { id, color, qty: (existing ? existing.qty : 0) + boxes*boxQty };
   updateCartUI();
-  if(p) window.trackEvent('add_to_cart', {item_id: String(id), item_name: p.name, quantity: boxes*boxQty});
+  if(p) window.trackEvent('add_to_cart', {item_id: String(id), item_name: p.name, quantity: boxes*boxQty, color});
 }
-function changeQty(id, delta){
-  const p = PRODUCTS[id];
+function changeQty(key, delta){
+  const entry = cart[key];
+  if(!entry) return;
+  const p = PRODUCTS[entry.id];
   const boxQty = (p && p.boxQty) ? p.boxQty : 1;
-  cart[id] = (cart[id]||0)+delta*boxQty;
-  if(cart[id]<=0) delete cart[id];
+  entry.qty += delta*boxQty;
+  if(entry.qty<=0) delete cart[key];
   updateCartUI();
 }
-function removeFromCart(id){ delete cart[id]; updateCartUI(); }
+function removeFromCart(key){ delete cart[key]; updateCartUI(); }
 
 function updateCartUI(){
-  const ids = Object.keys(cart);
-  document.getElementById('cartCount').textContent = ids.reduce((a,id)=>a+cart[id],0);
+  const keys = Object.keys(cart);
+  document.getElementById('cartCount').textContent = keys.reduce((a,k)=>a+cart[k].qty,0);
   const wrap = document.getElementById('cartItems');
   const empty = document.getElementById('emptyMsg');
   wrap.innerHTML='';
   let total = 0;
-  if(ids.length===0){ empty.style.display='block'; }
+  if(keys.length===0){ empty.style.display='block'; }
   else { empty.style.display='none'; }
-  ids.forEach(id=>{
-    const p = PRODUCTS[id];
-    const qty = cart[id];
+  keys.forEach(key=>{
+    const entry = cart[key];
+    const p = PRODUCTS[entry.id];
+    const qty = entry.qty;
     const boxQty = p.boxQty || 1;
     total += p.price*qty;
     const boxes = Math.round(qty/boxQty);
     const qtyLabel = boxQty > 1 ? `${boxes} cx (${qty} pçs)` : `${qty}`;
+    const colorLabel = entry.color ? ` · Cor: ${entry.color}` : '';
     const row = document.createElement('div'); row.className='cartItem';
     row.innerHTML = `
       <div style="flex:1">
         <div class="ci-name">${p.name}</div>
-        <div class="ci-code">Cód: ${p.code} · ${money(p.price)}${boxQty>1?` un. · ${boxQty} pçs/cx`:' un.'}</div>
+        <div class="ci-code">Cód: ${p.code} · ${money(p.price)}${boxQty>1?` un. · ${boxQty} pçs/cx`:' un.'}${colorLabel}</div>
         <div class="qtyBox">
-          <button onclick="changeQty(${id},-1)">−</button>
+          <button onclick="changeQty('${key}',-1)">−</button>
           <span>${qtyLabel}</span>
-          <button onclick="changeQty(${id},1)">+</button>
-          <button class="rmBtn" onclick="removeFromCart(${id})">remover</button>
+          <button onclick="changeQty('${key}',1)">+</button>
+          <button class="rmBtn" onclick="removeFromCart('${key}')">remover</button>
         </div>
       </div>
       <div style="font-weight:700;color:var(--green)">${money(p.price*qty)}</div>
     `;
     wrap.appendChild(row);
   });
-  document.getElementById('cartTotal').textContent = ids.length? `Total: ${money(total)}` : '';
+  document.getElementById('cartTotal').textContent = keys.length? `Total: ${money(total)}` : '';
 }
 
 function toggleCart(open){
@@ -1055,23 +1100,25 @@ function toggleCart(open){
 }
 
 function sendWhats(){
-  const ids = Object.keys(cart);
-  if(ids.length===0){ alert('Seu carrinho está vazio.'); return; }
+  const keys = Object.keys(cart);
+  if(keys.length===0){ alert('Seu carrinho está vazio.'); return; }
   let msg = "Olá! Gostaria de fazer o seguinte pedido:%0A%0A";
   let total = 0;
-  ids.forEach(id=>{
-    const p = PRODUCTS[id]; const qty = cart[id]; total += p.price*qty;
+  keys.forEach(key=>{
+    const entry = cart[key];
+    const p = PRODUCTS[entry.id]; const qty = entry.qty; total += p.price*qty;
     const boxQty = p.boxQty || 1;
     const boxes = Math.round(qty/boxQty);
     const qtyTxt = boxQty>1 ? `${boxes} cx (${qty} pçs)` : `${qty}x`;
-    msg += `• ${qtyTxt} ${p.name} (Cód ${p.code}) - ${money(p.price)} un.%0A`;
+    const colorTxt = entry.color ? ` - Cor: ${entry.color}` : '';
+    msg += `• ${qtyTxt} ${p.name} (Cód ${p.code})${colorTxt} - ${money(p.price)} un.%0A`;
   });
   msg += `%0ATotal estimado: ${money(total)}`;
   // Número de exemplo - trocar pelo WhatsApp real da empresa
   const phone = "5511981707807";
   window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
   window.trackConversion('whatsapp_order');
-  window.trackEvent('purchase', {value: total, currency: 'BRL', num_items: ids.length});
+  window.trackEvent('purchase', {value: total, currency: 'BRL', num_items: keys.length});
 }
 
 let searchTrackTimer = null;
