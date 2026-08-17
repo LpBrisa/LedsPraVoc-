@@ -1201,6 +1201,7 @@ try{
       stock: !!data.stock,
       promo: !!data.promo,
       boxQty: Math.max(1, parseInt(data.boxQty) || 1),
+      color: data.color || '',
       img: data.img || null,
       desc: data.desc || ''
     });
