@@ -1432,32 +1432,62 @@ try{
     }
   }catch(e){ /* não bloqueia o site se isso falhar */ }
 
-  const snap = await getDocs(collection(db, 'products'));
-  const list = [];
-  snap.forEach(d=>{
-    const data = d.data();
-    list.push({
-      id: data.id ?? d.id,
-      cat: data.cat || 'Outros',
-      name: data.name || '',
-      code: data.code || '',
-      price: Number(data.price) || 0,
-      stock: !!data.stock,
-      promo: !!data.promo,
-      boxQty: Math.max(1, parseInt(data.boxQty) || 1),
-      color: data.color || '',
-      img: data.img || null,
-      desc: data.desc || ''
+  // ---- Cache local (localStorage) pra economizar leituras do Firestore ----
+  // O catálogo tem 800+ produtos: sem isso, CADA visita = 800+ leituras no
+  // banco só pra abrir a página, o que estoura rápido a cota gratuita do
+  // Firebase. Com o cache, só busca de novo depois que o tempo abaixo passa.
+  const CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutos
+  function readCache(key){
+    try{
+      const raw = localStorage.getItem(key);
+      if(!raw) return null;
+      const parsed = JSON.parse(raw);
+      if(!parsed || parsed.ts == null || Date.now() - parsed.ts > CACHE_TTL_MS) return null;
+      return parsed.data;
+    }catch(e){ return null; }
+  }
+  function writeCache(key, data){
+    try{ localStorage.setItem(key, JSON.stringify({ ts: Date.now(), data })); }catch(e){ /* localStorage cheio/bloqueado — segue sem cache */ }
+  }
+
+  let list = readCache('lpbrisa_products_cache_v1');
+  if(list){
+    if(window.applyRemoteProducts) window.applyRemoteProducts(list);
+  } else {
+    const snap = await getDocs(collection(db, 'products'));
+    list = [];
+    snap.forEach(d=>{
+      const data = d.data();
+      list.push({
+        id: data.id ?? d.id,
+        cat: data.cat || 'Outros',
+        name: data.name || '',
+        code: data.code || '',
+        price: Number(data.price) || 0,
+        stock: !!data.stock,
+        promo: !!data.promo,
+        boxQty: Math.max(1, parseInt(data.boxQty) || 1),
+        color: data.color || '',
+        img: data.img || null,
+        desc: data.desc || ''
+      });
     });
-  });
-  list.sort((a,b)=> (parseInt(a.id)||0) - (parseInt(b.id)||0) || 0);
-  if(window.applyRemoteProducts) window.applyRemoteProducts(list);
+    list.sort((a,b)=> (parseInt(a.id)||0) - (parseInt(b.id)||0) || 0);
+    writeCache('lpbrisa_products_cache_v1', list);
+    if(window.applyRemoteProducts) window.applyRemoteProducts(list);
+  }
 
   // Load footer/business settings (edited from the admin panel)
   try{
-    const settingsSnap = await getDoc(doc(db, 'settings', 'site'));
-    if(settingsSnap.exists()){
-      const s = settingsSnap.data();
+    let s = readCache('lpbrisa_settings_cache_v1');
+    if(!s){
+      const settingsSnap = await getDoc(doc(db, 'settings', 'site'));
+      if(settingsSnap.exists()){
+        s = settingsSnap.data();
+        writeCache('lpbrisa_settings_cache_v1', s);
+      }
+    }
+    if(s){
 
       if(s.aboutText){
         let html = s.aboutText;
