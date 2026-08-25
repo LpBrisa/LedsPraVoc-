@@ -141,12 +141,17 @@
 
     <div id="bulkPriceBox" style="background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:20px 0;">
       <h3 style="margin-top:0">💲 Ajuste de preço em massa</h3>
-      <span style="font-size:11px;color:var(--muted)">Soma (ou subtrai, se for negativo) o valor abaixo ao preço ATUAL de cada produto no banco. Ex: digite 5,00 pra somar R$ 5 em todo mundo; digite -5,00 pra tirar R$ 5. O preço nunca fica negativo (para em R$ 0,00).</span>
+      <span style="font-size:11px;color:var(--muted)">Soma (ou subtrai, se for negativo) o valor abaixo ao preço ATUAL de cada produto no banco. Ex: digite 5,00 pra somar R$ 5; digite -5,00 pra tirar R$ 5. Escolha uma categoria pra afetar só ela, ou deixe "Todas categorias" pra aplicar em tudo. O preço nunca fica negativo (para em R$ 0,00).</span>
       <div style="display:flex; gap:10px; align-items:center; margin-top:10px; flex-wrap:wrap;">
+        <label style="font-size:12px;color:var(--muted)">Categoria
+          <select id="bulkPriceCat" style="display:block;min-width:200px;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)">
+            <option value="">Todas categorias</option>
+          </select>
+        </label>
         <label style="font-size:12px;color:var(--muted)">Valor a somar (R$)
           <input type="number" id="bulkPriceAmount" step="0.01" value="5.00" style="display:block;width:140px;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)">
         </label>
-        <button class="btn btn-orange" id="bulkPriceBtn" style="margin-top:16px">Aplicar a todos os produtos</button>
+        <button class="btn btn-orange" id="bulkPriceBtn" style="margin-top:16px">Aplicar</button>
         <span id="bulkPriceStatus" style="margin-top:16px;font-size:13px;color:var(--green)"></span>
       </div>
     </div>
@@ -480,12 +485,25 @@ async function loadProducts(){
   allProducts.sort((a,b)=> (parseInt(a.id)||0) - (parseInt(b.id)||0));
   document.getElementById('status').textContent = `${allProducts.length} produto(s) no banco.`;
   renderTable(allProducts);
+  populateBulkCatSelect(allProducts);
 }
 
-// ---- Ajuste de preço em massa (soma/subtrai um valor fixo do preço atual de TODOS os produtos) ----
+// Preenche o seletor de categoria do ajuste de preço em massa, mantendo a
+// categoria escolhida (se ainda existir) quando a lista é recarregada.
+function populateBulkCatSelect(list){
+  const sel = document.getElementById('bulkPriceCat');
+  const prev = sel.value;
+  const cats = [...new Set(list.map(p => p.cat).filter(Boolean))].sort((a,b)=>a.localeCompare(b, 'pt-BR'));
+  sel.innerHTML = '<option value="">Todas categorias</option>' +
+    cats.map(c => `<option value="${c.replace(/"/g,'&quot;')}">${c}</option>`).join('');
+  if(cats.includes(prev)) sel.value = prev;
+}
+
+// ---- Ajuste de preço em massa (soma/subtrai um valor fixo do preço atual dos produtos, opcionalmente só de uma categoria) ----
 document.getElementById('bulkPriceBtn').addEventListener('click', async ()=>{
   const statusEl = document.getElementById('bulkPriceStatus');
   const amountInput = document.getElementById('bulkPriceAmount');
+  const selectedCat = document.getElementById('bulkPriceCat').value;
   const amount = parseFloat(amountInput.value);
   if(isNaN(amount) || amount === 0){
     alert('Digite um valor diferente de zero (ex: 5.00 para somar, -5.00 para subtrair).');
@@ -503,14 +521,18 @@ document.getElementById('bulkPriceBtn').addEventListener('click', async ()=>{
     statusEl.textContent = 'Erro ao buscar produtos.';
     return;
   }
-  const docs = [];
+  let docs = [];
   snap.forEach(d => docs.push({ docId: d.id, ...d.data() }));
+  if(selectedCat){
+    docs = docs.filter(p => p.cat === selectedCat);
+  }
   if(docs.length === 0){
-    alert('Nenhum produto encontrado no banco.');
+    alert(selectedCat ? `Nenhum produto encontrado na categoria "${selectedCat}".` : 'Nenhum produto encontrado no banco.');
     return;
   }
   const sinal = amount > 0 ? '+' : '';
-  if(!confirm(`Isso vai somar ${sinal}${amount.toFixed(2).replace('.',',')} ao preço ATUAL de ${docs.length} produto(s) no banco. Essa ação não pode ser desfeita automaticamente (pra reverter, aplique o valor oposto depois). Continuar?`)) return;
+  const alvoTxt = selectedCat ? `${docs.length} produto(s) da categoria "${selectedCat}"` : `${docs.length} produto(s) (TODAS as categorias)`;
+  if(!confirm(`Isso vai somar ${sinal}${amount.toFixed(2).replace('.',',')} ao preço ATUAL de ${alvoTxt} no banco. Essa ação não pode ser desfeita automaticamente (pra reverter, aplique o valor oposto depois). Continuar?`)) return;
 
   statusEl.style.color = 'var(--muted)';
   statusEl.textContent = `Aplicando a ${docs.length} produto(s)...`;
