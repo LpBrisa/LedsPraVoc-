@@ -135,8 +135,10 @@
     <div class="toolbar">
       <input type="text" id="search" placeholder="🔍 Buscar por nome ou código...">
       <button class="btn btn-ghost" id="refreshBtn">🔄 Recarregar</button>
+      <button class="btn btn-green" id="addMissingBtn">✅ Adicionar só os que faltam (<span id="missingCount">...</span>)</button>
       <button class="btn btn-red" id="importBtn">📦 Restaurar catálogo inicial (<span id="importCount">...</span> produtos)</button>
     </div>
+    <div style="margin-top:6px"><span style="font-size:11px;color:var(--muted)">O botão verde é seguro: só cria os produtos que ainda não existem no banco, sem tocar em preço/nome/estoque de nada que você já editou. O botão vermelho apaga e recria TUDO — só use se quiser descartar edições manuais.</span></div>
     <div id="status"></div>
 
 
@@ -208,6 +210,55 @@ async function refreshCatalogCount(){
   }
 }
 refreshCatalogCount();
+
+// "Adicionar só os que faltam": compara products.json com o que já está no
+// banco (por ID) e cria apenas os documentos ausentes — nunca sobrescreve
+// um produto que já existe, então preço/nome/estoque editados manualmente
+// ficam intactos.
+let missingList = [];
+async function refreshMissingCount(){
+  try{
+    const [jsonRes, dbSnap] = await Promise.all([
+      fetch('products.json').then(r=>r.json()),
+      getDocs(collection(db,'products'))
+    ]);
+    const existingIds = new Set();
+    dbSnap.forEach(d=>{
+      const data = d.data();
+      existingIds.add(String(data.id ?? d.id));
+    });
+    missingList = jsonRes.filter(p => !existingIds.has(String(p.id)));
+    document.getElementById('missingCount').textContent = missingList.length;
+  }catch(e){
+    document.getElementById('missingCount').textContent = '?';
+    console.error('Erro ao calcular produtos faltando:', e);
+  }
+}
+refreshMissingCount();
+
+document.getElementById('addMissingBtn').addEventListener('click', async ()=>{
+  if(missingList.length === 0){
+    alert('Nada faltando — todos os produtos do arquivo já estão no banco.');
+    return;
+  }
+  if(!confirm(`Isso vai CRIAR ${missingList.length} produto(s) que ainda não existem no banco. Produtos já existentes NÃO serão alterados. Continuar?`)) return;
+  document.getElementById('status').textContent = 'Adicionando produtos que faltam...';
+  let batch = writeBatch(db);
+  let count = 0;
+  for(const p of missingList){
+    const ref = doc(db, 'products', String(p.id));
+    batch.set(ref, p);
+    count++;
+    if(count % 400 === 0){
+      await batch.commit();
+      batch = writeBatch(db);
+    }
+  }
+  await batch.commit();
+  document.getElementById('status').textContent = `Concluído: ${missingList.length} produto(s) adicionado(s), nada existente foi tocado.`;
+  loadProducts();
+  refreshMissingCount();
+});
 
 onAuthStateChanged(auth, user=>{
   if(user){

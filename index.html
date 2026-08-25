@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR"> 
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -890,11 +890,18 @@ const PROD_IMG = {0:"imgs/products/prod_0.jpg",1:"imgs/products/prod_1.jpg",2:"i
 
 let PRODUCTS = products.map(p => ({...p, img: PROD_IMG[p.id] || null, desc: ''}));
 
+// Busca segura por ID: PRODUCTS[id] quebra sempre que algum produto está
+// ausente no meio da lista (a posição no array deixa de bater com o ID).
+// Esse mapa resolve isso — sempre reconstruído junto com PRODUCTS.
+let PRODUCTS_BY_ID = new Map(PRODUCTS.map(p => [p.id, p]));
+function getProduct(id){ return PRODUCTS_BY_ID.get(Number(id)); }
+
 // A busca dos produtos reais (Firestore) acontece no script type="module" no final da página,
 // que chama window.applyRemoteProducts(...) quando os dados chegam.
 window.applyRemoteProducts = function(list){
   if(!list || !list.length) return;
   PRODUCTS = list;
+  PRODUCTS_BY_ID = new Map(PRODUCTS.map(p => [p.id, p]));
   document.getElementById('catFilter').innerHTML = '<option value="">Todas categorias</option>';
   populateCatFilter();
   renderCatalog(document.getElementById('search').value, document.getElementById('catFilter').value);
@@ -1039,7 +1046,7 @@ function addToCart(id){
   }
   const colorSelect = document.getElementById(`colorSelect-${id}`);
   const color = colorSelect ? colorSelect.value : '';
-  const p = PRODUCTS[id];
+  const p = getProduct(id);
   const boxQty = (p && p.boxQty) ? p.boxQty : 1;
   const key = cartKey(id, color);
   const existing = cart[key];
@@ -1050,7 +1057,7 @@ function addToCart(id){
 function changeQty(key, delta){
   const entry = cart[key];
   if(!entry) return;
-  const p = PRODUCTS[entry.id];
+  const p = getProduct(entry.id);
   const boxQty = (p && p.boxQty) ? p.boxQty : 1;
   entry.qty += delta*boxQty;
   if(entry.qty<=0) delete cart[key];
@@ -1069,7 +1076,7 @@ function updateCartUI(){
   else { empty.style.display='none'; }
   keys.forEach(key=>{
     const entry = cart[key];
-    const p = PRODUCTS[entry.id];
+    const p = getProduct(entry.id);
     const qty = entry.qty;
     const boxQty = p.boxQty || 1;
     total += p.price*qty;
@@ -1106,7 +1113,7 @@ function sendWhats(){
   let total = 0;
   keys.forEach(key=>{
     const entry = cart[key];
-    const p = PRODUCTS[entry.id]; const qty = entry.qty; total += p.price*qty;
+    const p = getProduct(entry.id); const qty = entry.qty; total += p.price*qty;
     const boxQty = p.boxQty || 1;
     const boxes = Math.round(qty/boxQty);
     const qtyTxt = boxQty>1 ? `${boxes} cx (${qty} pçs)` : `${qty}x`;
