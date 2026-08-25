@@ -111,6 +111,13 @@
       <div id="visitsList"></div>
     </div>
 
+    <div id="customersBox" style="margin-bottom:20px">
+      <h3>👥 Clientes cadastrados (login do site)</h3>
+      <button class="btn btn-ghost" id="loadCustomersBtn">🔄 Carregar clientes</button>
+      <span id="customersStatus" style="margin-left:10px;color:var(--muted);font-size:13px;"></span>
+      <div id="customersList" style="margin-top:12px"></div>
+    </div>
+
     <div id="newRowBox">
       <h3>➕ Adicionar produto novo</h3>
       <div class="grid2">
@@ -130,6 +137,18 @@
       <textarea id="n_desc" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)"></textarea></div>
       <button class="btn btn-orange" style="margin-top:12px" id="addBtn">Adicionar produto</button>
       <span id="addStatus" style="margin-left:10px;color:var(--green);font-size:13px;"></span>
+    </div>
+
+    <div id="bulkPriceBox" style="background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:20px 0;">
+      <h3 style="margin-top:0">💲 Ajuste de preço em massa</h3>
+      <span style="font-size:11px;color:var(--muted)">Soma (ou subtrai, se for negativo) o valor abaixo ao preço ATUAL de cada produto no banco. Ex: digite 5,00 pra somar R$ 5 em todo mundo; digite -5,00 pra tirar R$ 5. O preço nunca fica negativo (para em R$ 0,00).</span>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:10px; flex-wrap:wrap;">
+        <label style="font-size:12px;color:var(--muted)">Valor a somar (R$)
+          <input type="number" id="bulkPriceAmount" step="0.01" value="5.00" style="display:block;width:140px;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)">
+        </label>
+        <button class="btn btn-orange" id="bulkPriceBtn" style="margin-top:16px">Aplicar a todos os produtos</button>
+        <span id="bulkPriceStatus" style="margin-top:16px;font-size:13px;color:var(--green)"></span>
+      </div>
     </div>
 
     <div class="toolbar">
@@ -386,6 +405,71 @@ async function loadVisits(){
 }
 document.getElementById('loadVisitsBtn').addEventListener('click', loadVisits);
 
+// ---- Clientes cadastrados (login do site) ----
+function escAttrC(s){ return String(s??'').replace(/"/g,'&quot;'); }
+
+async function loadCustomers(){
+  const statusEl = document.getElementById('customersStatus');
+  const box = document.getElementById('customersList');
+  statusEl.textContent = 'Carregando...';
+  box.innerHTML = '';
+  try{
+    const snap = await getDocs(collection(db, 'customers'));
+    if(snap.empty){
+      statusEl.textContent = 'Nenhum cliente cadastrado ainda.';
+      return;
+    }
+    const customers = [];
+    snap.forEach(d => customers.push({ uid: d.id, ...d.data() }));
+    statusEl.textContent = `${customers.length} cliente(s) cadastrado(s).`;
+
+    let html = `<div style="overflow-x:auto;"><table><thead><tr>
+      <th>Nome</th><th>Telefone</th><th>Endereço</th><th>CNPJ / Razão Social</th>
+      <th>Desconto (%)</th><th></th>
+    </tr></thead><tbody>`;
+    customers.forEach(c=>{
+      const addr = c.address || {};
+      const addrTxt = [addr.street, addr.neighborhood, addr.city, addr.cep].filter(Boolean).join(', ') || '—';
+      const cnpjTxt = c.cnpj ? `${c.cnpj}${c.razaoSocial ? ' — ' + c.razaoSocial : ''}` : '—';
+      html += `<tr data-uid="${c.uid}">
+        <td>${escAttrC(c.name)}</td>
+        <td>${escAttrC(c.phone)}</td>
+        <td style="max-width:220px">${escAttrC(addrTxt)}</td>
+        <td>${escAttrC(cnpjTxt)}</td>
+        <td><input type="number" min="0" max="100" step="1" class="custDiscountInput" value="${Number(c.discountPercent)||0}" style="width:70px"></td>
+        <td><button class="rowsave custSaveBtn">Salvar</button></td>
+      </tr>`;
+    });
+    html += '</tbody></table></div>';
+    box.innerHTML = html;
+
+    box.querySelectorAll('.custSaveBtn').forEach(btn=>{
+      btn.addEventListener('click', async ()=>{
+        const tr = btn.closest('tr');
+        const uid = tr.dataset.uid;
+        const input = tr.querySelector('.custDiscountInput');
+        let pct = parseInt(input.value, 10);
+        if(isNaN(pct) || pct < 0) pct = 0;
+        if(pct > 100) pct = 100;
+        input.value = pct;
+        btn.disabled = true; btn.textContent = 'Salvando...';
+        try{
+          await setDoc(doc(db, 'customers', uid), { discountPercent: pct }, { merge: true });
+          flashRow(tr);
+        }catch(e){
+          console.error(e);
+          alert('Não foi possível salvar o desconto desse cliente.');
+        }
+        btn.disabled = false; btn.textContent = 'Salvar';
+      });
+    });
+  }catch(e){
+    console.error(e);
+    statusEl.textContent = 'Erro ao carregar clientes. Confira se sua conta está na coleção "admins" no Firestore (veja firestore.rules).';
+  }
+}
+document.getElementById('loadCustomersBtn').addEventListener('click', loadCustomers);
+
 let allProducts = [];
 
 async function loadProducts(){
@@ -397,6 +481,65 @@ async function loadProducts(){
   document.getElementById('status').textContent = `${allProducts.length} produto(s) no banco.`;
   renderTable(allProducts);
 }
+
+// ---- Ajuste de preço em massa (soma/subtrai um valor fixo do preço atual de TODOS os produtos) ----
+document.getElementById('bulkPriceBtn').addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('bulkPriceStatus');
+  const amountInput = document.getElementById('bulkPriceAmount');
+  const amount = parseFloat(amountInput.value);
+  if(isNaN(amount) || amount === 0){
+    alert('Digite um valor diferente de zero (ex: 5.00 para somar, -5.00 para subtrair).');
+    return;
+  }
+  // Garante que estamos trabalhando com a lista mais atual do banco, não só o que já estava na tela.
+  statusEl.style.color = 'var(--muted)';
+  statusEl.textContent = 'Buscando produtos atuais no banco...';
+  let snap;
+  try{
+    snap = await getDocs(collection(db, 'products'));
+  }catch(e){
+    console.error(e);
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = 'Erro ao buscar produtos.';
+    return;
+  }
+  const docs = [];
+  snap.forEach(d => docs.push({ docId: d.id, ...d.data() }));
+  if(docs.length === 0){
+    alert('Nenhum produto encontrado no banco.');
+    return;
+  }
+  const sinal = amount > 0 ? '+' : '';
+  if(!confirm(`Isso vai somar ${sinal}${amount.toFixed(2).replace('.',',')} ao preço ATUAL de ${docs.length} produto(s) no banco. Essa ação não pode ser desfeita automaticamente (pra reverter, aplique o valor oposto depois). Continuar?`)) return;
+
+  statusEl.style.color = 'var(--muted)';
+  statusEl.textContent = `Aplicando a ${docs.length} produto(s)...`;
+  const btn = document.getElementById('bulkPriceBtn');
+  btn.disabled = true;
+  try{
+    let batch = writeBatch(db);
+    let count = 0;
+    for(const p of docs){
+      const oldPrice = Number(p.price) || 0;
+      const newPrice = Math.max(0, Math.round((oldPrice + amount) * 100) / 100);
+      batch.update(doc(db, 'products', p.docId), { price: newPrice });
+      count++;
+      if(count % 400 === 0){
+        await batch.commit();
+        batch = writeBatch(db);
+      }
+    }
+    await batch.commit();
+    statusEl.style.color = 'var(--green)';
+    statusEl.textContent = `✓ Concluído: ${docs.length} produto(s) atualizado(s).`;
+    loadProducts(); // recarrega a tabela pra mostrar os preços novos
+  }catch(e){
+    console.error(e);
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = 'Erro ao aplicar o ajuste. Confira sua conexão e tente de novo.';
+  }
+  btn.disabled = false;
+});
 
 function renderTable(list){
   const tbody = document.getElementById('tbody');

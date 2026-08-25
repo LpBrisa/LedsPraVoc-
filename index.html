@@ -83,6 +83,54 @@
     font-weight:700; cursor:pointer; display:flex; align-items:center; gap:8px; font-size:14px;
   }
   #cartCount{background:#1a1200;color:var(--orange2);border-radius:999px;padding:1px 8px;font-size:12px}
+  #accountBtn{
+    background:var(--bg2); color:var(--text); border:1px solid var(--line); padding:10px 14px; border-radius:10px;
+    font-weight:700; cursor:pointer; display:flex; align-items:center; gap:6px; font-size:14px; white-space:nowrap;
+  }
+  #accountBtn:hover{border-color:var(--orange);}
+  #accountBtn.logged{border-color:var(--green); color:var(--green);}
+
+  #accountOverlay{
+    position:fixed; inset:0; background:#000a; display:none; z-index:110; align-items:center; justify-content:center; padding:20px;
+  }
+  #accountOverlay.show{display:flex;}
+  #accountPanel{
+    width:420px; max-width:94vw; max-height:90vh; overflow-y:auto; background:var(--bg2); border:1px solid var(--line);
+    border-radius:14px; padding:24px; position:relative;
+  }
+  #accountPanel h2{margin:0 0 4px;}
+  #accountPanel .accountHint{color:var(--muted); font-size:13px; margin:0 0 16px;}
+  #accountPanel .closeBtn{position:absolute; top:14px; right:16px;}
+  .accTabs{display:flex; gap:8px; margin-bottom:16px;}
+  .accTab{
+    flex:1; text-align:center; padding:9px; border-radius:8px; border:1px solid var(--line); background:var(--bg2);
+    color:var(--muted); font-weight:700; font-size:13px; cursor:pointer;
+  }
+  .accTab.active{background:var(--orange); color:#1a1200; border-color:var(--orange);}
+  .accForm{display:none; flex-direction:column; gap:12px;}
+  .accForm.show{display:flex;}
+  .accForm label{display:flex; flex-direction:column; gap:5px; font-size:12px; color:var(--muted); font-weight:600;}
+  .accForm input{
+    background:var(--bg); border:1px solid var(--line); border-radius:8px; color:var(--text);
+    padding:9px 11px; font-size:14px; font-family:inherit;
+  }
+  .accRow2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .accDivider{border-top:1px solid var(--line); margin:4px 0; padding-top:10px; font-size:12px; color:var(--orange2); font-weight:700;}
+  #accountStatus{font-size:13px; min-height:16px;}
+  #accountStatus.ok{color:var(--green);} #accountStatus.err{color:var(--red);}
+  #accountLoggedBox{display:none; flex-direction:column; gap:10px;}
+  #accountLoggedBox.show{display:flex;}
+  .accInfoRow{font-size:13px; color:var(--muted);}
+  .accInfoRow b{color:var(--text);}
+  .discountPill{
+    display:inline-block; background:var(--green); color:#04241a; font-weight:800; font-size:12px;
+    padding:3px 10px; border-radius:999px; margin-top:4px;
+  }
+  .priceOld{font-size:12px; color:var(--muted); text-decoration:line-through; font-weight:600; margin-right:6px;}
+  .priceBadge{
+    display:inline-block; background:var(--red); color:#fff; font-size:10px; font-weight:800;
+    padding:2px 6px; border-radius:6px; margin-left:6px; vertical-align:middle;
+  }
 
   main{padding:20px; max-width:1400px; margin:0 auto;}
 #lightbox{position:fixed; inset:0; background:#000d; display:none; z-index:200; align-items:center; justify-content:center; padding:20px; cursor:zoom-out;}
@@ -219,7 +267,7 @@
     overflow:hidden; white-space:nowrap; padding:12px 0; display:none;
   }
   .marqueeWrap.show{display:block;}
-  .marqueeTrack{display:inline-flex; align-items:center; padding-left:100%; animation:marqueeScroll 26s linear infinite;}
+  .marqueeTrack{display:inline-flex; align-items:center; padding-left:100%; animation:marqueeScroll 55s linear infinite;}
   .marqueeBubble{
     display:inline-flex; align-items:center; color:var(--orange2); font-weight:800; font-size:16px;
     background:var(--card); border:1px solid var(--orange); border-radius:999px;
@@ -266,6 +314,7 @@
   <a href="https://wa.me/5511981707807" target="_blank" id="waHeader">📲 (11) 98170-7807</a>
   <input type="text" id="search" placeholder="🔍 Buscar produto ou código (ex: SMD 100W, 30005)...">
   <select id="catFilter"><option value="">Todas categorias</option></select>
+  <button id="accountBtn" onclick="openAccount()">👤 <span id="accountBtnLabel">Entrar</span></button>
   <button id="cartBtn" onclick="toggleCart(true)">🛒 Carrinho <span id="cartCount">0</span></button>
 </header>
 
@@ -368,6 +417,79 @@
     <div id="emptyMsg">Carrinho vazio</div>
     <div id="cartTotal"></div>
     <button id="whatsBtn" onclick="sendWhats()">📲 Enviar pedido via WhatsApp</button>
+  </div>
+</div>
+
+<div id="accountOverlay" onclick="if(event.target===this) closeAccount()">
+  <div id="accountPanel">
+    <button class="closeBtn" onclick="closeAccount()">✕</button>
+
+    <div id="accountGuestBox">
+      <h2>Minha Conta</h2>
+      <p class="accountHint">Entre ou cadastre-se para salvar seus dados, ver seu carrinho de qualquer aparelho e aproveitar seu desconto (se você tiver um combinado com a gente).</p>
+
+      <div class="accTabs">
+        <div class="accTab active" id="tabLoginBtn" onclick="switchAccTab('login')">Entrar</div>
+        <div class="accTab" id="tabSignupBtn" onclick="switchAccTab('signup')">Cadastrar</div>
+      </div>
+
+      <form id="loginForm" class="accForm show" onsubmit="return doCustomerLogin(event)">
+        <label>E-mail <input type="email" id="acc_login_email" required placeholder="voce@email.com"></label>
+        <label>Senha <input type="password" id="acc_login_pass" required placeholder="Sua senha"></label>
+        <button type="submit" class="addBtn" id="loginSubmitBtn">Entrar</button>
+      </form>
+
+      <form id="signupForm" class="accForm" onsubmit="return doCustomerSignup(event)">
+        <label>Nome completo <input type="text" id="acc_name" required placeholder="Seu nome"></label>
+        <label>Telefone <input type="tel" id="acc_phone" required placeholder="(11) 98765-4321"></label>
+        <label>E-mail <input type="email" id="acc_email" required placeholder="voce@email.com"></label>
+        <label>Senha <input type="password" id="acc_pass" required placeholder="Crie uma senha (mín. 6 caracteres)" minlength="6"></label>
+
+        <div class="accDivider">📍 Endereço de entrega</div>
+        <label>Rua / Avenida <input type="text" id="acc_street" placeholder="Rua Exemplo, 123"></label>
+        <div class="accRow2">
+          <label>Bairro <input type="text" id="acc_neighborhood" placeholder="Bairro"></label>
+          <label>Cidade/UF <input type="text" id="acc_city" placeholder="São Paulo/SP"></label>
+        </div>
+        <label>CEP <input type="text" id="acc_cep" placeholder="00000-000"></label>
+
+        <div class="accDivider">🧾 Dados para nota fiscal (opcional)</div>
+        <label>CNPJ <input type="text" id="acc_cnpj" placeholder="00.000.000/0001-00"></label>
+        <label>Razão Social <input type="text" id="acc_razao" placeholder="Nome da empresa"></label>
+
+        <button type="submit" class="addBtn" id="signupSubmitBtn">Criar minha conta</button>
+      </form>
+
+      <div id="accountStatus"></div>
+    </div>
+
+    <div id="accountLoggedBox">
+      <h2>Olá, <span id="accGreetName">cliente</span> 👋</h2>
+      <div id="accDiscountInfo"></div>
+      <div class="accInfoRow"><b>E-mail:</b> <span id="accInfoEmail"></span></div>
+      <div class="accInfoRow"><b>Telefone:</b> <span id="accInfoPhone"></span></div>
+      <div class="accInfoRow"><b>Endereço:</b> <span id="accInfoAddress"></span></div>
+      <div class="accInfoRow"><b>CNPJ:</b> <span id="accInfoCnpj"></span></div>
+      <button class="btn-ghost addBtn" style="margin-top:6px" onclick="toggleEditProfile()">✏️ Editar meus dados</button>
+
+      <form id="editProfileForm" style="display:none; flex-direction:column; gap:12px; margin-top:6px;" onsubmit="return saveCustomerProfile(event)">
+        <label>Nome completo <input type="text" id="edit_name" required></label>
+        <label>Telefone <input type="tel" id="edit_phone" required></label>
+        <div class="accDivider">📍 Endereço de entrega</div>
+        <label>Rua / Avenida <input type="text" id="edit_street"></label>
+        <div class="accRow2">
+          <label>Bairro <input type="text" id="edit_neighborhood"></label>
+          <label>Cidade/UF <input type="text" id="edit_city"></label>
+        </div>
+        <label>CEP <input type="text" id="edit_cep"></label>
+        <div class="accDivider">🧾 Dados para nota fiscal</div>
+        <label>CNPJ <input type="text" id="edit_cnpj"></label>
+        <label>Razão Social <input type="text" id="edit_razao"></label>
+        <button type="submit" class="addBtn">Salvar alterações</button>
+      </form>
+
+      <button class="btn-ghost addBtn" style="margin-top:14px; border-color:var(--red); color:var(--red)" onclick="doCustomerLogout()">Sair da conta</button>
+    </div>
   </div>
 </div>
 
@@ -912,7 +1034,102 @@ window.applyRemoteProducts = function(list){
 let cart = {};
 function cartKey(id, color){ return `${id}::${color||''}`; }
 
+// Cliente logado (login do site) — null enquanto ninguém logou.
+// Preenchido pelo script type="module" via window.applyCustomerState(...).
+let currentCustomer = null;
+
+// Preço já com o desconto do cliente logado aplicado (se ele tiver um).
+function effectivePrice(p){
+  const pct = currentCustomer ? (currentCustomer.discountPercent || 0) : 0;
+  return pct > 0 ? p.price * (1 - pct/100) : p.price;
+}
+
 function money(v){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
+
+// ===== CONTA DE CLIENTE (login do site) =====
+function openAccount(){ document.getElementById('accountOverlay').classList.add('show'); }
+function closeAccount(){ document.getElementById('accountOverlay').classList.remove('show'); }
+window.closeAccount = closeAccount;
+
+function switchAccTab(tab){
+  document.getElementById('tabLoginBtn').classList.toggle('active', tab==='login');
+  document.getElementById('tabSignupBtn').classList.toggle('active', tab==='signup');
+  document.getElementById('loginForm').classList.toggle('show', tab==='login');
+  document.getElementById('signupForm').classList.toggle('show', tab==='signup');
+  const statusEl = document.getElementById('accountStatus');
+  statusEl.textContent = ''; statusEl.className = '';
+}
+
+function toggleEditProfile(){
+  const f = document.getElementById('editProfileForm');
+  const show = f.style.display !== 'flex';
+  f.style.display = show ? 'flex' : 'none';
+  if(show && currentCustomer){
+    const addr = currentCustomer.address || {};
+    document.getElementById('edit_name').value = currentCustomer.name || '';
+    document.getElementById('edit_phone').value = currentCustomer.phone || '';
+    document.getElementById('edit_street').value = addr.street || '';
+    document.getElementById('edit_neighborhood').value = addr.neighborhood || '';
+    document.getElementById('edit_city').value = addr.city || '';
+    document.getElementById('edit_cep').value = addr.cep || '';
+    document.getElementById('edit_cnpj').value = currentCustomer.cnpj || '';
+    document.getElementById('edit_razao').value = currentCustomer.razaoSocial || '';
+  }
+}
+window.toggleEditProfile = toggleEditProfile;
+
+// Troca o conteúdo do carrinho local por outro (ex: carrinho salvo na conta)
+// sem quebrar a referência do objeto `cart` usada em todo o resto do código.
+function setCart(obj){
+  Object.keys(cart).forEach(k => delete cart[k]);
+  Object.assign(cart, obj || {});
+  updateCartUI();
+}
+window.setCart = setCart;
+
+// Chamado pelo script type="module" sempre que o estado de login muda
+// (login, logout, cadastro, ou perfil carregado do Firestore).
+window.applyCustomerState = function(customer){
+  currentCustomer = customer;
+  const btn = document.getElementById('accountBtn');
+  const label = document.getElementById('accountBtnLabel');
+  const guestBox = document.getElementById('accountGuestBox');
+  const loggedBox = document.getElementById('accountLoggedBox');
+  if(customer){
+    btn.classList.add('logged');
+    label.textContent = customer.name ? customer.name.split(' ')[0] : 'Minha conta';
+    guestBox.style.display = 'none';
+    loggedBox.classList.add('show');
+    document.getElementById('accGreetName').textContent = customer.name || 'cliente';
+    document.getElementById('accInfoEmail').textContent = customer.email || '-';
+    document.getElementById('accInfoPhone').textContent = customer.phone || '-';
+    const addr = customer.address || {};
+    const addrParts = [addr.street, addr.neighborhood, addr.city, addr.cep].filter(Boolean);
+    document.getElementById('accInfoAddress').textContent = addrParts.length ? addrParts.join(', ') : '-';
+    document.getElementById('accInfoCnpj').textContent = customer.cnpj
+      ? `${customer.cnpj}${customer.razaoSocial ? ' — ' + customer.razaoSocial : ''}` : '-';
+    document.getElementById('accDiscountInfo').innerHTML = (customer.discountPercent > 0)
+      ? `<span class="discountPill">🏷️ Você tem ${customer.discountPercent}% de desconto</span>` : '';
+  } else {
+    btn.classList.remove('logged');
+    label.textContent = 'Entrar';
+    guestBox.style.display = 'block';
+    loggedBox.classList.remove('show');
+    document.getElementById('editProfileForm').style.display = 'none';
+  }
+  renderCatalog(document.getElementById('search').value, document.getElementById('catFilter').value);
+  updateCartUI();
+};
+
+// Salva o carrinho na conta do cliente (com atraso, pra não gravar a cada clique).
+let cartSaveTimer = null;
+function scheduleCartSave(){
+  if(!currentCustomer) return;
+  clearTimeout(cartSaveTimer);
+  cartSaveTimer = setTimeout(()=>{
+    if(window.persistCustomerCart) window.persistCustomerCart({...cart});
+  }, 900);
+}
 
 function colorDot(colorName){
   const known = {
@@ -980,6 +1197,11 @@ function renderCatalog(filterText="", filterCat=""){
              </select>
            </div>`
         : '';
+      const discPct = currentCustomer ? (currentCustomer.discountPercent || 0) : 0;
+      const finalPrice = effectivePrice(p);
+      const priceHtml = discPct > 0
+        ? `<div class="price"><span class="priceOld">${money(p.price)}</span>${money(finalPrice)}<span class="priceBadge">-${discPct}%</span></div>`
+        : `<div class="price">${money(p.price)}</div>`;
       const boxQty = p.boxQty || 1;
       const boxHintHtml = boxQty > 1 ? `<div class="boxHint">📦 Vendido em caixas de ${boxQty} peças</div>` : '';
       const qtyControlHtml = p.stock
@@ -999,7 +1221,7 @@ function renderCatalog(filterText="", filterCat=""){
         ${descHtml}
         <div class="code">Cód: ${p.code}</div>
         ${colorHtml}
-        <div class="price">${money(p.price)}</div>
+        ${priceHtml}
         ${boxHintHtml}
         ${colorSelectHtml}
         ${qtyControlHtml}
@@ -1078,8 +1300,9 @@ function updateCartUI(){
     const entry = cart[key];
     const p = getProduct(entry.id);
     const qty = entry.qty;
+    const unit = effectivePrice(p);
     const boxQty = p.boxQty || 1;
-    total += p.price*qty;
+    total += unit*qty;
     const boxes = Math.round(qty/boxQty);
     const qtyLabel = boxQty > 1 ? `${boxes} cx (${qty} pçs)` : `${qty}`;
     const colorLabel = entry.color ? ` · Cor: ${entry.color}` : '';
@@ -1087,7 +1310,7 @@ function updateCartUI(){
     row.innerHTML = `
       <div style="flex:1">
         <div class="ci-name">${p.name}</div>
-        <div class="ci-code">Cód: ${p.code} · ${money(p.price)}${boxQty>1?` un. · ${boxQty} pçs/cx`:' un.'}${colorLabel}</div>
+        <div class="ci-code">Cód: ${p.code} · ${money(unit)}${boxQty>1?` un. · ${boxQty} pçs/cx`:' un.'}${colorLabel}</div>
         <div class="qtyBox">
           <button onclick="changeQty('${key}',-1)">−</button>
           <span>${qtyLabel}</span>
@@ -1095,11 +1318,12 @@ function updateCartUI(){
           <button class="rmBtn" onclick="removeFromCart('${key}')">remover</button>
         </div>
       </div>
-      <div style="font-weight:700;color:var(--green)">${money(p.price*qty)}</div>
+      <div style="font-weight:700;color:var(--green)">${money(unit*qty)}</div>
     `;
     wrap.appendChild(row);
   });
   document.getElementById('cartTotal').textContent = keys.length? `Total: ${money(total)}` : '';
+  scheduleCartSave();
 }
 
 function toggleCart(open){
@@ -1110,15 +1334,25 @@ function sendWhats(){
   const keys = Object.keys(cart);
   if(keys.length===0){ alert('Seu carrinho está vazio.'); return; }
   let msg = "Olá! Gostaria de fazer o seguinte pedido:%0A%0A";
+  if(currentCustomer){
+    msg += `Cliente: ${currentCustomer.name||''}%0A`;
+    if(currentCustomer.phone) msg += `Telefone: ${currentCustomer.phone}%0A`;
+    const addr = currentCustomer.address || {};
+    const addrTxt = [addr.street, addr.neighborhood, addr.city, addr.cep].filter(Boolean).join(', ');
+    if(addrTxt) msg += `Endereço: ${addrTxt}%0A`;
+    if(currentCustomer.cnpj) msg += `CNPJ: ${currentCustomer.cnpj}${currentCustomer.razaoSocial?' ('+currentCustomer.razaoSocial+')':''}%0A`;
+    msg += `%0A`;
+  }
   let total = 0;
   keys.forEach(key=>{
     const entry = cart[key];
-    const p = getProduct(entry.id); const qty = entry.qty; total += p.price*qty;
+    const p = getProduct(entry.id); const qty = entry.qty;
+    const unit = effectivePrice(p); total += unit*qty;
     const boxQty = p.boxQty || 1;
     const boxes = Math.round(qty/boxQty);
     const qtyTxt = boxQty>1 ? `${boxes} cx (${qty} pçs)` : `${qty}x`;
     const colorTxt = entry.color ? ` - Cor: ${entry.color}` : '';
-    msg += `• ${qtyTxt} ${p.name} (Cód ${p.code})${colorTxt} - ${money(p.price)} un.%0A`;
+    msg += `• ${qtyTxt} ${p.name} (Cód ${p.code})${colorTxt} - ${money(unit)} un.%0A`;
   });
   msg += `%0ATotal estimado: ${money(total)}`;
   // Número de exemplo - trocar pelo WhatsApp real da empresa
@@ -1165,7 +1399,8 @@ function showMainTab(tab){
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, collection, getDocs, addDoc, doc, getDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, collection, getDocs, addDoc, doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDp6wkoQsVsttae9nERy1DTUem-EgbPOgM",
@@ -1179,6 +1414,8 @@ const firebaseConfig = {
 try{
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+  // Login de CLIENTE (loja) — app separado do login do admin.html, mesmo projeto Firebase.
+  const custAuth = getAuth(app);
 
   // Registro simples de acessos (uma vez por sessão de navegador, não a cada recarregamento)
   try{
@@ -1297,6 +1534,134 @@ try{
       btn.textContent = 'Enviar';
     });
     return false;
+  };
+
+  // ---- Conta de cliente (login do site) ----
+  async function loadCustomerProfile(user){
+    try{
+      const snap = await getDoc(doc(db, 'customers', user.uid));
+      if(snap.exists()){
+        const d = snap.data();
+        const profile = { uid: user.uid, email: user.email, ...d };
+        if(window.applyCustomerState) window.applyCustomerState(profile);
+        return d;
+      }
+    }catch(e){
+      console.error('Erro ao carregar perfil do cliente:', e);
+    }
+    return null;
+  }
+
+  onAuthStateChanged(custAuth, async (user)=>{
+    if(user){
+      const profile = await loadCustomerProfile(user);
+      // Se a conta já tinha um carrinho salvo, ele substitui o carrinho local
+      // (assim o cliente vê de qualquer aparelho o que deixou salvo da última vez).
+      if(profile && profile.cart && Object.keys(profile.cart).length && window.setCart){
+        window.setCart(profile.cart);
+      }
+    } else if(window.applyCustomerState){
+      window.applyCustomerState(null);
+    }
+  });
+
+  window.doCustomerSignup = async function(evt){
+    evt.preventDefault();
+    const statusEl = document.getElementById('accountStatus');
+    const btn = document.getElementById('signupSubmitBtn');
+    const name = document.getElementById('acc_name').value.trim();
+    const phone = document.getElementById('acc_phone').value.trim();
+    const email = document.getElementById('acc_email').value.trim();
+    const pass = document.getElementById('acc_pass').value;
+    const street = document.getElementById('acc_street').value.trim();
+    const neighborhood = document.getElementById('acc_neighborhood').value.trim();
+    const city = document.getElementById('acc_city').value.trim();
+    const cep = document.getElementById('acc_cep').value.trim();
+    const cnpj = document.getElementById('acc_cnpj').value.trim();
+    const razaoSocial = document.getElementById('acc_razao').value.trim();
+    statusEl.className = ''; statusEl.textContent = 'Criando sua conta...';
+    btn.disabled = true;
+    try{
+      const cred = await createUserWithEmailAndPassword(custAuth, email, pass);
+      await setDoc(doc(db, 'customers', cred.user.uid), {
+        name, phone,
+        address: { street, neighborhood, city, cep },
+        cnpj, razaoSocial,
+        discountPercent: 0,
+        cart: {},
+        createdAt: serverTimestamp()
+      });
+      statusEl.className = 'ok'; statusEl.textContent = 'Conta criada! Você já está logado.';
+      setTimeout(()=>{ if(window.closeAccount) window.closeAccount(); }, 700);
+    }catch(e){
+      console.error(e);
+      let msg = 'Não foi possível criar a conta. Tente novamente.';
+      if(e.code === 'auth/email-already-in-use') msg = 'Esse e-mail já tem cadastro. Tente entrar na aba "Entrar".';
+      else if(e.code === 'auth/weak-password') msg = 'Senha muito curta (mínimo 6 caracteres).';
+      else if(e.code === 'auth/invalid-email') msg = 'E-mail inválido.';
+      statusEl.className = 'err'; statusEl.textContent = msg;
+    }
+    btn.disabled = false;
+    return false;
+  };
+
+  window.doCustomerLogin = async function(evt){
+    evt.preventDefault();
+    const statusEl = document.getElementById('accountStatus');
+    const btn = document.getElementById('loginSubmitBtn');
+    const email = document.getElementById('acc_login_email').value.trim();
+    const pass = document.getElementById('acc_login_pass').value;
+    statusEl.className = ''; statusEl.textContent = 'Entrando...';
+    btn.disabled = true;
+    try{
+      await signInWithEmailAndPassword(custAuth, email, pass);
+      statusEl.className = 'ok'; statusEl.textContent = 'Login feito!';
+      setTimeout(()=>{ if(window.closeAccount) window.closeAccount(); }, 400);
+    }catch(e){
+      console.error(e);
+      statusEl.className = 'err'; statusEl.textContent = 'E-mail ou senha inválidos.';
+    }
+    btn.disabled = false;
+    return false;
+  };
+
+  window.doCustomerLogout = function(){
+    signOut(custAuth);
+    if(window.closeAccount) window.closeAccount();
+  };
+
+  window.saveCustomerProfile = async function(evt){
+    evt.preventDefault();
+    if(!custAuth.currentUser) return false;
+    const name = document.getElementById('edit_name').value.trim();
+    const phone = document.getElementById('edit_phone').value.trim();
+    const street = document.getElementById('edit_street').value.trim();
+    const neighborhood = document.getElementById('edit_neighborhood').value.trim();
+    const city = document.getElementById('edit_city').value.trim();
+    const cep = document.getElementById('edit_cep').value.trim();
+    const cnpj = document.getElementById('edit_cnpj').value.trim();
+    const razaoSocial = document.getElementById('edit_razao').value.trim();
+    try{
+      await setDoc(doc(db, 'customers', custAuth.currentUser.uid), {
+        name, phone, address: { street, neighborhood, city, cep }, cnpj, razaoSocial
+      }, { merge: true });
+      await loadCustomerProfile(custAuth.currentUser);
+      if(window.toggleEditProfile) window.toggleEditProfile();
+    }catch(e){
+      console.error(e);
+      alert('Não foi possível salvar seus dados agora. Tente novamente.');
+    }
+    return false;
+  };
+
+  // Salva o carrinho atual na conta (chamado com atraso pelo script principal).
+  window.persistCustomerCart = async function(cartObj){
+    if(!custAuth.currentUser) return;
+    try{
+      await setDoc(doc(db, 'customers', custAuth.currentUser.uid), { cart: cartObj }, { merge: true });
+    }catch(e){
+      console.error('Erro ao salvar carrinho na conta:', e);
+    }
   };
 }catch(e){
   console.warn('Não foi possível carregar produtos do Firebase, usando catálogo padrão embutido.', e);
