@@ -186,7 +186,7 @@ import {
   getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
-  getFirestore, collection, getDocs, doc, setDoc, getDoc, deleteDoc, writeBatch, orderBy, query
+  getFirestore, collection, getDocs, doc, setDoc, getDoc, deleteDoc, deleteField, writeBatch, orderBy, query
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -428,25 +428,62 @@ async function loadCustomers(){
     snap.forEach(d => customers.push({ uid: d.id, ...d.data() }));
     statusEl.textContent = `${customers.length} cliente(s) cadastrado(s).`;
 
+    // Categorias existentes no catálogo (pra montar os campos de desconto
+    // por categoria de cada cliente). Se os produtos ainda não carregaram,
+    // fica vazio e o admin só vê o desconto geral — sem problema, é só
+    // clicar em "Carregar produtos" antes ou recarregar essa lista depois.
+    const cats = [...new Set(allProducts.map(p => p.cat).filter(Boolean))].sort((a,b)=>a.localeCompare(b, 'pt-BR'));
+    const catMapByUid = {};
+    customers.forEach(c => { catMapByUid[c.uid] = c.categoryDiscounts || {}; });
+
     let html = `<div style="overflow-x:auto;"><table><thead><tr>
       <th>Nome</th><th>Telefone</th><th>Endereço</th><th>CNPJ / Razão Social</th>
-      <th>Desconto (%)</th><th></th>
+      <th>Desconto geral (%)</th><th></th>
     </tr></thead><tbody>`;
     customers.forEach(c=>{
       const addr = c.address || {};
       const addrTxt = [addr.street, addr.neighborhood, addr.city, addr.cep].filter(Boolean).join(', ') || '—';
       const cnpjTxt = c.cnpj ? `${c.cnpj}${c.razaoSocial ? ' — ' + c.razaoSocial : ''}` : '—';
+      const catMap = c.categoryDiscounts || {};
+      const catCount = Object.values(catMap).filter(v => Number(v) > 0).length;
       html += `<tr data-uid="${c.uid}">
         <td>${escAttrC(c.name)}</td>
         <td>${escAttrC(c.phone)}</td>
         <td style="max-width:220px">${escAttrC(addrTxt)}</td>
         <td>${escAttrC(cnpjTxt)}</td>
         <td><input type="number" min="0" max="100" step="1" class="custDiscountInput" value="${Number(c.discountPercent)||0}" style="width:70px"></td>
-        <td><button class="rowsave custSaveBtn">Salvar</button></td>
+        <td>
+          <button class="btn btn-ghost custToggleCatBtn" type="button">📂 Por categoria${catCount ? ` (${catCount})` : ''}</button>
+          <button class="rowsave custSaveBtn">Salvar</button>
+        </td>
+      </tr>
+      <tr class="custCatRow" data-uid="${c.uid}" style="display:none">
+        <td colspan="6" style="background:#00000022">
+          ${cats.length === 0
+            ? '<em>Carregue os produtos (aba de cima) pra poder definir desconto por categoria.</em>'
+            : `<div style="display:flex;flex-wrap:wrap;gap:10px;padding:6px 0">
+                ${cats.map(cat => `
+                  <label style="display:flex;flex-direction:column;font-size:12px;gap:2px">
+                    ${escAttrC(cat)}
+                    <input type="number" min="0" max="100" step="1" class="custCatInput" data-cat="${escAttrC(cat)}"
+                      placeholder="geral" value="${catMap[cat] !== undefined && catMap[cat] !== null ? Number(catMap[cat]) : ''}" style="width:90px">
+                  </label>`).join('')}
+              </div>
+              <div style="font-size:12px;opacity:.7;margin-top:4px">Deixe em branco pra usar o desconto geral nessa categoria. Depois de preencher, clique em "Salvar" na linha de cima.</div>`
+          }
+        </td>
       </tr>`;
     });
     html += '</tbody></table></div>';
     box.innerHTML = html;
+
+    box.querySelectorAll('.custToggleCatBtn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const tr = btn.closest('tr');
+        const catRow = box.querySelector(`.custCatRow[data-uid="${CSS.escape(tr.dataset.uid)}"]`);
+        if(catRow) catRow.style.display = catRow.style.display === 'none' ? '' : 'none';
+      });
+    });
 
     box.querySelectorAll('.custSaveBtn').forEach(btn=>{
       btn.addEventListener('click', async ()=>{
@@ -457,9 +494,32 @@ async function loadCustomers(){
         if(isNaN(pct) || pct < 0) pct = 0;
         if(pct > 100) pct = 100;
         input.value = pct;
+
+        const catRow = box.querySelector(`.custCatRow[data-uid="${CSS.escape(uid)}"]`);
+        const categoryDiscounts = {};
+        if(catRow){
+          catRow.querySelectorAll('.custCatInput').forEach(inp=>{
+            const v = inp.value.trim();
+            if(v === ''){
+              // Campo em branco: se já existia um valor salvo pra essa
+              // categoria, remove (deleteField) — senão o merge do
+              // Firestore manteria o valor antigo mesmo com o campo vazio.
+              if(catMapByUid[uid] && catMapByUid[uid][inp.dataset.cat] !== undefined){
+                categoryDiscounts[inp.dataset.cat] = deleteField();
+              }
+              return;
+            }
+            let catPct = parseInt(v, 10);
+            if(isNaN(catPct) || catPct < 0) catPct = 0;
+            if(catPct > 100) catPct = 100;
+            inp.value = catPct;
+            categoryDiscounts[inp.dataset.cat] = catPct;
+          });
+        }
+
         btn.disabled = true; btn.textContent = 'Salvando...';
         try{
-          await setDoc(doc(db, 'customers', uid), { discountPercent: pct }, { merge: true });
+          await setDoc(doc(db, 'customers', uid), { discountPercent: pct, categoryDiscounts }, { merge: true });
           flashRow(tr);
         }catch(e){
           console.error(e);

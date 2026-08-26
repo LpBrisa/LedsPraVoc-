@@ -1038,9 +1038,20 @@ function cartKey(id, color){ return `${id}::${color||''}`; }
 // Preenchido pelo script type="module" via window.applyCustomerState(...).
 let currentCustomer = null;
 
+// Desconto (%) que vale pra um produto específico, olhando primeiro se o
+// cliente tem um desconto configurado PARA A CATEGORIA daquele produto; se
+// não tiver, cai no desconto geral dele.
+function discountForProduct(p){
+  if(!currentCustomer) return 0;
+  const catMap = currentCustomer.categoryDiscounts || {};
+  const catPct = catMap[p.cat];
+  if(catPct !== undefined && catPct !== null && catPct !== '') return Number(catPct) || 0;
+  return Number(currentCustomer.discountPercent || 0);
+}
+
 // Preço já com o desconto do cliente logado aplicado (se ele tiver um).
 function effectivePrice(p){
-  const pct = currentCustomer ? (currentCustomer.discountPercent || 0) : 0;
+  const pct = discountForProduct(p);
   return pct > 0 ? p.price * (1 - pct/100) : p.price;
 }
 
@@ -1108,8 +1119,18 @@ window.applyCustomerState = function(customer){
     document.getElementById('accInfoAddress').textContent = addrParts.length ? addrParts.join(', ') : '-';
     document.getElementById('accInfoCnpj').textContent = customer.cnpj
       ? `${customer.cnpj}${customer.razaoSocial ? ' — ' + customer.razaoSocial : ''}` : '-';
-    document.getElementById('accDiscountInfo').innerHTML = (customer.discountPercent > 0)
-      ? `<span class="discountPill">🏷️ Você tem ${customer.discountPercent}% de desconto</span>` : '';
+    (function(){
+      const catMap = customer.categoryDiscounts || {};
+      const catEntries = Object.entries(catMap).filter(([,v]) => Number(v) > 0);
+      let html = '';
+      if(customer.discountPercent > 0){
+        html += `<span class="discountPill">🏷️ ${customer.discountPercent}% de desconto geral</span>`;
+      }
+      catEntries.forEach(([cat, pct]) => {
+        html += `<span class="discountPill">🏷️ ${pct}% em ${cat}</span>`;
+      });
+      document.getElementById('accDiscountInfo').innerHTML = html;
+    })();
   } else {
     btn.classList.remove('logged');
     label.textContent = 'Entrar';
@@ -1197,7 +1218,7 @@ function renderCatalog(filterText="", filterCat=""){
              </select>
            </div>`
         : '';
-      const discPct = currentCustomer ? (currentCustomer.discountPercent || 0) : 0;
+      const discPct = discountForProduct(p);
       const finalPrice = effectivePrice(p);
       const priceHtml = discPct > 0
         ? `<div class="price"><span class="priceOld">${money(p.price)}</span>${money(finalPrice)}<span class="priceBadge">-${discPct}%</span></div>`
@@ -1618,6 +1639,7 @@ try{
         address: { street, neighborhood, city, cep },
         cnpj, razaoSocial,
         discountPercent: 0,
+        categoryDiscounts: {},
         cart: {},
         createdAt: serverTimestamp()
       });
