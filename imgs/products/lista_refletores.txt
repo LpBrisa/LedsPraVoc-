@@ -1,0 +1,63 @@
+01_refletor_100w_30_bf.jpg	Refletor 100W 30% BF — Cx/50
+02_refletor_200w_30_bf.jpg	Refletor 200W 30% BF — Cx/20
+03_refletor_50w_preto_bf_30.jpg	Refletor 50w Preto(BF) 30% — Cx/60
+04_refletor_50w_preto_bq_30.jpg	Refletor 50w Preto(BQ) 30% — Cx/60
+05_refletor_50w_preto_vd_30.jpg	Refletor 50w Preto(VD) 30% — Cx/60
+06_refletor_50w_preto_rgb_30.jpg	Refletor 50w Preto(RGB) 30% — Cx/60
+07_refletor_100w_preto_bf_30.jpg	Refletor 100w Preto(BF) 30% — Cx/50
+08_refletor_100w_preto_bq_30.jpg	Refletor 100w Preto(BQ) 30% — Cx/50
+09_refletor_100w_preto_vd_30.jpg	Refletor 100w Preto(VD) 30% — Cx/50
+10_refletor_100w_preto_rgb_30.jpg	Refletor 100w Preto(RGB) 30% — Cx/40
+11_refletor_150w_preto_bf_30.jpg	Refletor 150w Preto(BF) 30% — Cx/40
+12_refletor_200w_preto_bf_30.jpg	Refletor 200w Preto(BF) 30% — Cx/20
+13_refletor_200w_preto_bq_vd_30.jpg	Refletor 200w Preto(BQ/VD) 30% — Cx/20
+14_refletor_300w_preto_bf_30.jpg	Refletor 300w Preto(BF) 30% — Cx/20
+15_refletor_300w_preto_bq_vd_30.jpg	Refletor 300w Preto(BQ/VD) 30% — Cx/12
+16_refletor_300w_preto_bf_30.jpg	Refletor 300w Preto(BF) 30% — Cx/12
+17_refletor_400w_preto_bf_bq_30.jpg	Refletor 400w Preto(BF/BQ) 30% — Cx/10
+18_refletor_400w_preto_vd_30.jpg	Refletor 400w Preto(VD) 30% — Cx/10
+19_refletor_500w_preto_bf_bq_30.jpg	Refletor 500w Preto(BF/BQ) 30% — Cx/10
+20_refletor_500w_preto_vd_30.jpg	Refletor 500w Preto(VD) 30% — Cx/10
+21_refletor_600w_preto_bf_bq_30.jpg	Refletor 600w Preto(BF/BQ) 30% — Cx/8
+22_refletor_600w_preto_vd_30.jpg	Refletor 600w Preto(VD) 30% — Cx/8
+23_refletor_1000w_preto_bf_30.jpg	Refletor 1000w Preto(BF) 30% — Cx/5
+24_refletor_2000w_preto_bf_30.jpg	Refletor 2000w Preto(BF) 30% — Cx/2
+25_refletor_mini_10w_preto_bf_bq_50.jpg	Refletor mini 10w Preto(BF/BQ) 50% — Cx/100
+26_refletor_mini_10w_preto_vd_az_50.jpg	Refletor mini 10w Preto(VD/AZ) 50% — Cx/100
+27_refletor_mini_10w_preto_rgb_50.jpg	Refletor mini 10w Preto(RGB) 50% — Cx/100
+28_refletor_mini_20w_preto_bf_bq_50.jpg	Refletor mini 20w Preto(BF/BQ) 50% — Cx/100
+29_refletor_mini_20w_preto_az_vd_50.jpg	Refletor mini 20w Preto(AZ/VD) 50% — Cx/100
+30_refletor_mini_20w_preto_rgb_50.jpg	Refletor mini 20w Preto(RGB) 50% — Cx/100
+31_refletor_mini_30w_preto_az_50.jpg	Refletor mini 30w Preto(AZ) 50% — Cx/80
+32_refletor_mini_30w_preto_rgb_50.jpg	Refletor mini 30w Preto(RGB) 50% — Cx/80
+33_refletor_50w_preto_vd_az_50.jpg	Refletor 50w Preto(VD/AZ) 50% — Cx/40
+34_refletor_150w_preto_bf_bq_50.jpg	Refletor 150w Preto(BF/BQ) 50% — Cx/20
+35_refletor_50w_preto_bf_50.jpg	Refletor 50w Preto(BF) 50% — Cx/40
+36_refletor_50w_preto_bq_50.jpg	Refletor 50w Preto(BQ) 50% — Cx/40
+37_refletor_50w_preto_az_50.jpg	Refletor 50w Preto(AZ) 50% — Cx/40
+38_refletor_50w_preto_rgb_50.jpg	Refletor 50w Preto(RGB) 50% — Cx/40
+39_refletor_100w_preto_bf_50.jpg	Refletor 100w Preto(BF) 50% — Cx/40
+40_refletor_100w_preto_bq_50.jpg	Refletor 100w Preto(BQ) 50% — Cx/40
+41_refletor_100w_preto_az_vd_50.jpg	Refletor 100w Preto(AZ/VD) 50% — Cx/40
+42_refletor_100w_preto_rgb_50.jpg	Refletor 100w Preto(RGB) 50% — Cx/40
+43_refletor_150w_preto_bq_50.jpg	Refletor 150w Preto(BQ) 50% — Cx/40
+44_refletor_200w_preto_bf_50.jpg	Refletor 200w Preto(BF) 50% — Cx/20
+45_refletor_200w_preto_bq_50.jpg	Refletor 200w Preto(BQ) 50% — Cx/20
+46_refletor_200w_preto_vd_50.jpg	Refletor 200w Preto(VD) 50% — Cx/20
+47_refletor_200w_preto_az_50.jpg	Refletor 200w Preto(AZ) 50% — Cx/20
+48_refletor_200w_preto_rgb_50.jpg	Refletor 200w Preto(RGB) 50% — Cx/20
+49_refletor_300w_preto_bf_50.jpg	Refletor 300w Preto(BF) 50% — Cx/12
+50_refletor_300w_preto_bq_50.jpg	Refletor 300w Preto(BQ) 50% — Cx/12
+51_refletor_300w_preto_vd_50.jpg	Refletor 300w Preto(VD) 50% — Cx/12
+52_refletor_300w_preto_rgb_50.jpg	Refletor 300w Preto(RGB) 50% — Cx/12
+53_refletor_400w_preto_bf_50.jpg	Refletor 400w Preto(BF) 50% — Cx/10
+54_refletor_400w_preto_bq_50.jpg	Refletor 400w Preto(BQ) 50% — Cx/10
+55_refletor_400w_preto_az_vd_50.jpg	Refletor 400w Preto(AZ/VD) 50% — Cx/10
+56_refletor_400w_preto_rgb_50.jpg	Refletor 400w Preto(RGB) 50% — Cx/10
+57_refletor_500w_preto_bf_50.jpg	Refletor 500w Preto(BF) 50% — Cx/10
+58_refletor_500w_preto_rgb_50.jpg	Refletor 500w Preto(RGB) 50% — Cx/10
+59_refletor_600w_preto_bf_50.jpg	Refletor 600w Preto(BF) 50% — Cx/8
+60_refletor_600w_preto_rgb_50.jpg	Refletor 600w Preto(RGB) 50% — Cx/8
+61_refletor_800w_preto_bf_50.jpg	Refletor 800w Preto(BF) 50% — Cx/5
+62_refletor_1000w_preto_branco_frio_50.jpg	Refletor 1000w Preto(Branco Frio) 50% — Cx/5
+63_refletor_1500w_preto_branco_frio_50.jpg	Refletor 1500w Preto(Branco Frio) 50% — Cx/1
