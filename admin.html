@@ -94,8 +94,30 @@
       <div style="margin-top:10px"><label style="font-size:12px;color:var(--muted)">Faixa rolante (texto que passa pro lado no topo, opcional)</label>
       <input id="s_marquee" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)" placeholder="Ex: 🚚 Frete grátis acima de R$500 • Parcelamos em até 12x • Atendimento de seg a sáb"></div>
       <div style="margin-top:4px"><span style="font-size:11px;color:var(--muted)">Deixe em branco pra não mostrar nenhuma faixa. Use • ou — pra separar várias mensagens no mesmo texto.</span></div>
+
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line)">
+        <label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700">
+          <input type="checkbox" id="s_headerWhatsShow" checked style="width:16px;height:16px">
+          Mostrar botão verde de WhatsApp no topo do site
+        </label>
+        <div class="grid2" style="margin-top:10px">
+          <div><label>Número (só dígitos, com 55 e DDD)</label><input id="s_headerWhatsPhone" placeholder="Ex: 5511981707807"></div>
+          <div><label>Texto do botão</label><input id="s_headerWhatsText" placeholder="Ex: (11) 98170-7807"></div>
+        </div>
+        <div style="margin-top:4px"><span style="font-size:11px;color:var(--muted)">Desmarque a caixa pra tirar o botão do topo. Deixando marcada, ele aparece com esse número e texto.</span></div>
+      </div>
+
       <button class="btn btn-orange" style="margin-top:12px" id="saveSettingsBtn">Salvar informações</button>
       <span id="settingsStatus" style="margin-left:10px;color:var(--green);font-size:13px;"></span>
+    </div>
+
+    <div id="sellersBox" style="background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:20px;">
+      <h3 style="margin-top:0">📲 Vendedores (WhatsApp)</h3>
+      <span style="font-size:11px;color:var(--muted)">Com 2 ou mais vendedores cadastrados aqui, o cliente escolhe com quem falar antes de enviar o pedido pelo WhatsApp no site. Com só 1 (ou nenhum), o pedido vai direto pro número de sempre.</span>
+      <div id="sellersList" style="margin-top:12px;display:flex;flex-direction:column;gap:8px;"></div>
+      <button class="btn btn-ghost" style="margin-top:10px" id="addSellerBtn" type="button">➕ Adicionar vendedor</button>
+      <button class="btn btn-orange" style="margin-top:10px;margin-left:8px" id="saveSellersBtn" type="button">Salvar vendedores</button>
+      <span id="sellersStatus" style="margin-left:10px;color:var(--green);font-size:13px;"></span>
     </div>
 
     <div id="leadsBox" style="margin-bottom:20px">
@@ -291,6 +313,7 @@ onAuthStateChanged(auth, user=>{
     logoutBtn.style.display='inline-block';
     loadProducts();
     loadSettings();
+    loadSellers();
   } else {
     loginBox.style.display='block';
     appArea.style.display='none';
@@ -313,6 +336,9 @@ async function loadSettings(){
       document.getElementById('s_about').value = s.aboutText || '';
       document.getElementById('s_extra').value = s.extra || '';
       document.getElementById('s_marquee').value = s.marqueeText || '';
+      document.getElementById('s_headerWhatsShow').checked = s.headerWhatsShow !== false;
+      document.getElementById('s_headerWhatsPhone').value = s.headerWhatsPhone || '';
+      document.getElementById('s_headerWhatsText').value = s.headerWhatsText || '';
     }
   }catch(e){
     console.error('Erro ao carregar configurações:', e);
@@ -332,9 +358,73 @@ document.getElementById('saveSettingsBtn').addEventListener('click', async ()=>{
       instagram: document.getElementById('s_instagram').value.trim(),
       aboutText: document.getElementById('s_about').value.trim(),
       extra: document.getElementById('s_extra').value.trim(),
-      marqueeText: document.getElementById('s_marquee').value.trim()
-    });
+      marqueeText: document.getElementById('s_marquee').value.trim(),
+      headerWhatsShow: document.getElementById('s_headerWhatsShow').checked,
+      headerWhatsPhone: document.getElementById('s_headerWhatsPhone').value.replace(/\D/g,''),
+      headerWhatsText: document.getElementById('s_headerWhatsText').value.trim()
+    }, { merge: true });
     statusEl.textContent = 'Salvo! Já aparece no rodapé do site.';
+    setTimeout(()=> statusEl.textContent = '', 4000);
+  }catch(e){
+    console.error(e);
+    statusEl.textContent = 'Erro ao salvar.';
+  }
+});
+
+// ---- Vendedores (WhatsApp) ----
+let loadedSellers = [];
+
+function renderSellersList(){
+  const box = document.getElementById('sellersList');
+  if(loadedSellers.length === 0){
+    box.innerHTML = '<em style="font-size:12px;color:var(--muted)">Nenhum vendedor cadastrado ainda — o site usa o número fixo padrão.</em>';
+    return;
+  }
+  box.innerHTML = loadedSellers.map((s, i) => `
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap" data-idx="${i}">
+      <input class="sellerName" placeholder="Nome (ex: João - Vendas)" value="${escAttrC(s.name||'')}" style="flex:1;min-width:160px;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)">
+      <input class="sellerPhone" placeholder="Ex: 5511999998888" value="${escAttrC(s.phone||'')}" style="flex:1;min-width:160px;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)">
+      <button class="btn btn-red removeSellerBtn" type="button">Remover</button>
+    </div>
+  `).join('');
+  box.querySelectorAll('.removeSellerBtn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const idx = Number(btn.closest('[data-idx]').dataset.idx);
+      loadedSellers.splice(idx, 1);
+      renderSellersList();
+    });
+  });
+}
+
+async function loadSellers(){
+  try{
+    const snap = await getDoc(doc(db, 'settings', 'site'));
+    loadedSellers = (snap.exists() && Array.isArray(snap.data().sellers)) ? snap.data().sellers : [];
+  }catch(e){
+    console.error('Erro ao carregar vendedores:', e);
+    loadedSellers = [];
+  }
+  renderSellersList();
+}
+
+document.getElementById('addSellerBtn').addEventListener('click', ()=>{
+  loadedSellers.push({ name: '', phone: '' });
+  renderSellersList();
+});
+
+document.getElementById('saveSellersBtn').addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('sellersStatus');
+  const rows = [...document.querySelectorAll('#sellersList [data-idx]')];
+  const sellers = rows.map(row => ({
+    name: row.querySelector('.sellerName').value.trim(),
+    phone: row.querySelector('.sellerPhone').value.replace(/\D/g,'')
+  })).filter(s => s.phone);
+  statusEl.textContent = 'Salvando...';
+  try{
+    await setDoc(doc(db, 'settings', 'site'), { sellers }, { merge: true });
+    loadedSellers = sellers;
+    renderSellersList();
+    statusEl.textContent = 'Salvo! Já vale pro site.';
     setTimeout(()=> statusEl.textContent = '', 4000);
   }catch(e){
     console.error(e);

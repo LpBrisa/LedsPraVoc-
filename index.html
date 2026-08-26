@@ -420,6 +420,15 @@
   </div>
 </div>
 
+<div id="sellerOverlay" onclick="if(event.target===this) closeSellerPicker()" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);align-items:center;justify-content:center;">
+  <div style="background:var(--bg2, #1c1c1c);border-radius:12px;padding:22px;max-width:340px;width:90%;text-align:center;">
+    <h3 style="margin-top:0">Escolha um vendedor</h3>
+    <p style="font-size:13px;color:var(--muted, #999);margin-top:-6px">Seu pedido vai direto pro WhatsApp da pessoa que você escolher.</p>
+    <div id="sellerList" style="display:flex;flex-direction:column;gap:8px;margin-top:14px;"></div>
+    <button class="addBtn" style="margin-top:14px" onclick="closeSellerPicker()">Cancelar</button>
+  </div>
+</div>
+
 <div id="accountOverlay" onclick="if(event.target===this) closeAccount()">
   <div id="accountPanel">
     <button class="closeBtn" onclick="closeAccount()">✕</button>
@@ -1351,9 +1360,18 @@ function toggleCart(open){
   document.getElementById('cartOverlay').style.display = open? 'flex':'none';
 }
 
-function sendWhats(){
+// Vendedores cadastrados no admin (settings/site.sellers). Cada um é
+// {name, phone}. Se não houver nenhum cadastrado, cai no número padrão
+// abaixo (mesmo comportamento de antes).
+window.siteSellers = [];
+const DEFAULT_WHATS_PHONE = "5511981707807";
+let pendingWhatsMsg = null;
+let pendingWhatsTotal = 0;
+let pendingWhatsCount = 0;
+
+function buildWhatsOrderMessage(){
   const keys = Object.keys(cart);
-  if(keys.length===0){ alert('Seu carrinho está vazio.'); return; }
+  if(keys.length===0) return null;
   let msg = "Olá! Gostaria de fazer o seguinte pedido:%0A%0A";
   if(currentCustomer){
     msg += `Cliente: ${currentCustomer.name||''}%0A`;
@@ -1376,11 +1394,47 @@ function sendWhats(){
     msg += `• ${qtyTxt} ${p.name} (Cód ${p.code})${colorTxt} - ${money(unit)} un.%0A`;
   });
   msg += `%0ATotal estimado: ${money(total)}`;
-  // Número de exemplo - trocar pelo WhatsApp real da empresa
-  const phone = "5511981707807";
-  window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+  return {msg, total, count: keys.length};
+}
+
+function openWhatsWithPhone(phone){
+  window.open(`https://wa.me/${phone}?text=${pendingWhatsMsg}`, '_blank');
   window.trackConversion('whatsapp_order');
-  window.trackEvent('purchase', {value: total, currency: 'BRL', num_items: keys.length});
+  window.trackEvent('purchase', {value: pendingWhatsTotal, currency: 'BRL', num_items: pendingWhatsCount});
+}
+
+function sendWhats(){
+  const built = buildWhatsOrderMessage();
+  if(!built){ alert('Seu carrinho está vazio.'); return; }
+  pendingWhatsMsg = built.msg;
+  pendingWhatsTotal = built.total;
+  pendingWhatsCount = built.count;
+
+  const validSellers = (window.siteSellers || []).filter(s => s && s.phone);
+  if(validSellers.length >= 2){
+    openSellerPicker(validSellers);
+    return;
+  }
+  const phone = validSellers.length === 1 ? validSellers[0].phone : DEFAULT_WHATS_PHONE;
+  openWhatsWithPhone(phone);
+}
+
+function openSellerPicker(sellers){
+  const list = document.getElementById('sellerList');
+  list.innerHTML = sellers.map(s => `
+    <button class="addBtn" onclick="chooseSeller('${s.phone.replace(/\D/g,'')}')">📲 ${(s.name||'Vendedor').replace(/</g,'&lt;')}</button>
+  `).join('');
+  document.getElementById('sellerOverlay').style.display = 'flex';
+}
+
+function closeSellerPicker(){
+  document.getElementById('sellerOverlay').style.display = 'none';
+}
+
+function chooseSeller(phone){
+  closeSellerPicker();
+  toggleCart(false);
+  openWhatsWithPhone(phone);
 }
 
 let searchTrackTimer = null;
@@ -1509,6 +1563,24 @@ try{
       }
     }
     if(s){
+      window.siteSellers = Array.isArray(s.sellers) ? s.sellers.filter(x => x && x.phone) : [];
+      if(window.siteSellers.length){
+        const firstPhone = window.siteSellers[0].phone.replace(/\D/g,'');
+        const fab = document.getElementById('floatingWhatsBtn');
+        if(fab) fab.href = `https://wa.me/${firstPhone}?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.`;
+      }
+
+      // Botão verde de WhatsApp no topo (cabeçalho) — controlado no admin.
+      const waHeaderEl = document.getElementById('waHeader');
+      if(waHeaderEl){
+        if(s.headerWhatsShow === false){
+          waHeaderEl.style.display = 'none';
+        } else {
+          const hwPhone = (s.headerWhatsPhone || '').replace(/\D/g,'');
+          if(hwPhone) waHeaderEl.href = `https://wa.me/${hwPhone}`;
+          if(s.headerWhatsText) waHeaderEl.textContent = `📲 ${s.headerWhatsText}`;
+        }
+      }
 
       if(s.aboutText){
         let html = s.aboutText;
