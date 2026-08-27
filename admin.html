@@ -178,6 +178,21 @@
       </div>
     </div>
 
+    <div id="bulkHiddenBox" style="background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:20px 0;">
+      <h3 style="margin-top:0">👁️ Mostrar/ocultar produtos em massa</h3>
+      <span style="font-size:11px;color:var(--muted)">Produto "oculto" fica salvo no banco (com foto, nome, etc.) mas NÃO aparece pro cliente no site — útil pra importar o catálogo inteiro de uma vez e ir liberando aos poucos, conforme for definindo preço/estoque de cada um. Escolha uma categoria e clique em Ocultar ou Mostrar.</span>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:10px; flex-wrap:wrap;">
+        <label style="font-size:12px;color:var(--muted)">Categoria
+          <select id="bulkHiddenCat" style="display:block;min-width:200px;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)">
+            <option value="">Todas categorias</option>
+          </select>
+        </label>
+        <button class="btn btn-red" id="bulkHideBtn" style="margin-top:16px">🙈 Ocultar esses</button>
+        <button class="btn btn-green" id="bulkShowBtn" style="margin-top:16px">👁️ Mostrar esses</button>
+        <span id="bulkHiddenStatus" style="margin-top:16px;font-size:13px;color:var(--green)"></span>
+      </div>
+    </div>
+
     <div class="toolbar">
       <input type="text" id="search" placeholder="🔍 Buscar por nome ou código...">
       <button class="btn btn-ghost" id="refreshBtn">🔄 Recarregar</button>
@@ -194,7 +209,7 @@
       <thead>
         <tr>
           <th>Foto</th><th>Categoria</th><th>Nome</th><th>Código</th><th>Preço</th>
-          <th>Estoque</th><th>Promo</th><th>Peças/Cx</th><th>Cor</th><th>Descrição</th><th>URL Foto</th><th></th>
+          <th>Estoque</th><th>Promo</th><th>Oculto</th><th>Peças/Cx</th><th>Cor</th><th>Descrição</th><th>URL Foto</th><th></th>
         </tr>
       </thead>
       <tbody id="tbody"></tbody>
@@ -691,12 +706,15 @@ async function loadProducts(){
 // Preenche o seletor de categoria do ajuste de preço em massa, mantendo a
 // categoria escolhida (se ainda existir) quando a lista é recarregada.
 function populateBulkCatSelect(list){
-  const sel = document.getElementById('bulkPriceCat');
-  const prev = sel.value;
   const cats = [...new Set(list.map(p => p.cat).filter(Boolean))].sort((a,b)=>a.localeCompare(b, 'pt-BR'));
-  sel.innerHTML = '<option value="">Todas categorias</option>' +
-    cats.map(c => `<option value="${c.replace(/"/g,'&quot;')}">${c}</option>`).join('');
-  if(cats.includes(prev)) sel.value = prev;
+  ['bulkPriceCat','bulkHiddenCat'].forEach(id=>{
+    const sel = document.getElementById(id);
+    if(!sel) return;
+    const prev = sel.value;
+    sel.innerHTML = '<option value="">Todas categorias</option>' +
+      cats.map(c => `<option value="${c.replace(/"/g,'&quot;')}">${c}</option>`).join('');
+    if(cats.includes(prev)) sel.value = prev;
+  });
 }
 
 // ---- Ajuste de preço em massa (soma/subtrai um valor fixo do preço atual dos produtos, opcionalmente só de uma categoria) ----
@@ -763,6 +781,60 @@ document.getElementById('bulkPriceBtn').addEventListener('click', async ()=>{
   btn.disabled = false;
 });
 
+// ---- Mostrar/ocultar em massa (marca/desmarca o campo "hidden" de todos os produtos de uma categoria, ou de todos) ----
+async function bulkSetHidden(hiddenValue){
+  const statusEl = document.getElementById('bulkHiddenStatus');
+  const selectedCat = document.getElementById('bulkHiddenCat').value;
+  statusEl.style.color = 'var(--muted)';
+  statusEl.textContent = 'Buscando produtos atuais no banco...';
+  let snap;
+  try{
+    snap = await getDocs(collection(db, 'products'));
+  }catch(e){
+    console.error(e);
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = 'Erro ao buscar produtos.';
+    return;
+  }
+  let docs = [];
+  snap.forEach(d => docs.push({ docId: d.id, ...d.data() }));
+  if(selectedCat){
+    docs = docs.filter(p => p.cat === selectedCat);
+  }
+  if(docs.length === 0){
+    alert(selectedCat ? `Nenhum produto encontrado na categoria "${selectedCat}".` : 'Nenhum produto encontrado no banco.');
+    return;
+  }
+  const acao = hiddenValue ? 'OCULTAR (deixar de mostrar pro cliente)' : 'MOSTRAR (voltar a aparecer pro cliente)';
+  const alvoTxt = selectedCat ? `${docs.length} produto(s) da categoria "${selectedCat}"` : `${docs.length} produto(s) (TODAS as categorias)`;
+  if(!confirm(`Isso vai ${acao} ${alvoTxt}. Preço/estoque/nome não mudam, só a visibilidade no site. Continuar?`)) return;
+
+  statusEl.style.color = 'var(--muted)';
+  statusEl.textContent = `Aplicando a ${docs.length} produto(s)...`;
+  try{
+    let batch = writeBatch(db);
+    let count = 0;
+    for(const p of docs){
+      batch.update(doc(db, 'products', p.docId), { hidden: !!hiddenValue });
+      count++;
+      if(count % 400 === 0){
+        await batch.commit();
+        batch = writeBatch(db);
+      }
+    }
+    await batch.commit();
+    statusEl.style.color = 'var(--green)';
+    statusEl.textContent = `✓ Concluído: ${docs.length} produto(s) atualizado(s).`;
+    loadProducts();
+  }catch(e){
+    console.error(e);
+    statusEl.style.color = 'var(--red)';
+    statusEl.textContent = 'Erro ao aplicar. Confira sua conexão e tente de novo.';
+  }
+}
+document.getElementById('bulkHideBtn').addEventListener('click', ()=> bulkSetHidden(true));
+document.getElementById('bulkShowBtn').addEventListener('click', ()=> bulkSetHidden(false));
+
 function renderTable(list){
   const tbody = document.getElementById('tbody');
   tbody.innerHTML = '';
@@ -776,6 +848,7 @@ function renderTable(list){
       <td><input type="number" step="0.01" data-f="price" value="${p.price}" style="width:80px"></td>
       <td><input type="number" min="0" max="1" data-f="stock" value="${p.stock?1:0}" style="width:50px"></td>
       <td><input type="number" min="0" max="1" data-f="promo" value="${p.promo?1:0}" style="width:50px"></td>
+      <td><input type="number" min="0" max="1" data-f="hidden" value="${p.hidden?1:0}" style="width:50px" title="1 = não aparece pro cliente no site"></td>
       <td><input type="number" min="1" step="1" data-f="boxQty" value="${p.boxQty||1}" style="width:60px"></td>
       <td><input type="text" data-f="color" value="${escAttr(p.color||'')}" style="width:90px"></td>
       <td><textarea data-f="desc" rows="1">${escAttr(p.desc||'')}</textarea></td>
@@ -794,7 +867,7 @@ function renderTable(list){
         const f = inp.dataset.f;
         if(f==='price') updated[f] = parseFloat(inp.value)||0;
         else if(f==='boxQty') updated[f] = Math.max(1, parseInt(inp.value)||1);
-        else if(f==='stock' || f==='promo') updated[f] = Number(inp.value) > 0;
+        else if(f==='stock' || f==='promo' || f==='hidden') updated[f] = Number(inp.value) > 0;
         else updated[f] = inp.value;
       });
       delete updated.docId;

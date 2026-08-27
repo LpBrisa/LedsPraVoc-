@@ -7,6 +7,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_10_espeto_de_jardim_5w_preto_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -19,6 +20,7 @@
   "price": 8.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_11_espeto_de_jardim_5w_preto_vd_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -31,6 +33,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_12_espeto_de_jardim_7w_preto_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -43,6 +46,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_13_espeto_de_jardim_7w_preto_vd_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -55,6 +59,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_20_energia_solar_pl_stico_espeto_de_jardim_10w_preto_bf_bq_cx_5.jpg",
   "desc": "",
   "boxQty": 50
@@ -67,6 +72,7 @@
   "price": 28.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_21_energia_solar_pl_stico_espeto_de_jardim_10w_preto_vd_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -79,6 +85,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_22_pl_stico_espeto_de_jardim_7w_preto_bf_bq_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -91,6 +98,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_23_pl_stico_de_jardim_espeto_7w_preto_vd_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -103,6 +111,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_30_balizador_de_ch_o_cob_1w_preto_bf_bq_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -115,6 +124,7 @@
   "price": 18.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_31_balizador_de_ch_o_smd_3w_preto_bf_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -127,6 +137,7 @@
   "price": 23.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_32_balizador_de_ch_o_smd_5w_preto_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -139,6 +150,7 @@
   "price": 30.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_33_balizador_de_ch_o_smd_7w_preto_bf_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -151,6 +163,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_40_balizador_de_ch_o_smd_9w_preto_bq_cx_18_20.jpg",
   "desc": "",
   "boxQty": 18
@@ -163,6 +176,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_41_balizador_de_ch_o_smd_9w_preto_bf_cx_18.jpg",
   "desc": "",
   "boxQty": 18
@@ -175,6 +189,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_42_balizador_de_ch_o_smd_12w_preto_bf_bq_cx_16.jpg",
   "desc": "",
   "boxQty": 16
@@ -187,6 +202,7 @@
   "price": 70.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_43_balizador_de_ch_o_smd_18w_preto_bq_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -199,6 +215,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_50_lumin_ria_p_blica_cob_50w_branco_frio_preto_100_cx_4.jpg",
   "desc": "",
   "boxQty": 4
@@ -211,6 +228,7 @@
   "price": 110.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_51_lumin_ria_p_blica_cob_100w_branco_frio_preto_100_ccx_4.jpg",
   "desc": "",
   "boxQty": 1
@@ -223,6 +241,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_52_lumin_ria_p_blica_cob_150w_branco_frio_preto_100_cx_4.jpg",
   "desc": "",
   "boxQty": 4
@@ -235,6 +254,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/01_53_lumin_ria_p_blica_cob_200w_frio_preto_100_branco_cx_4.jpg",
   "desc": "",
   "boxQty": 4
@@ -247,6 +267,7 @@
   "price": 380.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_00_299889_lumin_ria_p_blica_cob_250w_branco_frio_preto_100_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -259,6 +280,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_01_lumin_ria_p_blica_smd_50w_frio_preto_60_branco_e_cinza_ccx_8.jpg",
   "desc": "",
   "boxQty": 1
@@ -271,6 +293,7 @@
   "price": 36.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_02_lumin_ria_p_blica_smd_100w_branco_frio_preto_cinza_50_e_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -283,6 +306,7 @@
   "price": 53.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_03_lumin_ria_p_blica_smd_200w_branco_frio_preto_cinza_50_e_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -295,6 +319,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_10_lumin_ria_p_blica_smd_300w_branco_frio_preto_cinza_50_e_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -307,6 +332,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_11_e_lumin_ria_p_blica_smd_400w_frio_preto_e_50_branco_cinza_cx.jpg",
   "desc": "",
   "boxQty": 8
@@ -319,6 +345,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_12_l_mpada_de_rua_smd_100w_branco_frio_50_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -331,6 +358,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_13_l_mpada_de_rua_smd_200w_branco_frio_50_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -343,6 +371,7 @@
   "price": 120.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_20_l_mpada_de_rua_smd_300w_branco_frio_50_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -355,6 +384,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_21_l_mpada_de_rua_indutiva_smd_100w_branco_frio_50_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -367,6 +397,7 @@
   "price": 105.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_22_l_mpada_de_rua_indutiva_smd_200w_branco_frio_50_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -379,6 +410,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_23_l_mpada_de_rua_indutiva_smd_300w_branco_frio_50_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -391,6 +423,7 @@
   "price": 48.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_30_l_mpada_de_indutiva_smd_rua_60w_frio_branco_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -403,6 +436,7 @@
   "price": 65.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_31_l_mpada_de_indutiva_smd_rua_150w_branco_frio_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -415,6 +449,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_32_l_mpada_de_rua_indutiva_smd_200w_branco_frio_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -427,6 +462,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_33_l_mpada_de_rua_indutiva_smd_300w_branco_frio_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -439,6 +475,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_40_lumin_ria_p_blica_smd_50w_branco_frio_preto_e_cinza_75_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -451,6 +488,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_41_lumin_ria_p_blica_smd_100w_branco_frio_preto_e_cinza_75_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -463,6 +501,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_42_lumin_ria_p_blica_smd_150w_branco_frio_preto_e_cinza_75_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -475,6 +514,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/02_43_lumin_ria_p_blica_smd_200w_branco_frio_preto_e_cinza_75_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -487,6 +527,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_00_lumin_ria_p_blica_smd_300w_frio_preto_cinza_branco_e_75_cx_2.jpg",
   "desc": "",
   "boxQty": 2
@@ -499,6 +540,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_01_lumin_ria_p_blica_smd_50w_branco_frio_preto_e_cinza_100_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -511,6 +553,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_02_lumin_ria_p_blica_smd_100w_branco_frio_preto_cinza_100_e_cx.jpg",
   "desc": "",
   "boxQty": 8
@@ -523,6 +566,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_03_lumin_ria_p_blica_smd_150_branco_frio_preto_cinza_100_e_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -535,6 +579,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_10_lumin_ria_p_blica_smd_200w_branco_frio_preto_e_cinza_100_cx.jpg",
   "desc": "",
   "boxQty": 8
@@ -547,6 +592,7 @@
   "price": 65.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_11_lumin_ria_p_blica_smd_100w_branco_frio_preto_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -559,6 +605,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_12_lumin_ria_p_blica_smd_150w_branco_frio_preto_x_10.jpg",
   "desc": "",
   "boxQty": 1
@@ -571,6 +618,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_13_fes_im_ee_ee_peito_g4_fonte_de_luz_5w_bf_bq_branco_cx_1000.jpg",
   "desc": "",
   "boxQty": 1000
@@ -583,6 +631,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_20_2_7_hh_e14_fonte_de_luz_5w_bf_bq_branco_cx_1000.jpg",
   "desc": "",
   "boxQty": 1000
@@ -595,6 +644,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_21_ee_de_g9_fonte_luz_5w_bf_bq_branco_cx_1000.jpg",
   "desc": "",
   "boxQty": 1000
@@ -607,6 +657,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_22_g9_fonte_de_luz_7w_bf_bq_branco_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -619,6 +670,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/03_23_de_g9_fonte_luz_9w_bf_bq_branco_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -631,6 +683,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/01_refletor_100w_30_bf.jpg",
   "desc": "",
   "boxQty": 50
@@ -643,6 +696,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/02_refletor_200w_30_bf.jpg",
   "desc": "",
   "boxQty": 20
@@ -655,6 +709,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/03_refletor_50w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 60
@@ -667,6 +722,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/04_refletor_50w_preto_bq_30.jpg",
   "desc": "",
   "boxQty": 60
@@ -679,6 +735,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/05_refletor_50w_preto_vd_30.jpg",
   "desc": "",
   "boxQty": 60
@@ -691,6 +748,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/06_refletor_50w_preto_rgb_30.jpg",
   "desc": "",
   "boxQty": 60
@@ -703,6 +761,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/07_refletor_100w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 50
@@ -715,6 +774,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/08_refletor_100w_preto_bq_30.jpg",
   "desc": "",
   "boxQty": 50
@@ -727,6 +787,7 @@
   "price": 22.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/09_refletor_100w_preto_vd_30.jpg",
   "desc": "",
   "boxQty": 50
@@ -739,6 +800,7 @@
   "price": 35.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/10_refletor_100w_preto_rgb_30.jpg",
   "desc": "",
   "boxQty": 40
@@ -751,6 +813,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/11_refletor_150w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 40
@@ -763,6 +826,7 @@
   "price": 24.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/12_refletor_200w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 20
@@ -775,6 +839,7 @@
   "price": 32.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/13_refletor_200w_preto_bq_vd_30.jpg",
   "desc": "",
   "boxQty": 20
@@ -787,6 +852,7 @@
   "price": 40.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/14_refletor_300w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 20
@@ -799,6 +865,7 @@
   "price": 42.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/15_refletor_300w_preto_bq_vd_30.jpg",
   "desc": "",
   "boxQty": 12
@@ -811,6 +878,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/16_refletor_300w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 12
@@ -823,6 +891,7 @@
   "price": 55.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/17_refletor_400w_preto_bf_bq_30.jpg",
   "desc": "",
   "boxQty": 10
@@ -835,6 +904,7 @@
   "price": 65.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/18_refletor_400w_preto_vd_30.jpg",
   "desc": "",
   "boxQty": 10
@@ -847,6 +917,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/19_refletor_500w_preto_bf_bq_30.jpg",
   "desc": "",
   "boxQty": 10
@@ -859,6 +930,7 @@
   "price": 80.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/20_refletor_500w_preto_vd_30.jpg",
   "desc": "",
   "boxQty": 10
@@ -871,6 +943,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/21_refletor_600w_preto_bf_bq_30.jpg",
   "desc": "",
   "boxQty": 8
@@ -883,6 +956,7 @@
   "price": 90.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/22_refletor_600w_preto_vd_30.jpg",
   "desc": "",
   "boxQty": 8
@@ -895,6 +969,7 @@
   "price": 190.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/23_refletor_1000w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 5
@@ -907,6 +982,7 @@
   "price": 680.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/24_refletor_2000w_preto_bf_30.jpg",
   "desc": "",
   "boxQty": 2
@@ -919,6 +995,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/25_refletor_mini_10w_preto_bf_bq_50.jpg",
   "desc": "",
   "boxQty": 100
@@ -931,6 +1008,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/26_refletor_mini_10w_preto_vd_az_50.jpg",
   "desc": "",
   "boxQty": 100
@@ -943,6 +1021,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/27_refletor_mini_10w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 100
@@ -955,6 +1034,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/28_refletor_mini_20w_preto_bf_bq_50.jpg",
   "desc": "",
   "boxQty": 100
@@ -967,6 +1047,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/29_refletor_mini_20w_preto_az_vd_50.jpg",
   "desc": "",
   "boxQty": 100
@@ -979,6 +1060,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/30_refletor_mini_20w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 100
@@ -991,6 +1073,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/31_refletor_mini_30w_preto_az_50.jpg",
   "desc": "",
   "boxQty": 80
@@ -1003,6 +1086,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/32_refletor_mini_30w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 80
@@ -1015,6 +1099,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/33_refletor_50w_preto_vd_az_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1027,6 +1112,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/34_refletor_150w_preto_bf_bq_50.jpg",
   "desc": "",
   "boxQty": 20
@@ -1039,6 +1125,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/35_refletor_50w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1051,6 +1138,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/36_refletor_50w_preto_bq_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1063,6 +1151,7 @@
   "price": 17.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/37_refletor_50w_preto_az_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1075,6 +1164,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/38_refletor_50w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1087,6 +1177,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/39_refletor_100w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1099,6 +1190,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/40_refletor_100w_preto_bq_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1111,6 +1203,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/41_refletor_100w_preto_az_vd_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1123,6 +1216,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/42_refletor_100w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1135,6 +1229,7 @@
   "price": 30.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/43_refletor_150w_preto_bq_50.jpg",
   "desc": "",
   "boxQty": 40
@@ -1147,6 +1242,7 @@
   "price": 32.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/44_refletor_200w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 20
@@ -1159,6 +1255,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/45_refletor_200w_preto_bq_50.jpg",
   "desc": "",
   "boxQty": 20
@@ -1171,6 +1268,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/46_refletor_200w_preto_vd_50.jpg",
   "desc": "",
   "boxQty": 20
@@ -1183,6 +1281,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/47_refletor_200w_preto_az_50.jpg",
   "desc": "",
   "boxQty": 20
@@ -1195,6 +1294,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/48_refletor_200w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 20
@@ -1207,6 +1307,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/49_refletor_300w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 12
@@ -1219,6 +1320,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/50_refletor_300w_preto_bq_50.jpg",
   "desc": "",
   "boxQty": 12
@@ -1231,6 +1333,7 @@
   "price": 65.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/51_refletor_300w_preto_vd_50.jpg",
   "desc": "",
   "boxQty": 12
@@ -1243,6 +1346,7 @@
   "price": 95.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/52_refletor_300w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 12
@@ -1255,6 +1359,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/53_refletor_400w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 10
@@ -1267,6 +1372,7 @@
   "price": 80.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/54_refletor_400w_preto_bq_50.jpg",
   "desc": "",
   "boxQty": 10
@@ -1279,6 +1385,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/55_refletor_400w_preto_az_vd_50.jpg",
   "desc": "",
   "boxQty": 1
@@ -1291,6 +1398,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/56_refletor_400w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 10
@@ -1303,6 +1411,7 @@
   "price": 115.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/57_refletor_500w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 10
@@ -1315,6 +1424,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/58_refletor_500w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 10
@@ -1327,6 +1437,7 @@
   "price": 145.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/59_refletor_600w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 8
@@ -1339,6 +1450,7 @@
   "price": 295.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/60_refletor_600w_preto_rgb_50.jpg",
   "desc": "",
   "boxQty": 8
@@ -1351,6 +1463,7 @@
   "price": 220.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/61_refletor_800w_preto_bf_50.jpg",
   "desc": "",
   "boxQty": 5
@@ -1363,6 +1476,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/62_refletor_1000w_preto_branco_frio_50.jpg",
   "desc": "",
   "boxQty": 5
@@ -1375,6 +1489,7 @@
   "price": 900.0,
   "stock": true,
   "promo": false,
+  "hidden": false,
   "img": "imgs/products/63_refletor_1500w_preto_branco_frio_50.jpg",
   "desc": "",
   "boxQty": 1
@@ -1387,6 +1502,7 @@
   "price": 60.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/06_33_refletor_luz_solar_60w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1399,6 +1515,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/06_40_refletor_luz_solar_100w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1411,6 +1528,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/06_41_refletor_luz_solar_200w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1423,6 +1541,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/06_42_refletor_luz_solar_300w_branco_frio_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -1435,6 +1554,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/06_43_refletor_luz_solar_400w_frio_branco_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -1447,6 +1567,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_00_refletor_luz_solar_500w_branco_frio_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -1459,6 +1580,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_01_refletor_luz_solar_600w_branco_frio_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -1471,6 +1593,7 @@
   "price": 265.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_02_refletor_luz_solar_800w_branco_frio_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -1483,6 +1606,7 @@
   "price": 320.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_03_refletor_luz_solar_1000w_branco_frio_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -1495,6 +1619,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_10_refletor_luz_solar_100w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1507,6 +1632,7 @@
   "price": 60.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_11_solar_light_zoom_ear_refletor_luz_solar_200w_branco_frio_cx.jpg",
   "desc": "",
   "boxQty": 20
@@ -1519,6 +1645,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_12_solar_light_s00w_tft_refletor_luz_solar_300w_branco_frio_cx.jpg",
   "desc": "",
   "boxQty": 20
@@ -1531,6 +1658,7 @@
   "price": 95.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_13_refletor_luz_solar_400w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1543,6 +1671,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_20_refletor_m_dulo_luz_50w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1555,6 +1684,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_21_refletor_m_dulo_luz_100w_branco_frio_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -1567,6 +1697,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_22_refletor_m_dulo_luz_150w_branco_frio_cx_8.jpg",
   "desc": "",
   "boxQty": 8
@@ -1579,6 +1710,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_23_refletor_m_dulo_luz_200w_branco_frio_cx_6.jpg",
   "desc": "",
   "boxQty": 6
@@ -1591,6 +1723,7 @@
   "price": 230.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_30_refletor_m_dulo_luz_250w_branco_frio_cx_4.jpg",
   "desc": "",
   "boxQty": 4
@@ -1603,6 +1736,7 @@
   "price": 23.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_31_refletor_modular_50w_bf_cx_70.jpg",
   "desc": "",
   "boxQty": 70
@@ -1615,6 +1749,7 @@
   "price": 23.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_32_refletor_modular_50w_bq_cx_70.jpg",
   "desc": "",
   "boxQty": 70
@@ -1627,6 +1762,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_33_wa_e_d_o_plantas_luzes_crescer_50w_cx_70.jpg",
   "desc": "",
   "boxQty": 70
@@ -1639,6 +1775,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_40_l_mpada_m_dulo_50w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1651,6 +1788,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_41_l_mpada_m_dulo_100w_branco_frio_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -1663,6 +1801,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_42_l_mpada_m_dulo_cob_50w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1675,6 +1814,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/07_43_e_lo_l_mpada_m_dulo_cob_200w_branco_frio_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -1687,6 +1827,7 @@
   "price": 5.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_00_a_sj_mini_spot_1w_branco_bf_bq_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -1699,6 +1840,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_01_7_mini_spot_3w_branco_bf_bq_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -1711,6 +1853,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_02_e_e_mini_spot_3w_branco_bf_bq_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -1723,6 +1866,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_03_cob_redondo_30w_branco_bf_bq_bn_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -1735,6 +1879,7 @@
   "price": 30.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_10_cob_redondo_35w_branco_bf_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -1747,6 +1892,7 @@
   "price": 36.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_11_redondo_cob_50w_branco_frio_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1759,6 +1905,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_12_farol_redonda_do_42w_carro_preto_bf_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -1771,6 +1918,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_13_farol_quadrada_do_48w_carro_preto_bf_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -1783,6 +1931,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_20_tartaruga_prova_d_agua10w_bq_bf_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -1795,6 +1944,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_21_sobrepor_6w_bf_bq_cx_80.jpg",
   "desc": "",
   "boxQty": 80
@@ -1807,6 +1957,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_22_sobrepor_12w_bf_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -1819,6 +1970,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_23_sobrepor_18w_bf_bn_bq_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -1831,6 +1983,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_30_sobrepor_25w_25w_bf_bn_bq_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1843,6 +1996,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_31_sobrepor_6w_bf_bq_cx_80.jpg",
   "desc": "",
   "boxQty": 80
@@ -1855,6 +2009,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_32_12w_bf_bn_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -1867,6 +2022,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_33_18w_bf_bn_bq_sobrepor_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -1879,6 +2035,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_40_25w_bf_bn_bq_sobrepor_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1891,6 +2048,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_41_embutir_6w_bf_bq_cx_80.jpg",
   "desc": "",
   "boxQty": 80
@@ -1903,6 +2061,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_42_embutir_12w_bf_bn_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -1915,6 +2074,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/08_43_embutir_18w_bf_bn_bq_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1927,6 +2087,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_00_embutir_25w_bf_bn_bq_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1939,6 +2100,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_01_embutir_6w_bf_bq_cx_80.jpg",
   "desc": "",
   "boxQty": 80
@@ -1951,6 +2113,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_02_embutir_12w_bf_bn_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -1963,6 +2126,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_03_embutir_18w_bf_bn_bq_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -1975,6 +2139,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_10_embutir_25w_bf_bn_bq_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -1987,6 +2152,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_11_sobrepor_36w_150_1200_bf_bn_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -1999,6 +2165,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_12_sobrepor_48w_300_1200_bf_bn_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -2011,6 +2178,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_13_sobrepor_36w_400_400_bf_bq_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -2023,6 +2191,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_20_sobrepor_48w_600_600_bf_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -2035,6 +2204,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_21_sobrepor_36w_300_600_bf_bn_bq_cx_5.jpg",
   "desc": "",
   "boxQty": 5
@@ -2047,6 +2217,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_22_embutir_36w_170_1220_bf_bn_bq_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -2059,6 +2230,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_23_embutir_36w_220_1220_bf_bn_bq_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -2071,6 +2243,7 @@
   "price": 95.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_30_embutir_48w_320_1220_bf_bn_bq_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -2083,6 +2256,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_31_embutir_36w_320_620_bf_bq_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -2095,6 +2269,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_32_embutir_36w_400_400_bf_bn_bq_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -2107,6 +2282,7 @@
   "price": 60.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_33_embutir_36w_420_420_bf_bn_bq_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -2119,6 +2295,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_40_embutir_48w_620_620_bf_bn_bq_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -2131,6 +2308,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_41_soquete_e27_sensor_presenca_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -2143,6 +2321,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_42_emenda_de_trilho_branco_preto_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2155,6 +2334,7 @@
   "price": 3.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/09_43_o_emenda_de_trilho_l_branco_preto_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2167,6 +2347,7 @@
   "price": 16.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_00_barra_de_trilho_10w_preto_bq_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -2179,6 +2360,7 @@
   "price": 26.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_01_barra_de_trilho_20w_preto_bf_bq_4000k_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -2191,6 +2373,7 @@
   "price": 30.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_02_100000000000005_barra_de_trilho_30w_preto_bf_bq_4000k_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -2203,6 +2386,7 @@
   "price": 35.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_03_eram_barra_de_trilho_40w_preto_bf_bq_4000k_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -2215,6 +2399,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_10_spot_trilho_7w_branco_preto_bf_bq_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2227,6 +2412,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_11_spot_trilho_10w_branco_preto_bf_bq_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2239,6 +2425,7 @@
   "price": 12.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_12_o_spot_trilho_12w_preto_bf_bq_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2251,6 +2438,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_13_spot_trilho_15w_preto_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2263,6 +2451,7 @@
   "price": 16.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_20_spot_trilho_20w_branco_preto_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2275,6 +2464,7 @@
   "price": 23.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_21_ne_spot_trilho_30w_branco_preto_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2287,6 +2477,7 @@
   "price": 6.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_22_a_2_trilho_im_preto_branco_x_50.jpg",
   "desc": "",
   "boxQty": 1
@@ -2299,6 +2490,7 @@
   "price": 12.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_23_a_trilho_1_5m_preto_branco_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2311,6 +2503,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_30_a_trilho_2m_preto_branco_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -2323,6 +2516,7 @@
   "price": 14.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_31_decoracao_piscina_10led_rgb_cx_144.jpg",
   "desc": "",
   "boxQty": 144
@@ -2335,6 +2529,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_32_arandela_de_parede_bq_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2347,6 +2542,7 @@
   "price": 16.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_33_luz_strobo_24led_bf_branco_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2359,6 +2555,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_40_o_ma_bulbo_g45_e27_bf_bq_branco_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -2371,6 +2568,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_41_barra_12v_72d_bf_bq_az_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -2383,6 +2581,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/10_42_am_aste_para_suporte_300w_600w_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -2395,6 +2594,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_00_ufo_100w_preto_bf_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -2407,6 +2607,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_01_ufo_150w_preto_bf_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -2419,6 +2620,7 @@
   "price": 95.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_02_ufo_200w_preto_bf_x_10.jpg",
   "desc": "",
   "boxQty": 1
@@ -2431,6 +2633,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_03_ufo_300w_preto_bf_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -2443,6 +2646,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_10_ufo_150w_preto_bf_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -2455,6 +2659,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_11_ufo_400w_preto_bf_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -2467,6 +2672,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_12_fonte_chaveada_5a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2479,6 +2685,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_13_chaveada_fonte_10a_12v_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -2491,6 +2698,7 @@
   "price": 22.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_20_fonte_chaveada_20a_12v_cx_75.jpg",
   "desc": "",
   "boxQty": 75
@@ -2503,6 +2711,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_21_fonte_chaveada_30a_12v_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2515,6 +2724,7 @@
   "price": 42.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_22_e_re_a_fonte_chaveada_50a_12v_cx_36.jpg",
   "desc": "",
   "boxQty": 36
@@ -2527,6 +2737,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_23_1_2_w_a_e_a_fonte_chaveada_80a_12v_cx_36.jpg",
   "desc": "",
   "boxQty": 36
@@ -2539,6 +2750,7 @@
   "price": 20.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_30_chaveada_fonte_5a_24v_cx_75.jpg",
   "desc": "",
   "boxQty": 75
@@ -2551,6 +2763,7 @@
   "price": 30.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_31_fonte_chaveada_10a_24v_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2563,6 +2776,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_32_pe_fonte_chaveada_15a_24v_cx_36.jpg",
   "desc": "",
   "boxQty": 36
@@ -2575,6 +2789,7 @@
   "price": 55.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_33_rs_na_fonte_chaveada_20a_24v_cx_36.jpg",
   "desc": "",
   "boxQty": 36
@@ -2587,6 +2802,7 @@
   "price": 65.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_40_fonte_chaveada_30a_24v_cx_36.jpg",
   "desc": "",
   "boxQty": 36
@@ -2599,6 +2815,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_41_slim_chaveada_cinza_60w_12v_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2611,6 +2828,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_42_slim_chaveada_cinza_100w_cx_100_12v.jpg",
   "desc": "",
   "boxQty": 100
@@ -2623,6 +2841,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/11_43_slim_chaveada_cinza_150w_12v_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2635,6 +2854,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_00_slim_chaveada_cinza_200w_12v_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2647,6 +2867,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_01_slim_chaveada_cinza_300w_12v_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -2659,6 +2880,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_02_slim_chaveada_preto_60w_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2671,6 +2893,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_03_slim_chaveada_preto_100w_12v_cx_108.jpg",
   "desc": "",
   "boxQty": 108
@@ -2683,6 +2906,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_10_slim_chaveada_200w_preto_12v_cx_80.jpg",
   "desc": "",
   "boxQty": 80
@@ -2695,6 +2919,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_11_slim_chaveada_preto_300w_12v_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -2707,6 +2932,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_12_slim_chaveada_ouro_preto_60w_5a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2719,6 +2945,7 @@
   "price": 16.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_13_slim_chaveada_preto_ouro_120w_10a_12v_cx_108.jpg",
   "desc": "",
   "boxQty": 108
@@ -2731,6 +2958,7 @@
   "price": 19.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_20_slim_chaveada_ouro_preto_180w_15a_12v_cx_108.jpg",
   "desc": "",
   "boxQty": 108
@@ -2743,6 +2971,7 @@
   "price": 22.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_21_slim_chaveada_ouro_preto_240w_20a_12v_cx_80.jpg",
   "desc": "",
   "boxQty": 80
@@ -2755,6 +2984,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_22_slim_chaveada_ouro_preto_360w_30a_12v_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -2767,6 +2997,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_23_slim_chaveada_ouro_preto_60w_5a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2779,6 +3010,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_30_slim_chaveada_ouro_preto_120w_10a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2791,6 +3023,7 @@
   "price": 18.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_31_slim_chaveada_ouro_preto_240w_20a_12v_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2803,6 +3036,7 @@
   "price": 21.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_32_slim_chaveada_ouro_preto_360w_30a_12v_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2815,6 +3049,7 @@
   "price": 5.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_33_fonte_slim_longa_2a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2827,6 +3062,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_40_fonte_slim_longa_3a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2839,6 +3075,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_41_fonte_slim_longa_5a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2851,6 +3088,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_42_fonte_slim_longa_7a_12v_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -2863,6 +3101,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/12_43_fonte_slim_longa_10a_12v_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2875,6 +3114,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_00_fonte_slim_longa_15a_12v_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -2887,6 +3127,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_01_fonte_blindada_g0w_12v_cx_108.jpg",
   "desc": "",
   "boxQty": 108
@@ -2899,6 +3140,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_02_blindada_fonte_100w_12v_cx_56.jpg",
   "desc": "",
   "boxQty": 56
@@ -2911,6 +3153,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_03_fonte_blindada_120w_12v_cx_56.jpg",
   "desc": "",
   "boxQty": 56
@@ -2923,6 +3166,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_10_fonte_blindada_150w_12v_cx_56.jpg",
   "desc": "",
   "boxQty": 56
@@ -2935,6 +3179,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_11_fonte_blindada_200w_12v_cx_32.jpg",
   "desc": "",
   "boxQty": 32
@@ -2947,6 +3192,7 @@
   "price": 3.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_12_fonte_pvc_2a_12v_cx_280_acorde.jpg",
   "desc": "",
   "boxQty": 280
@@ -2959,6 +3205,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_13_fonte_pvc_3a_12v_cx_300_acorde.jpg",
   "desc": "",
   "boxQty": 300
@@ -2971,6 +3218,7 @@
   "price": 8.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_20_fonte_pvc5a_12v_cx_100_acorde.jpg",
   "desc": "",
   "boxQty": 100
@@ -2983,6 +3231,7 @@
   "price": 17.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_21_fonte_pvc_10a_12v_cx_100_acorde.jpg",
   "desc": "",
   "boxQty": 100
@@ -2995,6 +3244,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_22_driver_painel_36_48w_para_cx_240.jpg",
   "desc": "",
   "boxQty": 240
@@ -3007,6 +3257,7 @@
   "price": 11.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_23_driver_para_refletor_5ow_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -3019,6 +3270,7 @@
   "price": 2.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_30_driver_de_painel_8_25w_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -3031,6 +3283,7 @@
   "price": 7.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_31_le_em_driver_de_painel_downlight_35w_x_500.jpg",
   "desc": "",
   "boxQty": 1
@@ -3043,6 +3296,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_32_acabamento_aste_para_suporte_300w_cx_24.jpg",
   "desc": "",
   "boxQty": 24
@@ -3055,6 +3309,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_33_tomada_usb_x_120.jpg",
   "desc": "",
   "boxQty": 1
@@ -3067,6 +3322,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_40_r_tomada_usb_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -3079,6 +3335,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_41_tomada_usb_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -3091,6 +3348,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_42_tomada_usb_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -3103,6 +3361,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/13_43_ed_cc_e_tomada_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -3115,6 +3374,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_00_s_controlador_de_fita_24v_com_interruptor_fio_sem_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -3127,6 +3387,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_01_cx_250_280.jpg",
   "desc": "",
   "boxQty": 250
@@ -3139,6 +3400,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_02_rabicho_100l_fio_transparente_m_xico.jpg",
   "desc": "",
   "boxQty": 1
@@ -3151,6 +3413,7 @@
   "price": 3.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_03_rabicho_mangueira_redonda.jpg",
   "desc": "",
   "boxQty": 1
@@ -3163,6 +3426,7 @@
   "price": 4.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_10_o_va_rabicho_360_neon.jpg",
   "desc": "",
   "boxQty": 1
@@ -3175,6 +3439,7 @@
   "price": 3.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_11_rabicho_mangueira120l_cx_16.jpg",
   "desc": "",
   "boxQty": 16
@@ -3187,6 +3452,7 @@
   "price": 5.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_12_s_4_a_rabicho_mangueira_cob_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -3199,6 +3465,7 @@
   "price": 4.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_13_ao_e_rabicho_mangueira_neon_cx_250.jpg",
   "desc": "",
   "boxQty": 250
@@ -3211,6 +3478,7 @@
   "price": 3.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_20_rabicho_mangueira_5050_cx_250.jpg",
   "desc": "",
   "boxQty": 250
@@ -3223,6 +3491,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_21_rabicho_p_mangueira_cx_250.jpg",
   "desc": "",
   "boxQty": 250
@@ -3235,6 +3504,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_22_rabicho_mangueira_neon_cx_250.jpg",
   "desc": "",
   "boxQty": 250
@@ -3247,6 +3517,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_23_rabicho_para_fita.jpg",
   "desc": "",
   "boxQty": 1
@@ -3259,6 +3530,7 @@
   "price": 0.85,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_30_soquete_g9_15cm_cx_1000.jpg",
   "desc": "",
   "boxQty": 1000
@@ -3271,6 +3543,7 @@
   "price": 1.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_31_soquete_g9_15cm_cx_1000_1400.jpg",
   "desc": "",
   "boxQty": 1000
@@ -3283,6 +3556,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_32_35_soquete_gul0_15cm_cx_1000.jpg",
   "desc": "",
   "boxQty": 1000
@@ -3295,6 +3569,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_33_b_paraespelho_luz_cx_1250.jpg",
   "desc": "",
   "boxQty": 1250
@@ -3307,6 +3582,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_40_p_k_controlador_5050_rgb_110v_220v_cx_80.jpg",
   "desc": "",
   "boxQty": 80
@@ -3319,6 +3595,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_41_exa_eg_w_controlador_5050_rgb_alta_tens_o_1500w_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3331,6 +3608,7 @@
   "price": 7.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_42_rabicho_neon_rgb_cx_120.jpg",
   "desc": "",
   "boxQty": 120
@@ -3343,6 +3621,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/14_43_controlador_2811_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -3355,6 +3634,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_00_controle_remoto_sem_fio_interruptor_de_tr_s_via_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3367,6 +3647,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_01_e_a_pe_controladora_sp107e_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3379,6 +3660,7 @@
   "price": 23.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_02_o_controladora_wifi_rgb_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3391,6 +3673,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_03_15_driver_48w_cx_250.jpg",
   "desc": "",
   "boxQty": 250
@@ -3403,6 +3686,7 @@
   "price": 4.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_10_ad_perfilemb_1m_e1707_branco_preto_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3415,6 +3699,7 @@
   "price": 8.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_11_perfil_2m_emb_e1707_branco_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3427,6 +3712,7 @@
   "price": 8.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_12_2022_perfil_2m_emb_e1707_preto_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3439,6 +3725,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_13_20_o_perfil_2m_sobre_s1517_prata_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -3451,6 +3738,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_20_perfil_emb_3m_e1707_branco_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -3463,6 +3751,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_21_perfil_2m_sobre_s1707_cpreto_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -3475,6 +3764,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_22_a_g_2010sb_perfil_2m_sobre_branco_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -3487,6 +3777,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_23_2010sp_perfil_2m_sobre_preto_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -3499,6 +3790,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_30_ap_am_alum_nio_acrilico_escuro_2m_branco_preto_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -3511,6 +3803,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_31_e_mma_perfil_sobre_2m_2m_branco_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -3523,6 +3816,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_32_3010sp_perfil_2m_sobre_2m_preto_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -3535,6 +3829,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_33_dd_3010eb_alum_nio_acrilico_escuro_branco_2m_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3547,6 +3842,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_40_gai_pois_o_y_3010_ep_alum_nio_emb_acrilico_escur_preto_2m_cx.jpg",
   "desc": "",
   "boxQty": 100
@@ -3559,6 +3855,7 @@
   "price": 28.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_41_2011sb_alum_nio_pendente_de_3_lados_2m_branco_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3571,6 +3868,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_42_o_by_lg_3020eb_perfil_emb_2m_branco_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -3583,6 +3881,7 @@
   "price": 26.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_43_3020ep_perfil_emb_2m_preto_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -3595,6 +3894,7 @@
   "price": 26.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_50_3020sp_perfil_sobre_preto_branco_2m_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -3607,6 +3907,7 @@
   "price": 28.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_51_c_4020sb_perfil_2m_sobre_cbranco_preto_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -3619,6 +3920,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_52_p_4020eb_perfil_emb_2m_branco_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -3631,6 +3933,7 @@
   "price": 28.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/15_53_ae_p_perfil_emb_2m_preto_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -3643,6 +3946,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_00_aj_dmd_sas_perfil_zm_sobre_branco_x_20.jpg",
   "desc": "",
   "boxQty": 1
@@ -3655,6 +3959,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_01_dd_srs_perfil_emb_2m_branco_x_20.jpg",
   "desc": "",
   "boxQty": 1
@@ -3667,6 +3972,7 @@
   "price": 12.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_02_perfil_acabamento_de_canto_branco_16_16_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -3679,6 +3985,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_03_714_7158_perfil_acabamento_de_canto_714_715_2m_branco_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -3691,6 +3998,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_10_wa_perfil_2m_emb_cbranco_preto_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3703,6 +4011,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_11_17155_perfil_2m_sobre_cbranco_preto_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -3715,6 +4024,7 @@
   "price": 750.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_12_si_100m_perfil_flex_curvada_branco22_14mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3727,6 +4037,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_13_perfil_flex_200m_branco10_10mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3739,6 +4050,7 @@
   "price": 700.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_20_perfil_flex_200m_branco12_12mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3751,6 +4063,7 @@
   "price": 700.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_21_perfil_flex_100m_branco20_10mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3763,6 +4076,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_22_100m_perfil_flex_branco20_20mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3775,6 +4089,7 @@
   "price": 750.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_23_fi_perfil_flex_50m_branco30_20mm_cx_50m.jpg",
   "desc": "",
   "boxQty": 50
@@ -3787,6 +4102,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_30_perfil_flex_100m_cbranco30_20mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3799,6 +4115,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_31_perfil_flex_200m_branco10_10mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3811,6 +4128,7 @@
   "price": 700.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_32_perfil_flex_200m_branco12_12mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3823,6 +4141,7 @@
   "price": 700.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_33_perfil_flex_100m_branco20_10mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3835,6 +4154,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_40_perfil_flex_100m_branco20_20mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3847,6 +4167,7 @@
   "price": 750.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_41_perfil_flex_50m_branco30_20mm_cx_50m.jpg",
   "desc": "",
   "boxQty": 50
@@ -3859,6 +4180,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_42_perfil_flex_100m_branco30_20mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3871,6 +4193,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/16_43_perfil_flex_200m_branco10_10mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3883,6 +4206,7 @@
   "price": 700.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_00_perfil_flex_100m_branco20_10mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3895,6 +4219,7 @@
   "price": 900.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_01_44_perfil_flex_100m_branco20_20mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3907,6 +4232,7 @@
   "price": 900.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_02_e_y_perfil_flex_100m_branco25_17mm_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -3919,6 +4245,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_03_e_2_perfil_flex_c_rculo_luminoso_360_22mm_y_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -3931,6 +4258,7 @@
   "price": 600.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_10_neon_segunda_geracao_branco_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3943,6 +4271,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_11_neon_segunda_geracao_cazul_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3955,6 +4284,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_12_dat_neon_segunda_geracao_cazul_de_gelo_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3967,6 +4297,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_13_neon_segunda_geracao_verde_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3979,6 +4310,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_20_neon_segunda_geracao_vermelho_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -3991,6 +4323,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_21_neon_segunda_geracao_rosa_6mm_x_200m.jpg",
   "desc": "",
   "boxQty": 1
@@ -4003,6 +4336,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_22_poi_e_ni_neon_segunda_geracao_roxo_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -4015,6 +4349,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_23_neon_segunda_geracao_rosa_e_roxo_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -4027,6 +4362,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_30_e_neon_segunda_geracao_claranja_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -4039,6 +4375,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_31_neon_segunda_geracao_camarelo_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -4051,6 +4388,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_32_neon_segunda_geracao_dourado_6mm_cx_200m.jpg",
   "desc": "",
   "boxQty": 200
@@ -4063,6 +4401,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_33_presilha_de_perfil_flex_12_12mm_100m_prateado_cx_100m.jpg",
   "desc": "",
   "boxQty": 100
@@ -4075,6 +4414,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_40_3_dm_ay_presilha_de_perfil_flex_p0_20mm_100m_prateado_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4087,6 +4427,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_41_by_am_my_ta_4_a_4_ar_mes_presilha_de_perfil_flex_100m_pratea.jpg",
   "desc": "",
   "boxQty": 100
@@ -4099,6 +4440,7 @@
   "price": 100.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_42_aa_40w_1_2m_pendente_preto_branco_bf_bn_bq_90_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -4111,6 +4453,7 @@
   "price": 100.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/17_43_pendente_40w_1_2m_preto_laranja_90_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -4123,6 +4466,7 @@
   "price": 100.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_00_pendente_40w_1_2m_preto_verde_90_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -4135,6 +4479,7 @@
   "price": 100.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_01_pendente_40w_1_2m_preto_rosa_90_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -4147,6 +4492,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_02_pendente_40w_1_2m_preto_azul_90_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -4159,6 +4505,7 @@
   "price": 100.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_03_pendente_40w_1_2m_preto_vermelho_90_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -4171,6 +4518,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_10_linear_0_30cm_10w_bf_x_30.jpg",
   "desc": "",
   "boxQty": 1
@@ -4183,6 +4531,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_11_20w_bf_linear_0_60cm_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -4195,6 +4544,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_12_linear_120cm_40w_bf_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -4207,6 +4557,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_13_linear_120cm_80w_bf_bq_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -4219,6 +4570,7 @@
   "price": 33.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_20_linear_1_2m_80w_bf_bq_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -4231,6 +4583,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_21_linear_2_4m_160w_bf_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -4243,6 +4596,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_22_high_bay_100w_branco_frio_preto_75_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -4255,6 +4609,7 @@
   "price": 90.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_23_high_bay_150w_branco_frio_preto_75_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -4267,6 +4622,7 @@
   "price": 105.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_30_high_bay_200w_frio_preto_75_branco_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -4279,6 +4635,7 @@
   "price": 160.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_31_high_bay_300w_frio_preto_75_branco_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -4291,6 +4648,7 @@
   "price": 95.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_32_high_bay_100w_branco_frio_preto_100_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -4303,6 +4661,7 @@
   "price": 115.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_33_high_bay_150w_branco_frio_preto_100_x_12.jpg",
   "desc": "",
   "boxQty": 1
@@ -4315,6 +4674,7 @@
   "price": 135.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_40_high_bay_200w_branco_frio_preto_100_cx_12.jpg",
   "desc": "",
   "boxQty": 12
@@ -4327,6 +4687,7 @@
   "price": 9.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_41_fita_led_ip20_5050_12v_60led_bf_bq_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -4339,6 +4700,7 @@
   "price": 9.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_42_fita_led_ip65_5050_12v_60led_bq_bf_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -4351,6 +4713,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/18_43_fita_led_ip65_5050_12v_60led_azul_verde_vermelho_rosa_laranj.jpg",
   "desc": "",
   "boxQty": 100
@@ -4363,6 +4726,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_00_ar_ts_led_fita_ip65_5050_24v_60led_bq_bf_rosa_laranja_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -4375,6 +4739,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_01_fita_led_ip20_3528_24v_120led_10m_bf_bq_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4387,6 +4752,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_02_fita_led_ip65_5050_12v_60led_cuv_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4399,6 +4765,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_03_led_fita_ip20_3528_12v_120led_bf_bq_5mm_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -4411,6 +4778,7 @@
   "price": 7.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_10_fita_led_ip20_3528_12v_120led_bf_bq_4k_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -4423,6 +4791,7 @@
   "price": 10.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_11_fita_led_ip20_3528_12v_240led_bq_bf_4k_x_200.jpg",
   "desc": "",
   "boxQty": 1
@@ -4435,6 +4804,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_12_fita_led_ip20_cob_12v_320led_bq_bf_4k_cx_200.jpg",
   "desc": "",
   "boxQty": 200
@@ -4447,6 +4817,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_13_fita_led_ip20_cob_12v_320led_azul_verde_vermelho_rosa_am_rox.jpg",
   "desc": "",
   "boxQty": 100
@@ -4459,6 +4830,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_20_fita_led_ip20_cob_12v_480led_bq_bf_4k_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -4471,6 +4843,7 @@
   "price": 28.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_21_fita_led_ip44_3528_220v_10m_120led_bq_bf_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4483,6 +4856,7 @@
   "price": 28.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_22_fita_led_ip44_3528_220v_10m_120led_bn_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4495,6 +4869,7 @@
   "price": 28.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_23_fita_led_ip44_3528_110v_10m_120led_bq_bn_bf_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4507,6 +4882,7 @@
   "price": 26.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_30_fita_led_ip44_3528_220v_10m_120led_bq_bf_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4519,6 +4895,7 @@
   "price": 26.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_31_fita_led_ip44_3528_110v_10m_120led_bf_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4531,6 +4908,7 @@
   "price": 26.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_32_fita_led_ip44_3528_110v_120led_10m_bq_bn_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4543,6 +4921,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_33_fita_led_ip44_3528_220v_240led_10m_bf_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4555,6 +4934,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_40_led_fita_ip44_3528_220v_240led_10m_bq_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4567,6 +4947,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_41_fita_led_ip44_3528_110v_240led_10m_bf_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4579,6 +4960,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_42_fita_led_ip44_3528_110v_240led_10m_bq_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -4591,6 +4973,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/19_43_led_fita_ip44_3528_220v_240led_10m_d_bf_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4603,6 +4986,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_00_led_fita_ip44_3528_220v_240led_10m_d_bq_bn_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4615,6 +4999,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_01_led_fita_ip44_3528_110v_240led_10m_d_bf_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4627,6 +5012,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_02_led_fita_ip44_3528_110v_240led_10m_d_bq_bn_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4639,6 +5025,7 @@
   "price": 40.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_03_fita_led_ip20_2811_12v_60led_rgb_b_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -4651,6 +5038,7 @@
   "price": 40.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_10_fita_led_ip20_2811_12v_goled_rgb_p_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -4663,6 +5051,7 @@
   "price": 40.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_11_fita_led_ip65_2811_12v_30led_rgb_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4675,6 +5064,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_12_fita_led_ip65_2811_12v_60led_rgb_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4687,6 +5077,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_13_fita_led_ip20_cob_12v_486led_rgb_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -4699,6 +5090,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_20_110v_220v_bq_bf_azul_vermelho_verde_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4711,6 +5103,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_21_5050mangueira_de_led_100m_110v_220v_rgb_ccx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4723,6 +5116,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_22_neon_rgb_108_luzes_com_3535_12v_rgb_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4735,6 +5129,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_23_neon_rgb_12v_digital_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4747,6 +5142,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_30_fita_n_on_100m_b_12v_6500k_3000k_dourado_azul_cx_50m_2.jpg",
   "desc": "",
   "boxQty": 50
@@ -4759,6 +5155,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_31_fita_n_on_100m_b_12v_roxo_rosa_vermelho_laramja_cx_50m_2.jpg",
   "desc": "",
   "boxQty": 50
@@ -4771,6 +5168,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_32_n_on_100m_b_12v_fita_amarelo_verde_rosa_cx_50m_2.jpg",
   "desc": "",
   "boxQty": 50
@@ -4783,6 +5181,7 @@
   "price": 450.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_33_fita_n_on_110v_100m_3000k_4000k_6500k_azul_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4795,6 +5194,7 @@
   "price": 450.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_40_fita_n_on_100m_110v_verde_laranja_rosa_vermelho_roxo_dourado.jpg",
   "desc": "",
   "boxQty": 1
@@ -4807,6 +5207,7 @@
   "price": 450.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_41_n_on_220v_fita_100m_3000k_4000k_6500k_azul_roxo_laranja_azul.jpg",
   "desc": "",
   "boxQty": 1
@@ -4819,6 +5220,7 @@
   "price": 450.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_42_fita_n_on_100m_220v_verde_rosa_vermelho_dourado_amarelo_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4831,6 +5233,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/20_43_fita_n_on_100m_110_220v_rgb_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4843,6 +5246,7 @@
   "price": 600.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_00_mang_cob_100m_110v_6500k_4000k_3000k_azul_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4855,6 +5259,7 @@
   "price": 600.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_01_mang_cob_100m_220v_azul_6500k_4000k_3000k_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4867,6 +5272,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_02_mang_cob_100m_110v_220v_verde_rosa_roxo_dourado_laranja_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4879,6 +5285,7 @@
   "price": 650.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_03_mang_cob_100m_110_220v_vermelho_azul_gelo_amarelo_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4891,6 +5298,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_10_mangueira_1201_7mm_100m_220v_bq_bf_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4903,6 +5311,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_11_120_mangueira_8mm_100m_220v_bq_bf_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4915,6 +5324,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_12_mangueira_240l_100m_220v_bf_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4927,6 +5337,7 @@
   "price": 550.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_13_mangueira_240l_100m_bf_bq_110v_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4939,6 +5350,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_20_neon_360_120d_100m_110v_bq_bf_bn_azul_vermelho_verde_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4951,6 +5363,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_21_neon_360_100m_110v_120d_amarelo_dourado_rosa_roxo_azul_gelo.jpg",
   "desc": "",
   "boxQty": 1
@@ -4963,6 +5376,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_22_h_neon_360_100m_220v_120d_bq_bf_bn_azul_vermelho_verde_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4975,6 +5389,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_23_neon_360_100m_220v_120d_amarelo_dourado_rosa_roxo_azul_gelo.jpg",
   "desc": "",
   "boxQty": 1
@@ -4987,6 +5402,7 @@
   "price": 310.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_30_mangueira_redonda_100m_220v_bq_bf_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -4999,6 +5415,7 @@
   "price": 310.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_31_mangueira_redonda_100m_220v_vm_am_rosa_az_ve_rgb_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5011,6 +5428,7 @@
   "price": 310.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_32_mangueira_redonda_100m_220v_rgb_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5023,6 +5441,7 @@
   "price": 310.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_33_mangueira_redonda_100m_110v_bq_bf_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5035,6 +5454,7 @@
   "price": 310.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_40_mangueira_redonda_100m_110v_az_ve_vm_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5047,6 +5467,7 @@
   "price": 310.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_41_mangueira_redonda_100m_110v_rgb_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5059,6 +5480,7 @@
   "price": 310.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_42_mangueira_redonda_100m_110v_am_rosa_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5071,6 +5493,7 @@
   "price": 330.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/21_43_mangueira_redonda_100m_220v_ls_bq_bf_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5083,6 +5506,7 @@
   "price": 330.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_00_mangueira_redonda_100m_strobo_100m_220v_az_ve_vm_am_cx_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5095,6 +5519,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_01_bastao_50cm_85_265v_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5107,6 +5532,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_02_bastao_50cm_85_265v_bq_bf_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5119,6 +5545,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_03_bastao_50cm_85_265v_rgb_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5131,6 +5558,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_10_cord_o_100_led_fixo_prova_d_qua_220v_10m_bq_bf_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5143,6 +5571,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_11_cord_o_100_led_fixo_prova_d_qua_220v_10m_vm_rosa_roxo_az_ve.jpg",
   "desc": "",
   "boxQty": 60
@@ -5155,6 +5584,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_12_cord_o_100_led_fixo_prova_d_qua_220v_10m_rgb_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5167,6 +5597,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_13_cord_o_100_led_fixo_prova_d_qua_220v_10m_verde_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5179,6 +5610,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_20_cord_o_100_led_fixo_prova_d_qua_220v_10m_vermelho_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5191,6 +5623,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_21_cord_o_100_led_fixo_prova_d_qua_220v_10m_azul_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5203,6 +5636,7 @@
   "price": 10.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_22_cord_o_fixo_100_led_prova_d_qua_220v_10m_bq_bf_az_ve_vm_rgb.jpg",
   "desc": "",
   "boxQty": 60
@@ -5215,6 +5649,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_23_cord_o_100_led_fixo_prova_d_qua_220v_10m_rosa_roxo_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5227,6 +5662,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_30_cord_o_300_led_fixo_prova_d_qua_31v_30m_bq_bf_cx_30.jpg",
   "desc": "",
   "boxQty": 30
@@ -5239,6 +5675,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_31_cord_o_fixo_500_led_prova_d_qua_31v_50m_bq_bf_cx_20.jpg",
   "desc": "",
   "boxQty": 20
@@ -5251,6 +5688,7 @@
   "price": 150.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_32_cord_o_fixo_900_led_prova_d_qua_31v_100m_bf_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -5263,6 +5701,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_33_cord_o_fixo_900_led_prova_d_qua_31v_100m_bq_cx_10.jpg",
   "desc": "",
   "boxQty": 10
@@ -5275,6 +5714,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_40_100_led_com_strobo_prova_d_gua_luz_string_10m_220v_bq_bf_cx.jpg",
   "desc": "",
   "boxQty": 60
@@ -5287,6 +5727,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_41_100_led_com_strobo_prova_d_gua_luz_string_vermelho_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5299,6 +5740,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_42_strobo_100_led_com_prova_d_gua_luz_string_verde_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5311,6 +5753,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/22_43_100_led_com_strobo_prova_d_gua_luz_string_10m_220v_azul_cx_6.jpg",
   "desc": "",
   "boxQty": 60
@@ -5323,6 +5766,7 @@
   "price": 14.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_00_100_led_com_strobo_prova_d_gua_luz_string_10m_220v_bq_bf_cx.jpg",
   "desc": "",
   "boxQty": 60
@@ -5335,6 +5779,7 @@
   "price": 14.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_01_100_led_com_strobo_prova_d_gua_luz_string_10m_220v_az_ve_vm.jpg",
   "desc": "",
   "boxQty": 60
@@ -5347,6 +5792,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_02_cascata_200_led_fixoa_prova_d_qua_220v_5_5m_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -5359,6 +5805,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_03_cascata_200_led_fixoa_prova_d_qua_220v_5_5m_bf_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -5371,6 +5818,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_10_cascata_200_led_fixoa_prova_d_qua_110v_5_5m_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -5383,6 +5831,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_11_fixoa_cascata_400_led_prova_d_qua_220v_10m_bq_cx_24.jpg",
   "desc": "",
   "boxQty": 24
@@ -5395,6 +5844,7 @@
   "price": 45.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_12_fixoa_cascata_400_led_prova_d_qua_220v_10m_bf_cx_24.jpg",
   "desc": "",
   "boxQty": 24
@@ -5407,6 +5857,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_13_l_mpada_de_fio_de_cobre_300led_8_fun_es_9v_30m_bq_bf_rgb_cx.jpg",
   "desc": "",
   "boxQty": 50
@@ -5419,6 +5870,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_20_l_mpada_de_fio_de_cobre_5ooled_8_fun_es_9v_bq_bf_rgb_50m_cx.jpg",
   "desc": "",
   "boxQty": 50
@@ -5431,6 +5883,7 @@
   "price": 85.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_21_l_mpada_de_fio_de_cobre_1000led_8_fun_es_31v_100m_bq_bf_rgb.jpg",
   "desc": "",
   "boxQty": 40
@@ -5443,6 +5896,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_22_l_mpada_de_fio_de_cobre_1200led_8_fun_es_31v_120m_bq_bf_rgb.jpg",
   "desc": "",
   "boxQty": 40
@@ -5455,6 +5909,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_23_l_mpada_de_fio_de_cobre_300led_8_fun_es_9v_30m_bq_bf_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5467,6 +5922,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_30_l_mpada_de_fio_de_cobre_5ooled_8_fun_es_9v_50m_bq_bf_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5479,6 +5935,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_31_l_mpada_de_fio_de_cobre_1000led_8_fun_es_31v_100m_bq_bf_cx_4.jpg",
   "desc": "",
   "boxQty": 40
@@ -5491,6 +5948,7 @@
   "price": 110.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_32_l_mpada_de_fio_de_cobre_1200led_8_fun_es_31v_120m_bq_bf_cx_4.jpg",
   "desc": "",
   "boxQty": 40
@@ -5503,6 +5961,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_33_l_mpada_de_fio_de_cobre_9v_300led_30m_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5515,6 +5974,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_40_l_mpada_de_fio_de_cobre_9v_5ooled_50m_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5527,6 +5987,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_41_l_mpada_de_fio_de_cobre_31v_1000led_100m_bf_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -5539,6 +6000,7 @@
   "price": 90.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_42_l_mpada_de_fio_de_cobre_1200led_31v_120m_bf_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -5551,6 +6013,7 @@
   "price": 25.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/23_43_l_mpada_de_fio_de_cobre_9v_300led_30m_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5563,6 +6026,7 @@
   "price": 50.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_00_l_mpada_de_fio_de_cobre_9v_5ooled_50m_bf_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5575,6 +6039,7 @@
   "price": 75.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_01_l_mpada_de_fio_de_cobre_31v_1000led_100m_bf_bq_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -5587,6 +6052,7 @@
   "price": 90.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_02_l_mpada_de_fio_de_cobre_31v_1200led_120m_bq_bf_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -5599,6 +6065,7 @@
   "price": 1.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_03_emenda_mangueira_redonda.jpg",
   "desc": "",
   "boxQty": 1
@@ -5611,6 +6078,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_10_fita_n_on_5m_12v_bf_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5623,6 +6091,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_11_fita_n_on_5m_12v_bq_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5635,6 +6104,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_12_fita_n_on_5m_12v_azul_de_gelo_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5647,6 +6117,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_13_fita_n_on_5m_12v_azul_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5659,6 +6130,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_20_fita_n_on_12v_5m_vermelho_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5671,6 +6143,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_21_fita_n_on_5m_12v_amarelo_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5683,6 +6156,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_22_fita_n_on_5m_12v_laranja_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5695,6 +6169,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_23_fita_n_on_12v_5m_dourado_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5707,6 +6182,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_30_fita_n_on_5m_12v_verde_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5719,6 +6195,7 @@
   "price": 13.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_31_fita_n_on_5m_12v_roxo_violeta_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5731,6 +6208,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_32_n_on_12v_fita_5m_rosa_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5743,6 +6221,7 @@
   "price": 38.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_33_fita_n_on_5m_12v_rgb_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5755,6 +6234,7 @@
   "price": 55.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_40_fita_de_n_on_refrescante_5m_12v_rgb_digital_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5767,6 +6247,7 @@
   "price": 8.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_41_le_vn_recuado_mr11_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -5779,6 +6260,7 @@
   "price": 8.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_42_vn_recuado_mr16_branco_preto_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -5791,6 +6273,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/24_43_em_vn_recuado_par2o_cbranco_preto_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -5803,6 +6286,7 @@
   "price": 12.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_00_em_vn_recuado_ar70_branco_preto_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -5815,6 +6299,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_01_vn_f_recuado_ar111_branco_preto_cx_60.jpg",
   "desc": "",
   "boxQty": 60
@@ -5827,6 +6312,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_02_e_hvn_nec_recuado_par30_cpreto_branco_x_100.jpg",
   "desc": "",
   "boxQty": 1
@@ -5839,6 +6325,7 @@
   "price": 1.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_03_a_eee_emenda_p_spot_duplo_cmr11_cx_1500.jpg",
   "desc": "",
   "boxQty": 1500
@@ -5851,6 +6338,7 @@
   "price": 1.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_10_e_un_emenda_p_duplo_spot_cmr16_parzo_cx_1000.jpg",
   "desc": "",
   "boxQty": 1000
@@ -5863,6 +6351,7 @@
   "price": 1.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_11_mm_rn_emenda_p_duplo_spot_pressure_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -5875,6 +6364,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_12_emenda_fita_cx_500.jpg",
   "desc": "",
   "boxQty": 500
@@ -5887,6 +6377,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_13_10mm_lamp_with_direct_hand_pressure_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -5899,6 +6390,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_20_l_type_8mm_lamp_with_conversion_clamp_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -5911,6 +6403,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_21_l_type_10mm_lamp_with_conversion_clamp_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -5923,6 +6416,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_22_8mm_lampl_type_10mm_lamp_with_adapter_pressure_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -5935,6 +6429,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_23_8mm_10mm_4_vias_clamp_press_crystal_joint.jpg",
   "desc": "",
   "boxQty": 1
@@ -5947,6 +6442,7 @@
   "price": 1.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_30_soquete_e40_e27_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -5959,6 +6455,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_31_base_de_suporte_2_em_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5971,6 +6468,7 @@
   "price": 15.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_32_base_de_suporte_3_em_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5983,6 +6481,7 @@
   "price": 20.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_33_base_de_suporte_3_em_1.jpg",
   "desc": "",
   "boxQty": 1
@@ -5995,6 +6494,7 @@
   "price": 3.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_40_p4_liga_desliga_cx_600.jpg",
   "desc": "",
   "boxQty": 600
@@ -6007,6 +6507,7 @@
   "price": 0.6,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_41_soquete_t8_cx_3000.jpg",
   "desc": "",
   "boxQty": 3000
@@ -6019,6 +6520,7 @@
   "price": 2.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_42_conector_da_fita_rgb_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -6031,6 +6533,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/25_43_a_mm_presilha_perfil_7_17_cx_2000.jpg",
   "desc": "",
   "boxQty": 2000
@@ -6043,6 +6546,7 @@
   "price": 1.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_00_presilha_perfil_7_17_cx_4000.jpg",
   "desc": "",
   "boxQty": 4000
@@ -6055,6 +6559,7 @@
   "price": 1.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_01_presilha_de_painel_cx_1000_1800.jpg",
   "desc": "",
   "boxQty": 1000
@@ -6067,6 +6572,7 @@
   "price": 0.55,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_02_m_dulo_2835_6500k_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -6079,6 +6585,7 @@
   "price": 0.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_03_m_dulo_4040_6500k_cx_6000.jpg",
   "desc": "",
   "boxQty": 6000
@@ -6091,6 +6598,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_10_m_rabicho_neon_para_12v_cx_2000_3000.jpg",
   "desc": "",
   "boxQty": 2000
@@ -6103,6 +6611,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_11_emenda_5050_cx_20000.jpg",
   "desc": "",
   "boxQty": 20000
@@ -6115,6 +6624,7 @@
   "price": 0.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_12_presilha_de_painel_cx_10500.jpg",
   "desc": "",
   "boxQty": 10500
@@ -6127,6 +6637,7 @@
   "price": 5.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_13_chips_de_led_50w_cx_150.jpg",
   "desc": "",
   "boxQty": 150
@@ -6139,6 +6650,7 @@
   "price": 0.55,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_20_soquete_t8_30cm_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -6151,6 +6663,7 @@
   "price": 0.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_21_fio_p4_com_20cm_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -6163,6 +6676,7 @@
   "price": 0.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_22_p4_com_fio_20cm_cx_5000.jpg",
   "desc": "",
   "boxQty": 5000
@@ -6175,6 +6689,7 @@
   "price": 0.4,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_23_fio_m_f_p4_sem_cx_3000.jpg",
   "desc": "",
   "boxQty": 3000
@@ -6187,6 +6702,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_30_m_dulo_suporte_100w.jpg",
   "desc": "",
   "boxQty": 1
@@ -6199,6 +6715,7 @@
   "price": 20.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_31_m_dulo_suporte_200w.jpg",
   "desc": "",
   "boxQty": 1
@@ -6211,6 +6728,7 @@
   "price": 1.2,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_32_qu_emenda_p4_5050_cx_2500.jpg",
   "desc": "",
   "boxQty": 2500
@@ -6223,6 +6741,7 @@
   "price": 2.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_33_rabicho_120l_sem_tomada_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -6235,6 +6754,7 @@
   "price": 0.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_40_abracadeira_neon_cx_10000.jpg",
   "desc": "",
   "boxQty": 10000
@@ -6247,6 +6767,7 @@
   "price": 0.5,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_41_h_abracadeira_neon_x_1000.jpg",
   "desc": "",
   "boxQty": 1
@@ -6259,6 +6780,7 @@
   "price": 1.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_42_emenda_mangueira_5050_cx_3000.jpg",
   "desc": "",
   "boxQty": 3000
@@ -6271,6 +6793,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/26_43_atrav_s_da_linha_comum_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -6283,6 +6806,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_00_terminais_de_ch_2_conex_oacess_rios.jpg",
   "desc": "",
   "boxQty": 1
@@ -6295,6 +6819,7 @@
   "price": 0.8,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_01_ch_3_terminais_de_conex_oacess_rios.jpg",
   "desc": "",
   "boxQty": 1
@@ -6307,6 +6832,7 @@
   "price": 5.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_02_aste_pendente_para_cx_600.jpg",
   "desc": "",
   "boxQty": 600
@@ -6319,6 +6845,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_03_ea_3_coletor_de_leite_bf_rosa_cx_40.jpg",
   "desc": "",
   "boxQty": 40
@@ -6331,6 +6858,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_10_e_erre_fetal_monitor_azul_rosa_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -6343,6 +6871,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_11_aromizador_port_til_azul_cx_50.jpg",
   "desc": "",
   "boxQty": 50
@@ -6355,6 +6884,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_12_dimer_com_led_cx_100.jpg",
   "desc": "",
   "boxQty": 100
@@ -6367,6 +6897,7 @@
   "price": 0.0,
   "stock": true,
   "promo": false,
+  "hidden": true,
   "img": "imgs/products/27_13_dimer_com_led_cx_100.jpg",
   "desc": "",
   "boxQty": 100

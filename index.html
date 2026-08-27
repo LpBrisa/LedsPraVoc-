@@ -1533,6 +1533,7 @@ try{
     list = [];
     snap.forEach(d=>{
       const data = d.data();
+      if(data.hidden) return; // produto marcado como oculto no admin: não mostra pro cliente
       list.push({
         id: data.id ?? d.id,
         cat: data.cat || 'Outros',
