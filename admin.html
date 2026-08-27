@@ -183,8 +183,9 @@
       <button class="btn btn-ghost" id="refreshBtn">🔄 Recarregar</button>
       <button class="btn btn-green" id="addMissingBtn">✅ Adicionar só os que faltam (<span id="missingCount">...</span>)</button>
       <button class="btn btn-red" id="importBtn">📦 Restaurar catálogo inicial (<span id="importCount">...</span> produtos)</button>
+      <button class="btn btn-green" id="addYfctBtn">🆕 Importar catálogo YFCT (<span id="yfctMissingCount">...</span>)</button>
     </div>
-    <div style="margin-top:6px"><span style="font-size:11px;color:var(--muted)">O botão verde é seguro: só cria os produtos que ainda não existem no banco, sem tocar em preço/nome/estoque de nada que você já editou. O botão vermelho apaga e recria TUDO — só use se quiser descartar edições manuais.</span></div>
+    <div style="margin-top:6px"><span style="font-size:11px;color:var(--muted)">O botão verde é seguro: só cria os produtos que ainda não existem no banco, sem tocar em preço/nome/estoque de nada que você já editou. O botão vermelho apaga e recria TUDO — só use se quiser descartar edições manuais. O botão "Importar catálogo YFCT" funciona igual ao verde (só adiciona os que faltam, nunca sobrescreve), mas lê de products_yfct.json em vez de products.json.</span></div>
     <div id="status"></div>
 
 
@@ -304,6 +305,55 @@ document.getElementById('addMissingBtn').addEventListener('click', async ()=>{
   document.getElementById('status').textContent = `Concluído: ${missingList.length} produto(s) adicionado(s), nada existente foi tocado.`;
   loadProducts();
   refreshMissingCount();
+});
+
+// "Importar catálogo YFCT": mesmo padrão seguro do botão verde acima, mas lendo
+// de products_yfct.json (catálogo novo, separado do products.json original).
+// Só cria documentos com ID ainda não existente no banco — nunca sobrescreve
+// nada que já existe (produtos antigos ou edições feitas neles ficam intactos).
+let yfctMissingList = [];
+async function refreshYfctMissingCount(){
+  try{
+    const [jsonRes, dbSnap] = await Promise.all([
+      fetch('products_yfct.json').then(r=>r.json()),
+      getDocs(collection(db,'products'))
+    ]);
+    const existingIds = new Set();
+    dbSnap.forEach(d=>{
+      const data = d.data();
+      existingIds.add(String(data.id ?? d.id));
+    });
+    yfctMissingList = jsonRes.filter(p => !existingIds.has(String(p.id)));
+    document.getElementById('yfctMissingCount').textContent = yfctMissingList.length;
+  }catch(e){
+    document.getElementById('yfctMissingCount').textContent = '?';
+    console.error('Erro ao calcular produtos YFCT faltando:', e);
+  }
+}
+refreshYfctMissingCount();
+
+document.getElementById('addYfctBtn').addEventListener('click', async ()=>{
+  if(yfctMissingList.length === 0){
+    alert('Nada faltando — todos os produtos do catálogo YFCT já estão no banco.');
+    return;
+  }
+  if(!confirm(`Isso vai CRIAR ${yfctMissingList.length} produto(s) novo(s) do catálogo YFCT que ainda não existem no banco. Produtos já existentes (inclusive os que você já editou) NÃO serão alterados. Continuar?`)) return;
+  document.getElementById('status').textContent = 'Importando catálogo YFCT...';
+  let batch = writeBatch(db);
+  let count = 0;
+  for(const p of yfctMissingList){
+    const ref = doc(db, 'products', String(p.id));
+    batch.set(ref, p);
+    count++;
+    if(count % 400 === 0){
+      await batch.commit();
+      batch = writeBatch(db);
+    }
+  }
+  await batch.commit();
+  document.getElementById('status').textContent = `Concluído: ${yfctMissingList.length} produto(s) do catálogo YFCT adicionado(s), nada existente foi tocado.`;
+  loadProducts();
+  refreshYfctMissingCount();
 });
 
 onAuthStateChanged(auth, user=>{
