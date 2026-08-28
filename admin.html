@@ -139,8 +139,14 @@
     <div id="customersBox" style="margin-bottom:20px">
       <h3>👥 Clientes cadastrados (login do site)</h3>
       <button class="btn btn-ghost" id="loadCustomersBtn">🔄 Carregar clientes</button>
+      <button class="btn btn-ghost" id="toggleCustomersBtn" style="display:none">🔽 Minimizar</button>
       <span id="customersStatus" style="margin-left:10px;color:var(--muted);font-size:13px;"></span>
-      <div id="customersList" style="margin-top:12px"></div>
+      <div style="margin-top:10px">
+        <input type="text" id="customerSearch" placeholder="🔍 Buscar cliente por nome, CNPJ ou telefone..." style="width:100%;max-width:420px;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--bg2);color:var(--text)">
+      </div>
+      <div id="customersListWrap" style="max-height:420px; overflow-y:auto; border:1px solid var(--line); border-radius:8px; margin-top:12px;">
+        <div id="customersList"></div>
+      </div>
     </div>
 
     <div id="newRowBox">
@@ -582,6 +588,10 @@ document.getElementById('toggleVisitsBtn').addEventListener('click', ()=>{
 // ---- Clientes cadastrados (login do site) ----
 function escAttrC(s){ return String(s??'').replace(/"/g,'&quot;'); }
 
+let allCustomers = [];
+let customerCats = [];
+let customerCatMapByUid = {};
+
 async function loadCustomers(){
   const statusEl = document.getElementById('customersStatus');
   const box = document.getElementById('customersList');
@@ -596,16 +606,58 @@ async function loadCustomers(){
     const customers = [];
     snap.forEach(d => customers.push({ uid: d.id, ...d.data() }));
     statusEl.textContent = `${customers.length} cliente(s) cadastrado(s).`;
+    document.getElementById('toggleCustomersBtn').style.display = '';
 
     // Categorias existentes no catálogo (pra montar os campos de desconto
     // por categoria de cada cliente). Se os produtos ainda não carregaram,
     // fica vazio e o admin só vê o desconto geral — sem problema, é só
     // clicar em "Carregar produtos" antes ou recarregar essa lista depois.
-    const cats = [...new Set(allProducts.map(p => p.cat).filter(Boolean))].sort((a,b)=>a.localeCompare(b, 'pt-BR'));
-    const catMapByUid = {};
-    customers.forEach(c => { catMapByUid[c.uid] = c.categoryDiscounts || {}; });
+    allCustomers = customers;
+    customerCats = [...new Set(allProducts.map(p => p.cat).filter(Boolean))].sort((a,b)=>a.localeCompare(b, 'pt-BR'));
+    customerCatMapByUid = {};
+    customers.forEach(c => { customerCatMapByUid[c.uid] = c.categoryDiscounts || {}; });
 
-    let html = `<div style="overflow-x:auto;"><table><thead><tr>
+    renderCustomersTable(customers);
+  }catch(e){
+    console.error(e);
+    statusEl.textContent = 'Erro ao carregar clientes. Confira se sua conta está na coleção "admins" no Firestore (veja firestore.rules).';
+  }
+}
+document.getElementById('loadCustomersBtn').addEventListener('click', loadCustomers);
+
+// A lista de clientes pode crescer bastante — esse botão minimiza/expande
+// sem precisar recarregar os dados do banco.
+document.getElementById('toggleCustomersBtn').addEventListener('click', ()=>{
+  const wrap = document.getElementById('customersListWrap');
+  const btn = document.getElementById('toggleCustomersBtn');
+  const isHidden = wrap.style.display === 'none';
+  wrap.style.display = isHidden ? '' : 'none';
+  btn.textContent = isHidden ? '🔽 Minimizar' : '▶️ Expandir';
+});
+
+// Busca por nome, CNPJ/razão social ou telefone — filtra a tabela já
+// carregada, sem precisar ir no banco de novo a cada letra digitada.
+document.getElementById('customerSearch').addEventListener('input', (e)=>{
+  const term = e.target.value.trim().toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+  if(!term){ renderCustomersTable(allCustomers); return; }
+  const filtered = allCustomers.filter(c=>{
+    const haystack = [c.name, c.phone, c.cnpj, c.razaoSocial].filter(Boolean).join(' ').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+    return haystack.includes(term);
+  });
+  renderCustomersTable(filtered);
+});
+
+function renderCustomersTable(customers){
+  const box = document.getElementById('customersList');
+  const cats = customerCats;
+  const catMapByUid = customerCatMapByUid;
+
+  if(customers.length === 0){
+    box.innerHTML = '<p style="color:var(--muted);padding:12px 0">Nenhum cliente encontrado.</p>';
+    return;
+  }
+
+  let html = `<div style="overflow-x:auto;"><table><thead><tr>
       <th>Nome</th><th>Telefone</th><th>Endereço</th><th>CNPJ / Razão Social</th>
       <th>Desconto geral (%)</th><th></th>
     </tr></thead><tbody>`;
@@ -697,12 +749,7 @@ async function loadCustomers(){
         btn.disabled = false; btn.textContent = 'Salvar';
       });
     });
-  }catch(e){
-    console.error(e);
-    statusEl.textContent = 'Erro ao carregar clientes. Confira se sua conta está na coleção "admins" no Firestore (veja firestore.rules).';
-  }
 }
-document.getElementById('loadCustomersBtn').addEventListener('click', loadCustomers);
 
 let allProducts = [];
 
