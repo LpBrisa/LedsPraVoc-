@@ -129,8 +129,11 @@
     <div id="visitsBox" style="margin-bottom:20px">
       <h3>📊 Histórico de acessos ao site</h3>
       <button class="btn btn-ghost" id="loadVisitsBtn">🔄 Carregar acessos</button>
+      <button class="btn btn-ghost" id="toggleVisitsBtn" style="display:none">🔽 Minimizar</button>
       <div id="visitsSummary" style="margin:12px 0; display:flex; gap:20px; flex-wrap:wrap;"></div>
-      <div id="visitsList"></div>
+      <div id="visitsListWrap" style="max-height:420px; overflow-y:auto; border:1px solid var(--line); border-radius:8px;">
+        <div id="visitsList"></div>
+      </div>
     </div>
 
     <div id="customersBox" style="margin-bottom:20px">
@@ -558,12 +561,23 @@ async function loadVisits(){
     html += '</tbody></table>';
     if(all.length > 200) html += `<p style="font-size:12px;color:var(--muted);margin-top:8px">Mostrando os 200 mais recentes de ${all.length} no total.</p>`;
     listBox.innerHTML = html;
+    document.getElementById('toggleVisitsBtn').style.display = '';
   }catch(e){
     console.error(e);
     summaryBox.textContent = 'Erro ao carregar acessos.';
   }
 }
 document.getElementById('loadVisitsBtn').addEventListener('click', loadVisits);
+
+// A lista de acessos pode ficar bem comprida (até 200 linhas) — esse botão
+// deixa minimizar/expandir sem precisar recarregar os dados.
+document.getElementById('toggleVisitsBtn').addEventListener('click', ()=>{
+  const wrap = document.getElementById('visitsListWrap');
+  const btn = document.getElementById('toggleVisitsBtn');
+  const isHidden = wrap.style.display === 'none';
+  wrap.style.display = isHidden ? '' : 'none';
+  btn.textContent = isHidden ? '🔽 Minimizar' : '▶️ Expandir';
+});
 
 // ---- Clientes cadastrados (login do site) ----
 function escAttrC(s){ return String(s??'').replace(/"/g,'&quot;'); }
