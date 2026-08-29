@@ -1236,9 +1236,14 @@ function renderCatalog(filterText="", filterCat=""){
         : '';
       const discPct = discountForProduct(p);
       const finalPrice = effectivePrice(p);
+      // Desconto de cliente cadastrado tem prioridade (mostra a % dele); sem
+      // esse desconto, se o produto estiver em promoção com um "preço antigo"
+      // preenchido no admin, mostra o preço antigo riscado ao lado do atual.
       const priceHtml = discPct > 0
         ? `<div class="price"><span class="priceOld">${money(p.price)}</span>${money(finalPrice)}<span class="priceBadge">-${discPct}%</span></div>`
-        : `<div class="price">${money(p.price)}</div>`;
+        : (p.promo && p.oldPrice > p.price)
+          ? `<div class="price"><span class="priceOld">${money(p.oldPrice)}</span>${money(p.price)}</div>`
+          : `<div class="price">${money(p.price)}</div>`;
       const boxQty = p.boxQty || 1;
       const boxHintHtml = boxQty > 1 ? `<div class="boxHint">📦 Vendido em caixas de ${boxQty} peças</div>` : '';
       const qtyControlHtml = p.stock
@@ -1547,6 +1552,7 @@ try{
         name: data.name || '',
         code: data.code || '',
         price: Number(data.price) || 0,
+        oldPrice: Number(data.oldPrice) || 0,
         stock: !!data.stock,
         promo: !!data.promo,
         boxQty: Math.max(1, parseInt(data.boxQty) || 1),
