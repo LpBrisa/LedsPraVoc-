@@ -1509,13 +1509,29 @@ try{
     if(!sessionStorage.getItem('visitLogged')){
       const ua = navigator.userAgent;
       const isMobile = /Mobi|Android|iPhone|iPad/i.test(ua);
-      addDoc(collection(db, 'visits'), {
-        createdAt: serverTimestamp(),
-        referrer: document.referrer || 'direto',
-        device: isMobile ? 'mobile' : 'desktop',
-        path: location.pathname
-      }).catch(()=>{});
-      sessionStorage.setItem('visitLogged', '1');
+      sessionStorage.setItem('visitLogged', '1'); // marca antes: mesmo se a geolocalização falhar, não registra 2x
+
+      // Localização aproximada (cidade/estado) a partir do IP, via serviço
+      // público gratuito, sem precisar pedir permissão de GPS ao visitante.
+      // Isso é "best effort": se a chamada falhar ou demorar, registra o
+      // acesso mesmo assim, só sem a localização.
+      const logVisit = (loc) => {
+        addDoc(collection(db, 'visits'), {
+          createdAt: serverTimestamp(),
+          referrer: document.referrer || 'direto',
+          device: isMobile ? 'mobile' : 'desktop',
+          path: location.pathname,
+          city: loc?.city || '',
+          region: loc?.region || '',
+          country: loc?.country || ''
+        }).catch(()=>{});
+      };
+
+      const geoTimeout = new Promise(resolve => setTimeout(() => resolve(null), 2500));
+      Promise.race([
+        fetch('https://ipwho.is/').then(r => r.json()).catch(() => null),
+        geoTimeout
+      ]).then(loc => logVisit(loc && loc.success !== false ? loc : null));
     }
   }catch(e){ /* não bloqueia o site se isso falhar */ }
 

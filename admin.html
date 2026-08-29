@@ -560,10 +560,11 @@ async function loadVisits(){
       <div class="statCard"><div class="statNum">${mobileCount}</div><div class="statLabel">Pelo celular</div></div>
     `;
 
-    let html = '<table><thead><tr><th>Data</th><th>Dispositivo</th><th>Veio de</th></tr></thead><tbody>';
+    let html = '<table><thead><tr><th>Data</th><th>Dispositivo</th><th>Veio de</th><th>De onde</th></tr></thead><tbody>';
     all.slice(0, 200).forEach(v=>{
       const date = v.createdAt && v.createdAt.toDate ? v.createdAt.toDate().toLocaleString('pt-BR') : '-';
-      html += `<tr><td>${date}</td><td>${v.device||''}</td><td>${v.referrer||'direto'}</td></tr>`;
+      const local = [v.city, v.region].filter(Boolean).join(' / ') || (v.country || '—');
+      html += `<tr><td>${date}</td><td>${v.device||''}</td><td>${v.referrer||'direto'}</td><td>${local}</td></tr>`;
     });
     html += '</tbody></table>';
     if(all.length > 200) html += `<p style="font-size:12px;color:var(--muted);margin-top:8px">Mostrando os 200 mais recentes de ${all.length} no total.</p>`;
