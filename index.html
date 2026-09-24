@@ -142,6 +142,20 @@
   main{padding:20px; max-width:1400px; margin:0 auto;}
 #lightbox{position:fixed; inset:0; background:#000d; display:none; z-index:200; align-items:center; justify-content:center; padding:20px; cursor:zoom-out;}
 #lightbox img{max-width:95vw; max-height:95vh; border-radius:8px;}
+  .shopTabs{display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 14px;}
+  .shopTab{
+    display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+    padding:10px 18px; border-radius:999px; font-size:14px; font-weight:800;
+    background:var(--bg2); color:var(--text); border:1px solid var(--line); transition:.15s;
+  }
+  .shopTab:hover{border-color:var(--orange);}
+  .shopTab .tabCount{font-size:12px; font-weight:800; padding:2px 8px; border-radius:999px; background:#2a2f3b; color:var(--muted);}
+  .shopTab.active{background:var(--orange); color:#1a1200; border-color:var(--orange);}
+  .shopTab.active .tabCount{background:#1a120022; color:#1a1200;}
+  .shopTab.promoTab:not(.active){border-color:var(--red); color:#ff8f8f;}
+  .shopTab.promoTab.active{background:var(--red); border-color:var(--red); color:#fff;}
+  .shopTab.promoTab.active .tabCount{background:#ffffff33; color:#fff;}
+  .emptyPromo{padding:40px 20px; text-align:center; color:var(--muted); background:var(--bg2); border:1px dashed var(--line); border-radius:14px;}
   .catTitle{margin:28px 0 12px; font-size:18px; color:var(--orange2); border-left:4px solid var(--orange); padding-left:10px;}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px;}
   .card{
@@ -361,6 +375,10 @@
 
 <main>
   <div id="viewShop">
+    <div class="shopTabs" id="shopTabs">
+      <button type="button" class="shopTab active" id="shopTabAll" onclick="setShopTab('all')">🛍️ Todos os produtos <span class="tabCount" id="countAll">0</span></button>
+      <button type="button" class="shopTab promoTab" id="shopTabPromo" onclick="setShopTab('promo')">🔥 Promoções <span class="tabCount" id="countPromo">0</span></button>
+    </div>
     <div class="stats" id="stats"></div>
     <div id="catalog"></div>
   </div>
@@ -1191,14 +1209,27 @@ function icon(cat){
   return map[cat] || "💡";
 }
 
+// Aba ativa da vitrine: 'all' (todos) ou 'promo' (só itens com promo=1).
+// Os itens em promoção continuam aparecendo normalmente na aba "Todos".
+let shopTab = 'all';
+function setShopTab(tab, render=true){
+  shopTab = tab;
+  document.getElementById('shopTabAll').classList.toggle('active', tab==='all');
+  document.getElementById('shopTabPromo').classList.toggle('active', tab==='promo');
+  if(render) renderCatalog(document.getElementById('search').value, document.getElementById('catFilter').value);
+}
+
 function renderCatalog(filterText="", filterCat=""){
   const catalog = document.getElementById('catalog');
   catalog.innerHTML = "";
+  const promoOnly = shopTab === 'promo';
+  document.getElementById('countAll').textContent = PRODUCTS.length;
+  document.getElementById('countPromo').textContent = PRODUCTS.filter(p=>p.promo).length;
   const cats = [...new Set(PRODUCTS.map(p=>p.cat))];
   let shown = 0;
   cats.forEach(cat=>{
     if(filterCat && cat!==filterCat) return;
-    let items = PRODUCTS.filter(p=>p.cat===cat);
+    let items = PRODUCTS.filter(p=>p.cat===cat && (!promoOnly || p.promo));
     if(filterText){
       const f = filterText.toLowerCase();
       items = items.filter(p=> p.name.toLowerCase().includes(f) || String(p.code).toLowerCase().includes(f));
@@ -1272,7 +1303,13 @@ function renderCatalog(filterText="", filterCat=""){
     });
     catalog.appendChild(grid);
   });
-  document.getElementById('stats').textContent = `${shown} produto(s) encontrados de ${PRODUCTS.length} no catálogo`;
+  if(promoOnly && shown===0){
+    catalog.innerHTML = '<div class="emptyPromo">Nenhum item em promoção no momento. Confira todos os produtos na aba ao lado.</div>';
+  }
+  const totalBase = promoOnly ? PRODUCTS.filter(p=>p.promo).length : PRODUCTS.length;
+  document.getElementById('stats').textContent = promoOnly
+    ? `${shown} produto(s) em promoção encontrados de ${totalBase}`
+    : `${shown} produto(s) encontrados de ${totalBase} no catálogo`;
 }
 
 function populateCatFilter(){
@@ -1289,7 +1326,7 @@ function populateFooterCategories(cats){
   const box = document.getElementById('footerCatGrid');
   if(!box) return;
   box.innerHTML = cats.slice(0, 12).map(c =>
-    `<a href="#" onclick="document.getElementById('catFilter').value='${c.replace(/'/g,"\\'")}'; renderCatalog(document.getElementById('search').value, '${c.replace(/'/g,"\\'")}'); window.scrollTo({top:0,behavior:'smooth'}); return false;">${c}</a>`
+    `<a href="#" onclick="setShopTab('all', false); document.getElementById('catFilter').value='${c.replace(/'/g,"\\'")}'; renderCatalog(document.getElementById('search').value, '${c.replace(/'/g,"\\'")}'); window.scrollTo({top:0,behavior:'smooth'}); return false;">${c}</a>`
   ).join('');
 }
 
